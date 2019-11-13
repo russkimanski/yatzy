@@ -1,7 +1,7 @@
 ---
 name: Dokumentation
 about: 'Dient zur allgemeinen Dokumentation des Projekts. '
-title: "[DOC] "
+title: "[DOC]"
 labels: documentation
 assignees: ''
 

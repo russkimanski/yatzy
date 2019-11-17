@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_5vcMcAktEeqB3a4sRh-tuQ" name="Yahtzee Use-Case">
+  <eAnnotations xmi:id="_5vcMcQktEeqB3a4sRh-tuQ" source="genmymodel">
+    <details xmi:id="_5vcMcgktEeqB3a4sRh-tuQ" key="uuid" value="_z1FjUAksEeqB3a4sRh-tuQ"/>
+  </eAnnotations>
+  <ownedComment xmi:id="_5vcMcwktEeqB3a4sRh-tuQ" annotatedElement="_5vcNpwktEeqB3a4sRh-tuQ" body="The Turn Class will use methods in this class to input the score from the computer or get the score option from the player. ">
+    <eAnnotations xmi:id="_5vcMdAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcMdQktEeqB3a4sRh-tuQ" key="uuid" value="_Kh9uQGvhEDOSx4PCOGVL8A"/>
+    </eAnnotations>
+  </ownedComment>
+  <ownedComment xmi:id="_5vcMdgktEeqB3a4sRh-tuQ" annotatedElement="_5vcNhgktEeqB3a4sRh-tuQ" body="The methods in the scoring Class will alter the objects in the Players class to modify the score appropriately. ">
+    <eAnnotations xmi:id="_5vcMdwktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcMeAktEeqB3a4sRh-tuQ" key="uuid" value="_VhsLMGvhEDOSx4PCOGVL8A"/>
+    </eAnnotations>
+  </ownedComment>
+  <ownedComment xmi:id="_5vcMeQktEeqB3a4sRh-tuQ" annotatedElement="_5vc1OwktEeqB3a4sRh-tuQ" body="The score will be adjusted based off the players choice in Display">
+    <eAnnotations xmi:id="_5vcMegktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcMewktEeqB3a4sRh-tuQ" key="uuid" value="_joBpgHkjEDO_QP-7nl11vw"/>
+    </eAnnotations>
+  </ownedComment>
+  <packageImport xmi:id="_5vcMfAktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vcMfQktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcMfgktEeqB3a4sRh-tuQ" key="uuid" value="_LHV40YfYEeWSIKoWblTvZg"/>
+    </eAnnotations>
+    <importedPackage href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#/"/>
+  </packageImport>
+  <packageImport xmi:id="_5vcMfwktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vcMgAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcMgQktEeqB3a4sRh-tuQ" key="uuid" value="_LHg38IfYEeWSIKoWblTvZg"/>
+    </eAnnotations>
+    <importedPackage href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#/"/>
+  </packageImport>
+  <packagedElement xsi:type="uml:Package" xmi:id="_5vcMggktEeqB3a4sRh-tuQ" name="Yahtzee">
+    <eAnnotations xmi:id="_5vcMgwktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcMhAktEeqB3a4sRh-tuQ" key="uuid" value="_U2lHgGoGEDOqO97N0k2noQ"/>
+    </eAnnotations>
+    <ownedComment xmi:id="_5vcMhQktEeqB3a4sRh-tuQ" annotatedElement="_5vcM8AktEeqB3a4sRh-tuQ" body="Optional For Gui. After working model through txt.">
+      <eAnnotations xmi:id="_5vcMhgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcMhwktEeqB3a4sRh-tuQ" key="uuid" value="_67PqEGoJEDOqO97N0k2noQ"/>
+      </eAnnotations>
+    </ownedComment>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vcMiAktEeqB3a4sRh-tuQ" name="Game">
+      <eAnnotations xmi:id="_5vcMiQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcMigktEeqB3a4sRh-tuQ" key="uuid" value="_awuxwGoGEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_5vcMiwktEeqB3a4sRh-tuQ" name="Player" type="_5vcNegktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcMjAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMjQktEeqB3a4sRh-tuQ" key="uuid" value="_k0zewGoGEDOqO97N0k2noQ"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcMjgktEeqB3a4sRh-tuQ" name="CompPlayer" type="_5vcNfQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcMjwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMkAktEeqB3a4sRh-tuQ" key="uuid" value="_rw35AGoGEDOqO97N0k2noQ"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcMkQktEeqB3a4sRh-tuQ" name="First">
+        <eAnnotations xmi:id="_5vcMkgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMkwktEeqB3a4sRh-tuQ" key="uuid" value="_V1dVIGoHEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcMlAktEeqB3a4sRh-tuQ" name="Again">
+        <eAnnotations xmi:id="_5vcMlQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMlgktEeqB3a4sRh-tuQ" key="uuid" value="_hR_p4GoHEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//Boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5vcMlwktEeqB3a4sRh-tuQ" name="Introduction">
+        <eAnnotations xmi:id="_5vcMmAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMmQktEeqB3a4sRh-tuQ" key="uuid" value="_xqgl4WoGEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMmgktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMmwktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMnAktEeqB3a4sRh-tuQ" key="uuid" value="_xqgl4GoGEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+        <ownedParameter xmi:id="_5vcMnQktEeqB3a4sRh-tuQ" name="parameter" type="_5vcNgwktEeqB3a4sRh-tuQ" isUnique="false">
+          <eAnnotations xmi:id="_5vcMngktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMnwktEeqB3a4sRh-tuQ" key="uuid" value="_Gxg00GoHEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcMoAktEeqB3a4sRh-tuQ" name="RollFirst">
+        <eAnnotations xmi:id="_5vcMoQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMogktEeqB3a4sRh-tuQ" key="uuid" value="_oZ0oMWoHEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMowktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMpAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMpQktEeqB3a4sRh-tuQ" key="uuid" value="_oZ0oMGoHEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcMpgktEeqB3a4sRh-tuQ" name="GamePlay">
+        <eAnnotations xmi:id="_5vcMpwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMqAktEeqB3a4sRh-tuQ" key="uuid" value="_p69q0WoHEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMqQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMqgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMqwktEeqB3a4sRh-tuQ" key="uuid" value="_p69q0GoHEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcMrAktEeqB3a4sRh-tuQ" name="AnnounceWinner">
+        <eAnnotations xmi:id="_5vcMrQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMrgktEeqB3a4sRh-tuQ" key="uuid" value="_-qNhEGoHEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMrwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMsAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMsQktEeqB3a4sRh-tuQ" key="uuid" value="_-qLE0GoHEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vcMsgktEeqB3a4sRh-tuQ" name="Turn">
+      <eAnnotations xmi:id="_5vcMswktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcMtAktEeqB3a4sRh-tuQ" key="uuid" value="_SD-yIGoIEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedOperation xmi:id="_5vcMtQktEeqB3a4sRh-tuQ" name="RollDice">
+        <eAnnotations xmi:id="_5vcMtgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMtwktEeqB3a4sRh-tuQ" key="uuid" value="_UyOhEGoIEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMuAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMuQktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMugktEeqB3a4sRh-tuQ" key="uuid" value="_UyME0GoIEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcMuwktEeqB3a4sRh-tuQ" name="PlayerTurn">
+        <eAnnotations xmi:id="_5vcMvAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMvQktEeqB3a4sRh-tuQ" key="uuid" value="_ZE2z4GoIEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMvgktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMvwktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMwAktEeqB3a4sRh-tuQ" key="uuid" value="_ZEyicGoIEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcMwQktEeqB3a4sRh-tuQ" name="ComputerTurn">
+        <eAnnotations xmi:id="_5vcMwgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMwwktEeqB3a4sRh-tuQ" key="uuid" value="_dwSoQGoIEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMxAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMxQktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMxgktEeqB3a4sRh-tuQ" key="uuid" value="_dwQMAGoIEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vcMxwktEeqB3a4sRh-tuQ" name="Scoring">
+      <eAnnotations xmi:id="_5vcMyAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcMyQktEeqB3a4sRh-tuQ" key="uuid" value="_m_EE8GoIEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedOperation xmi:id="_5vcMygktEeqB3a4sRh-tuQ" name="PlayerScore">
+        <eAnnotations xmi:id="_5vcMywktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcMzAktEeqB3a4sRh-tuQ" key="uuid" value="_qOP9wGoIEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcMzQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcMzgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcMzwktEeqB3a4sRh-tuQ" key="uuid" value="_qONhgGoIEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcM0AktEeqB3a4sRh-tuQ" name="CompScore">
+        <eAnnotations xmi:id="_5vcM0QktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM0gktEeqB3a4sRh-tuQ" key="uuid" value="_stfnYGoIEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcM0wktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcM1AktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcM1QktEeqB3a4sRh-tuQ" key="uuid" value="_stfAUGoIEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcM1gktEeqB3a4sRh-tuQ" name="Scoring_Turn" memberEnd="_5vcM2QktEeqB3a4sRh-tuQ _5vcM3gktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcM2QktEeqB3a4sRh-tuQ _5vcM3gktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcM1wktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcM2AktEeqB3a4sRh-tuQ" key="uuid" value="_aKph0WoJEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcM2QktEeqB3a4sRh-tuQ" name="turn" type="_5vcMsgktEeqB3a4sRh-tuQ" association="_5vcM1gktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcM2gktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM2wktEeqB3a4sRh-tuQ" key="uuid" value="_aKkpUGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcM3AktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcM3QktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcM3gktEeqB3a4sRh-tuQ" name="scoring" type="_5vcMxwktEeqB3a4sRh-tuQ" association="_5vcM1gktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcM3wktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM4AktEeqB3a4sRh-tuQ" key="uuid" value="_aKph0GoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcM4QktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcM4gktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcM4wktEeqB3a4sRh-tuQ" name="Turn_Game" memberEnd="_5vcM5gktEeqB3a4sRh-tuQ _5vcM6wktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcM5gktEeqB3a4sRh-tuQ _5vcM6wktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcM5AktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcM5QktEeqB3a4sRh-tuQ" key="uuid" value="_cxtDoGoJEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcM5gktEeqB3a4sRh-tuQ" name="game" type="_5vcMiAktEeqB3a4sRh-tuQ" association="_5vcM4wktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcM5wktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM6AktEeqB3a4sRh-tuQ" key="uuid" value="_cxoLIGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcM6QktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcM6gktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcM6wktEeqB3a4sRh-tuQ" name="turn" type="_5vcMsgktEeqB3a4sRh-tuQ" association="_5vcM4wktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcM7AktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM7QktEeqB3a4sRh-tuQ" key="uuid" value="_cxqnYGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcM7gktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcM7wktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vcM8AktEeqB3a4sRh-tuQ" name="Display">
+      <eAnnotations xmi:id="_5vcM8QktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcM8gktEeqB3a4sRh-tuQ" key="uuid" value="_iWzD4GoJEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_5vcM8wktEeqB3a4sRh-tuQ" name="PanelScorecard">
+        <eAnnotations xmi:id="_5vcM9AktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM9QktEeqB3a4sRh-tuQ" key="uuid" value="_j6aLsGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcM9gktEeqB3a4sRh-tuQ" name="PanelChoices">
+        <eAnnotations xmi:id="_5vcM9wktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM-AktEeqB3a4sRh-tuQ" key="uuid" value="_luA3UGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcM-QktEeqB3a4sRh-tuQ" name="PanelPrimary">
+        <eAnnotations xmi:id="_5vcM-gktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM-wktEeqB3a4sRh-tuQ" key="uuid" value="_m4IhEGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcM_AktEeqB3a4sRh-tuQ" name="PanelGameName">
+        <eAnnotations xmi:id="_5vcM_QktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcM_gktEeqB3a4sRh-tuQ" key="uuid" value="_oHU4EGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcM_wktEeqB3a4sRh-tuQ" name="PanelNames">
+        <eAnnotations xmi:id="_5vcNAAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNAQktEeqB3a4sRh-tuQ" key="uuid" value="_pjR4sGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5vcNAgktEeqB3a4sRh-tuQ" name="SetScorecard">
+        <eAnnotations xmi:id="_5vcNAwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNBAktEeqB3a4sRh-tuQ" key="uuid" value="_tGF4IGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNBQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNBgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNBwktEeqB3a4sRh-tuQ" key="uuid" value="_tGDb4GoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNCAktEeqB3a4sRh-tuQ" name="ChangeScorecard">
+        <eAnnotations xmi:id="_5vcNCQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNCgktEeqB3a4sRh-tuQ" key="uuid" value="_ulrbkWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNCwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNDAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNDQktEeqB3a4sRh-tuQ" key="uuid" value="_ulrbkGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNDgktEeqB3a4sRh-tuQ" name="SetName">
+        <eAnnotations xmi:id="_5vcNDwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNEAktEeqB3a4sRh-tuQ" key="uuid" value="_xMshIWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNEQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNEgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNEwktEeqB3a4sRh-tuQ" key="uuid" value="_xMshIGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNFAktEeqB3a4sRh-tuQ" name="SetPlayAgain">
+        <eAnnotations xmi:id="_5vcNFQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNFgktEeqB3a4sRh-tuQ" key="uuid" value="_0Kxb0WoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNFwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNGAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNGQktEeqB3a4sRh-tuQ" key="uuid" value="_0Kxb0GoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNGgktEeqB3a4sRh-tuQ" name="ScoreOptions">
+        <eAnnotations xmi:id="_5vcNGwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNHAktEeqB3a4sRh-tuQ" key="uuid" value="_1xp6EWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNHQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNHgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNHwktEeqB3a4sRh-tuQ" key="uuid" value="_1xp6EGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNIAktEeqB3a4sRh-tuQ" name="RollingDice">
+        <eAnnotations xmi:id="_5vcNIQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNIgktEeqB3a4sRh-tuQ" key="uuid" value="_3h3TcGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNIwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNJAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNJQktEeqB3a4sRh-tuQ" key="uuid" value="_3h03MGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNJgktEeqB3a4sRh-tuQ" name="PlayFirst">
+        <eAnnotations xmi:id="_5vcNJwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNKAktEeqB3a4sRh-tuQ" key="uuid" value="_5aMHAWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNKQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNKgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNKwktEeqB3a4sRh-tuQ" key="uuid" value="_5aMHAGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vcNLAktEeqB3a4sRh-tuQ" name="Players">
+      <eAnnotations xmi:id="_5vcNLQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNLgktEeqB3a4sRh-tuQ" key="uuid" value="_7E2HcGoIEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_5vcNLwktEeqB3a4sRh-tuQ" name="Name">
+        <eAnnotations xmi:id="_5vcNMAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNMQktEeqB3a4sRh-tuQ" key="uuid" value="_9E-zMGoIEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vcNMgktEeqB3a4sRh-tuQ" name="Score">
+        <eAnnotations xmi:id="_5vcNMwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNNAktEeqB3a4sRh-tuQ" key="uuid" value="_AWK3IGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//ByteArray"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5vcNNQktEeqB3a4sRh-tuQ" name="SetName">
+        <eAnnotations xmi:id="_5vcNNgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNNwktEeqB3a4sRh-tuQ" key="uuid" value="_Ecuc0GoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNOAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNOQktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNOgktEeqB3a4sRh-tuQ" key="uuid" value="_EcsAkGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+          <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNOwktEeqB3a4sRh-tuQ" name="GetName">
+        <eAnnotations xmi:id="_5vcNPAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNPQktEeqB3a4sRh-tuQ" key="uuid" value="_IC88oWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNPgktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNPwktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNQAktEeqB3a4sRh-tuQ" key="uuid" value="_IC88oGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNQQktEeqB3a4sRh-tuQ" name="SetScore">
+        <eAnnotations xmi:id="_5vcNQgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNQwktEeqB3a4sRh-tuQ" key="uuid" value="_J5yicWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNRAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNRQktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNRgktEeqB3a4sRh-tuQ" key="uuid" value="_J5yicGoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNRwktEeqB3a4sRh-tuQ" name="GetScore">
+        <eAnnotations xmi:id="_5vcNSAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNSQktEeqB3a4sRh-tuQ" key="uuid" value="_TGF58WoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNSgktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNSwktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNTAktEeqB3a4sRh-tuQ" key="uuid" value="_TGF58GoJEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vcNTQktEeqB3a4sRh-tuQ" name="ShowScoreboard()">
+        <eAnnotations xmi:id="_5vcNTgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNTwktEeqB3a4sRh-tuQ" key="uuid" value="_557GQWolEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vcNUAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vcNUQktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vcNUgktEeqB3a4sRh-tuQ" key="uuid" value="_557GQGolEDOqO97N0k2noQ"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcNUwktEeqB3a4sRh-tuQ" name="Turn_Players" memberEnd="_5vcNVgktEeqB3a4sRh-tuQ _5vcNWwktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcNVgktEeqB3a4sRh-tuQ _5vcNWwktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcNVAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNVQktEeqB3a4sRh-tuQ" key="uuid" value="_bcKNAmoJEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcNVgktEeqB3a4sRh-tuQ" name="players" type="_5vcNLAktEeqB3a4sRh-tuQ" association="_5vcNUwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcNVwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNWAktEeqB3a4sRh-tuQ" key="uuid" value="_bcKNAGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNWQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNWgktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcNWwktEeqB3a4sRh-tuQ" name="turn" type="_5vcMsgktEeqB3a4sRh-tuQ" association="_5vcNUwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcNXAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNXQktEeqB3a4sRh-tuQ" key="uuid" value="_bcKNAWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNXgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNXwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcNYAktEeqB3a4sRh-tuQ" name="Game_Players" memberEnd="_5vcNYwktEeqB3a4sRh-tuQ _5vcNaAktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcNYwktEeqB3a4sRh-tuQ _5vcNaAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcNYQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNYgktEeqB3a4sRh-tuQ" key="uuid" value="_cAtrkGoJEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcNYwktEeqB3a4sRh-tuQ" name="players" type="_5vcNLAktEeqB3a4sRh-tuQ" association="_5vcNYAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcNZAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNZQktEeqB3a4sRh-tuQ" key="uuid" value="_cArPUGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNZgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNZwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcNaAktEeqB3a4sRh-tuQ" name="game" type="_5vcMiAktEeqB3a4sRh-tuQ" association="_5vcNYAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcNaQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNagktEeqB3a4sRh-tuQ" key="uuid" value="_cArPUWoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNawktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNbAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcNbQktEeqB3a4sRh-tuQ" name="Scoring_Players" memberEnd="_5vcNcAktEeqB3a4sRh-tuQ _5vcNdQktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcNcAktEeqB3a4sRh-tuQ _5vcNdQktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcNbgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNbwktEeqB3a4sRh-tuQ" key="uuid" value="_azu7EGoJEDOqO97N0k2noQ"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcNcAktEeqB3a4sRh-tuQ" name="players" type="_5vcNLAktEeqB3a4sRh-tuQ" association="_5vcNbQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcNcQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNcgktEeqB3a4sRh-tuQ" key="uuid" value="_aznmUGoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNcwktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNdAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcNdQktEeqB3a4sRh-tuQ" name="scoring" type="_5vcMxwktEeqB3a4sRh-tuQ" association="_5vcNbQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcNdgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNdwktEeqB3a4sRh-tuQ" key="uuid" value="_azse0GoJEDOqO97N0k2noQ"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNeAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNeQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_5vcNegktEeqB3a4sRh-tuQ" name="Class">
+    <eAnnotations xmi:id="_5vcNewktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNfAktEeqB3a4sRh-tuQ" key="uuid" value="_pg2-MGoGEDOqO97N0k2noQ"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_5vcNfQktEeqB3a4sRh-tuQ" name="Class">
+    <eAnnotations xmi:id="_5vcNfgktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNfwktEeqB3a4sRh-tuQ" key="uuid" value="_tUqnAGoGEDOqO97N0k2noQ"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:DataType" xmi:id="_5vcNgAktEeqB3a4sRh-tuQ" name="Player">
+    <eAnnotations xmi:id="_5vcNgQktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNggktEeqB3a4sRh-tuQ" key="uuid" value="_J8VLAGoHEDOqO97N0k2noQ"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:DataType" xmi:id="_5vcNgwktEeqB3a4sRh-tuQ" name="Player">
+    <eAnnotations xmi:id="_5vcNhAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNhQktEeqB3a4sRh-tuQ" key="uuid" value="_lkbIYGoHEDOqO97N0k2noQ"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_5vcNhgktEeqB3a4sRh-tuQ" name="Scoring">
+    <eAnnotations xmi:id="_5vcNhwktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNiAktEeqB3a4sRh-tuQ" key="uuid" value="_5v--0GvgEDOSx4PCOGVL8A"/>
+    </eAnnotations>
+    <ownedOperation xmi:id="_5vcNiQktEeqB3a4sRh-tuQ" name="playerScore">
+      <eAnnotations xmi:id="_5vcNigktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNiwktEeqB3a4sRh-tuQ" key="uuid" value="_7Pb_YGvgEDOSx4PCOGVL8A"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_5vcNjAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+        <eAnnotations xmi:id="_5vcNjQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNjgktEeqB3a4sRh-tuQ" key="uuid" value="_7PbYUGvgEDOSx4PCOGVL8A"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_5vcNjwktEeqB3a4sRh-tuQ" name="getPlayerScore">
+      <eAnnotations xmi:id="_5vcNkAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNkQktEeqB3a4sRh-tuQ" key="uuid" value="_ZFe30HkjEDO_QP-7nl11vw"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_5vcNkgktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+        <eAnnotations xmi:id="_5vcNkwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNlAktEeqB3a4sRh-tuQ" key="uuid" value="_ZFeQwHkjEDO_QP-7nl11vw"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_5vcNlQktEeqB3a4sRh-tuQ" name="bListener">
+      <eAnnotations xmi:id="_5vcNlgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNlwktEeqB3a4sRh-tuQ" key="uuid" value="_akKcUHkjEDO_QP-7nl11vw"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_5vcNmAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+        <eAnnotations xmi:id="_5vcNmQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNmgktEeqB3a4sRh-tuQ" key="uuid" value="_akJ1QHkjEDO_QP-7nl11vw"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_5vcNmwktEeqB3a4sRh-tuQ" name="buttonListener">
+      <eAnnotations xmi:id="_5vcNnAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNnQktEeqB3a4sRh-tuQ" key="uuid" value="_cQ7gIXkjEDO_QP-7nl11vw"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_5vcNngktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+        <eAnnotations xmi:id="_5vcNnwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNoAktEeqB3a4sRh-tuQ" key="uuid" value="_cQ7gIHkjEDO_QP-7nl11vw"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_5vcNoQktEeqB3a4sRh-tuQ" name="Calculate">
+      <eAnnotations xmi:id="_5vcNogktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNowktEeqB3a4sRh-tuQ" key="uuid" value="_dmN4EXkjEDO_QP-7nl11vw"/>
+      </eAnnotations>
+      <ownedParameter xmi:id="_5vcNpAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+        <eAnnotations xmi:id="_5vcNpQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcNpgktEeqB3a4sRh-tuQ" key="uuid" value="_dmN4EHkjEDO_QP-7nl11vw"/>
+        </eAnnotations>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_5vcNpwktEeqB3a4sRh-tuQ" name="Turn">
+    <eAnnotations xmi:id="_5vcNqAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNqQktEeqB3a4sRh-tuQ" key="uuid" value="_DNR_sGvhEDOSx4PCOGVL8A"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vcNqgktEeqB3a4sRh-tuQ" name="Turn_Scoring" memberEnd="_5vcNrQktEeqB3a4sRh-tuQ _5vcNsgktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcNrQktEeqB3a4sRh-tuQ _5vcNsgktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vcNqwktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNrAktEeqB3a4sRh-tuQ" key="uuid" value="_FeJPEGvhEDOSx4PCOGVL8A"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vcNrQktEeqB3a4sRh-tuQ" name="scoring" type="_5vcNhgktEeqB3a4sRh-tuQ" association="_5vcNqgktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcNrgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNrwktEeqB3a4sRh-tuQ" key="uuid" value="_FeFksGvhEDOSx4PCOGVL8A"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNsAktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNsQktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vcNsgktEeqB3a4sRh-tuQ" name="turn" type="_5vcNpwktEeqB3a4sRh-tuQ" association="_5vcNqgktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcNswktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNtAktEeqB3a4sRh-tuQ" key="uuid" value="_FeIA8GvhEDOSx4PCOGVL8A"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNtQktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNtgktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_5vcNtwktEeqB3a4sRh-tuQ" name="Players">
+    <eAnnotations xmi:id="_5vcNuAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNuQktEeqB3a4sRh-tuQ" key="uuid" value="_GMeUsGvhEDOSx4PCOGVL8A"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vcNugktEeqB3a4sRh-tuQ" name="Scoring_Players" memberEnd="_5vcNvQktEeqB3a4sRh-tuQ _5vcNwgktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcNvQktEeqB3a4sRh-tuQ _5vcNwgktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vcNuwktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNvAktEeqB3a4sRh-tuQ" key="uuid" value="_IPk04GvhEDOSx4PCOGVL8A"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vcNvQktEeqB3a4sRh-tuQ" name="players" type="_5vcNtwktEeqB3a4sRh-tuQ" association="_5vcNugktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcNvgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNvwktEeqB3a4sRh-tuQ" key="uuid" value="_IPgjcGvhEDOSx4PCOGVL8A"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNwAktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNwQktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vcNwgktEeqB3a4sRh-tuQ" name="scoring" type="_5vcNhgktEeqB3a4sRh-tuQ" association="_5vcNugktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcNwwktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNxAktEeqB3a4sRh-tuQ" key="uuid" value="_IPiYoGvhEDOSx4PCOGVL8A"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcNxQktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcNxgktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Component" xmi:id="_5vcNxwktEeqB3a4sRh-tuQ" name="Yahtzee">
+    <eAnnotations xmi:id="_5vcNyAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcNyQktEeqB3a4sRh-tuQ" key="uuid" value="_a2UXMHFrEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedUseCase xmi:id="_5vcNygktEeqB3a4sRh-tuQ" name="Get Instructions">
+      <eAnnotations xmi:id="_5vcNywktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNzAktEeqB3a4sRh-tuQ" key="uuid" value="_i_kWQHFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcNzQktEeqB3a4sRh-tuQ" name="Get Player Name">
+      <eAnnotations xmi:id="_5vcNzgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcNzwktEeqB3a4sRh-tuQ" key="uuid" value="_k1nR4HFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN0AktEeqB3a4sRh-tuQ" name="Roll First">
+      <eAnnotations xmi:id="_5vcN0QktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN0gktEeqB3a4sRh-tuQ" key="uuid" value="_ugYuEHFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN0wktEeqB3a4sRh-tuQ" name="Computer Turn">
+      <eAnnotations xmi:id="_5vcN1AktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN1QktEeqB3a4sRh-tuQ" key="uuid" value="_yVohUHFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN1gktEeqB3a4sRh-tuQ" name="Roll Dice">
+      <eAnnotations xmi:id="_5vcN1wktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN2AktEeqB3a4sRh-tuQ" key="uuid" value="_zcHBMHFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN2QktEeqB3a4sRh-tuQ" name="Game Start">
+      <eAnnotations xmi:id="_5vcN2gktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN2wktEeqB3a4sRh-tuQ" key="uuid" value="_0_ii0HFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN3AktEeqB3a4sRh-tuQ" name="Score Roll">
+      <eAnnotations xmi:id="_5vcN3QktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN3gktEeqB3a4sRh-tuQ" key="uuid" value="_I8pKcHFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN3wktEeqB3a4sRh-tuQ" name="Next Turn">
+      <eAnnotations xmi:id="_5vcN4AktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN4QktEeqB3a4sRh-tuQ" key="uuid" value="_Nk350HFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN4gktEeqB3a4sRh-tuQ" name="Announce Winner">
+      <eAnnotations xmi:id="_5vcN4wktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN5AktEeqB3a4sRh-tuQ" key="uuid" value="_gbgBkHFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_5vcN5QktEeqB3a4sRh-tuQ" name="Play Again">
+      <eAnnotations xmi:id="_5vcN5gktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN5wktEeqB3a4sRh-tuQ" key="uuid" value="_lBQrwHFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+    </ownedUseCase>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcN6AktEeqB3a4sRh-tuQ" name="Get Instructions_Get Player Name" memberEnd="_5vcN6wktEeqB3a4sRh-tuQ _5vcN8AktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcN6wktEeqB3a4sRh-tuQ _5vcN8AktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcN6QktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN6gktEeqB3a4sRh-tuQ" key="uuid" value="_srnk0XFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcN6wktEeqB3a4sRh-tuQ" name="get Player Name" type="_5vcNzQktEeqB3a4sRh-tuQ" association="_5vcN6AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcN7AktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcN7QktEeqB3a4sRh-tuQ" key="uuid" value="_srdz0HFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcN7gktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcN7wktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcN8AktEeqB3a4sRh-tuQ" name="get Instructions" type="_5vcNygktEeqB3a4sRh-tuQ" association="_5vcN6AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcN8QktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcN8gktEeqB3a4sRh-tuQ" key="uuid" value="_srnk0HFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcN8wktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcN9AktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcN9QktEeqB3a4sRh-tuQ" name="Get Player Name_Roll First" memberEnd="_5vcN-AktEeqB3a4sRh-tuQ _5vcN_QktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcN-AktEeqB3a4sRh-tuQ _5vcN_QktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcN9gktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcN9wktEeqB3a4sRh-tuQ" key="uuid" value="_wdi-UXFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcN-AktEeqB3a4sRh-tuQ" name="roll First" type="_5vcN0AktEeqB3a4sRh-tuQ" association="_5vcN9QktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcN-QktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcN-gktEeqB3a4sRh-tuQ" key="uuid" value="_wdZNUHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcN-wktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcN_AktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcN_QktEeqB3a4sRh-tuQ" name="get Player Name" type="_5vcNzQktEeqB3a4sRh-tuQ" association="_5vcN9QktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcN_gktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcN_wktEeqB3a4sRh-tuQ" key="uuid" value="_wdi-UHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcOAAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcOAQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcOAgktEeqB3a4sRh-tuQ" name="Roll First_Game Start" memberEnd="_5vcOBQktEeqB3a4sRh-tuQ _5vcOCgktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcOBQktEeqB3a4sRh-tuQ _5vcOCgktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcOAwktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcOBAktEeqB3a4sRh-tuQ" key="uuid" value="_3b_XIXFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcOBQktEeqB3a4sRh-tuQ" name="game Start" type="_5vcN2QktEeqB3a4sRh-tuQ" association="_5vcOAgktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOBgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcOBwktEeqB3a4sRh-tuQ" key="uuid" value="_3b1mIHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcOCAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcOCQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcOCgktEeqB3a4sRh-tuQ" name="roll First" type="_5vcN0AktEeqB3a4sRh-tuQ" association="_5vcOAgktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOCwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcODAktEeqB3a4sRh-tuQ" key="uuid" value="_3b_XIHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcODQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcODgktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcODwktEeqB3a4sRh-tuQ" name="Game Start_Computer Turn" memberEnd="_5vcOEgktEeqB3a4sRh-tuQ _5vcOFwktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcOEgktEeqB3a4sRh-tuQ _5vcOFwktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcOEAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcOEQktEeqB3a4sRh-tuQ" key="uuid" value="_3_S4gXFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcOEgktEeqB3a4sRh-tuQ" name="computer Turn" type="_5vcN0wktEeqB3a4sRh-tuQ" association="_5vcODwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOEwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcOFAktEeqB3a4sRh-tuQ" key="uuid" value="_3_JHgHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcOFQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcOFgktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcOFwktEeqB3a4sRh-tuQ" name="game Start" type="_5vcN2QktEeqB3a4sRh-tuQ" association="_5vcODwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOGAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcOGQktEeqB3a4sRh-tuQ" key="uuid" value="_3_S4gHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcOGgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcOGwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcOHAktEeqB3a4sRh-tuQ" name="Game Start_UseCase" memberEnd="_5vcOHwktEeqB3a4sRh-tuQ _5vcOJAktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcOHwktEeqB3a4sRh-tuQ _5vcOJAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcOHQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcOHgktEeqB3a4sRh-tuQ" key="uuid" value="_4nrHIXFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcOHwktEeqB3a4sRh-tuQ" name="useCase" type="_5vcN1gktEeqB3a4sRh-tuQ" association="_5vcOHAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOIAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcOIQktEeqB3a4sRh-tuQ" key="uuid" value="_4nh9MHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcOIgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcOIwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcOJAktEeqB3a4sRh-tuQ" name="game Start" type="_5vcN2QktEeqB3a4sRh-tuQ" association="_5vcOHAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOJQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcOJgktEeqB3a4sRh-tuQ" key="uuid" value="_4nrHIHFrEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcOJwktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcOKAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcOKQktEeqB3a4sRh-tuQ" name="Roll Dice_Score Roll" memberEnd="_5vcOLAktEeqB3a4sRh-tuQ _5vcOMQktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcOLAktEeqB3a4sRh-tuQ _5vcOMQktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcOKgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcOKwktEeqB3a4sRh-tuQ" key="uuid" value="_K_Uz4nFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcOLAktEeqB3a4sRh-tuQ" name="score Roll" type="_5vcN3AktEeqB3a4sRh-tuQ" association="_5vcOKQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOLQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcOLgktEeqB3a4sRh-tuQ" key="uuid" value="_K_Uz4HFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcOLwktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcOMAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcOMQktEeqB3a4sRh-tuQ" name="roll Dice" type="_5vcN1gktEeqB3a4sRh-tuQ" association="_5vcOKQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOMgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcOMwktEeqB3a4sRh-tuQ" key="uuid" value="_K_Uz4XFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcONAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcONQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcONgktEeqB3a4sRh-tuQ" name="Computer Turn_Next Turn" memberEnd="_5vcOOQktEeqB3a4sRh-tuQ _5vczgwktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcOOQktEeqB3a4sRh-tuQ _5vczgwktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcONwktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcOOAktEeqB3a4sRh-tuQ" key="uuid" value="_PJYZgXFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcOOQktEeqB3a4sRh-tuQ" name="next Turn" type="_5vcN3wktEeqB3a4sRh-tuQ" association="_5vcONgktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vcOOgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczgAktEeqB3a4sRh-tuQ" key="uuid" value="_PJOogHFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczgQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczggktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vczgwktEeqB3a4sRh-tuQ" name="computer Turn" type="_5vcN0wktEeqB3a4sRh-tuQ" association="_5vcONgktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczhAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczhQktEeqB3a4sRh-tuQ" key="uuid" value="_PJYZgHFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczhgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczhwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vcziAktEeqB3a4sRh-tuQ" name="Roll Dice_Next Turn" memberEnd="_5vcziwktEeqB3a4sRh-tuQ _5vczkAktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcziwktEeqB3a4sRh-tuQ _5vczkAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcziQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vczigktEeqB3a4sRh-tuQ" key="uuid" value="_UWq9wXFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vcziwktEeqB3a4sRh-tuQ" name="next Turn" type="_5vcN3wktEeqB3a4sRh-tuQ" association="_5vcziAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczjAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczjQktEeqB3a4sRh-tuQ" key="uuid" value="_UWhz0HFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczjgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczjwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vczkAktEeqB3a4sRh-tuQ" name="roll Dice" type="_5vcN1gktEeqB3a4sRh-tuQ" association="_5vcziAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczkQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczkgktEeqB3a4sRh-tuQ" key="uuid" value="_UWq9wHFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczkwktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczlAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vczlQktEeqB3a4sRh-tuQ" name="Next Turn_Announce Winner" memberEnd="_5vczmAktEeqB3a4sRh-tuQ _5vcznQktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vczmAktEeqB3a4sRh-tuQ _5vcznQktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vczlgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vczlwktEeqB3a4sRh-tuQ" key="uuid" value="_pJfFYnFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vczmAktEeqB3a4sRh-tuQ" name="announce Winner" type="_5vcN4gktEeqB3a4sRh-tuQ" association="_5vczlQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczmQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczmgktEeqB3a4sRh-tuQ" key="uuid" value="_pJfFYHFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczmwktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcznAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcznQktEeqB3a4sRh-tuQ" name="next Turn" type="_5vcN3wktEeqB3a4sRh-tuQ" association="_5vczlQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczngktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcznwktEeqB3a4sRh-tuQ" key="uuid" value="_pJfFYXFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczoAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczoQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vczogktEeqB3a4sRh-tuQ" name="Announce Winner_Play Again" memberEnd="_5vczpQktEeqB3a4sRh-tuQ _5vczqgktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vczpQktEeqB3a4sRh-tuQ _5vczqgktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vczowktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vczpAktEeqB3a4sRh-tuQ" key="uuid" value="_p11OAnFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vczpQktEeqB3a4sRh-tuQ" name="play Again" type="_5vcN5QktEeqB3a4sRh-tuQ" association="_5vczogktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczpgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczpwktEeqB3a4sRh-tuQ" key="uuid" value="_p11OAHFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczqAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczqQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vczqgktEeqB3a4sRh-tuQ" name="announce Winner" type="_5vcN4gktEeqB3a4sRh-tuQ" association="_5vczogktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczqwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczrAktEeqB3a4sRh-tuQ" key="uuid" value="_p11OAXFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczrQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczrgktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vczrwktEeqB3a4sRh-tuQ" name="Roll First_Play Again" memberEnd="_5vczsgktEeqB3a4sRh-tuQ _5vcztwktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vczsgktEeqB3a4sRh-tuQ _5vcztwktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vczsAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vczsQktEeqB3a4sRh-tuQ" key="uuid" value="_qgbqMnFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vczsgktEeqB3a4sRh-tuQ" name="play Again" type="_5vcN5QktEeqB3a4sRh-tuQ" association="_5vczrwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczswktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vcztAktEeqB3a4sRh-tuQ" key="uuid" value="_qgbqMHFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcztQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcztgktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vcztwktEeqB3a4sRh-tuQ" name="roll First" type="_5vcN0AktEeqB3a4sRh-tuQ" association="_5vczrwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vczuAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vczuQktEeqB3a4sRh-tuQ" key="uuid" value="_qgbqMXFsEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczugktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczuwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Actor" xmi:id="_5vczvAktEeqB3a4sRh-tuQ" name="Player">
+    <eAnnotations xmi:id="_5vczvQktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vczvgktEeqB3a4sRh-tuQ" key="uuid" value="_hMnx8HFrEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vczvwktEeqB3a4sRh-tuQ" name="Player_Get Instructions" memberEnd="_5vczwgktEeqB3a4sRh-tuQ _5vczxwktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vczwgktEeqB3a4sRh-tuQ _5vczxwktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vczwAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vczwQktEeqB3a4sRh-tuQ" key="uuid" value="_sBBvsXFrEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vczwgktEeqB3a4sRh-tuQ" name="get Instructions" type="_5vcNygktEeqB3a4sRh-tuQ" association="_5vczvwktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vczwwktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vczxAktEeqB3a4sRh-tuQ" key="uuid" value="_sA4lwHFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczxQktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczxgktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vczxwktEeqB3a4sRh-tuQ" name="player" type="_5vczvAktEeqB3a4sRh-tuQ" association="_5vczvwktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vczyAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vczyQktEeqB3a4sRh-tuQ" key="uuid" value="_sBBvsHFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vczygktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vczywktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vczzAktEeqB3a4sRh-tuQ" name="Player_Get Player Name" memberEnd="_5vczzwktEeqB3a4sRh-tuQ _5vcz1AktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vczzwktEeqB3a4sRh-tuQ _5vcz1AktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vczzQktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vczzgktEeqB3a4sRh-tuQ" key="uuid" value="_tVlH0XFrEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vczzwktEeqB3a4sRh-tuQ" name="get Player Name" type="_5vcNzQktEeqB3a4sRh-tuQ" association="_5vczzAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz0AktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz0QktEeqB3a4sRh-tuQ" key="uuid" value="_tVbW0HFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz0gktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz0wktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vcz1AktEeqB3a4sRh-tuQ" name="player" type="_5vczvAktEeqB3a4sRh-tuQ" association="_5vczzAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz1QktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz1gktEeqB3a4sRh-tuQ" key="uuid" value="_tVlH0HFrEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz1wktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz2AktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vcz2QktEeqB3a4sRh-tuQ" name="Player_Roll First" memberEnd="_5vcz3AktEeqB3a4sRh-tuQ _5vcz4QktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcz3AktEeqB3a4sRh-tuQ _5vcz4QktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vcz2gktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcz2wktEeqB3a4sRh-tuQ" key="uuid" value="_Rz9wcnFsEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vcz3AktEeqB3a4sRh-tuQ" name="roll First" type="_5vcN0AktEeqB3a4sRh-tuQ" association="_5vcz2QktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz3QktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz3gktEeqB3a4sRh-tuQ" key="uuid" value="_Rz9wcHFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz3wktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz4AktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vcz4QktEeqB3a4sRh-tuQ" name="player" type="_5vczvAktEeqB3a4sRh-tuQ" association="_5vcz2QktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz4gktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz4wktEeqB3a4sRh-tuQ" key="uuid" value="_Rz9wcXFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz5AktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz5QktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vcz5gktEeqB3a4sRh-tuQ" name="Player_Game Start" memberEnd="_5vcz6QktEeqB3a4sRh-tuQ _5vcz7gktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcz6QktEeqB3a4sRh-tuQ _5vcz7gktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vcz5wktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcz6AktEeqB3a4sRh-tuQ" key="uuid" value="_SjoS0nFsEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vcz6QktEeqB3a4sRh-tuQ" name="game Start" type="_5vcN2QktEeqB3a4sRh-tuQ" association="_5vcz5gktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz6gktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz6wktEeqB3a4sRh-tuQ" key="uuid" value="_SjoS0HFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz7AktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz7QktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vcz7gktEeqB3a4sRh-tuQ" name="player" type="_5vczvAktEeqB3a4sRh-tuQ" association="_5vcz5gktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz7wktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz8AktEeqB3a4sRh-tuQ" key="uuid" value="_SjoS0XFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz8QktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz8gktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vcz8wktEeqB3a4sRh-tuQ" name="Player_Roll Dice" memberEnd="_5vcz9gktEeqB3a4sRh-tuQ _5vcz-wktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vcz9gktEeqB3a4sRh-tuQ _5vcz-wktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vcz9AktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vcz9QktEeqB3a4sRh-tuQ" key="uuid" value="_27I3YnFsEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vcz9gktEeqB3a4sRh-tuQ" name="roll Dice" type="_5vcN1gktEeqB3a4sRh-tuQ" association="_5vcz8wktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz9wktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz-AktEeqB3a4sRh-tuQ" key="uuid" value="_27I3YHFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz-QktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz-gktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vcz-wktEeqB3a4sRh-tuQ" name="player" type="_5vczvAktEeqB3a4sRh-tuQ" association="_5vcz8wktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vcz_AktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vcz_QktEeqB3a4sRh-tuQ" key="uuid" value="_27I3YXFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vcz_gktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vcz_wktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vc0AAktEeqB3a4sRh-tuQ" name="Player_Play Again" memberEnd="_5vc0AwktEeqB3a4sRh-tuQ _5vc0CAktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vc0AwktEeqB3a4sRh-tuQ _5vc0CAktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vc0AQktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vc0AgktEeqB3a4sRh-tuQ" key="uuid" value="_6X5SInFsEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vc0AwktEeqB3a4sRh-tuQ" name="play Again" type="_5vcN5QktEeqB3a4sRh-tuQ" association="_5vc0AAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc0BAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc0BQktEeqB3a4sRh-tuQ" key="uuid" value="_6X5SIHFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc0BgktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc0BwktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vc0CAktEeqB3a4sRh-tuQ" name="player" type="_5vczvAktEeqB3a4sRh-tuQ" association="_5vc0AAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc0CQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc0CgktEeqB3a4sRh-tuQ" key="uuid" value="_6X5SIXFsEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc0CwktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc0DAktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vc0DQktEeqB3a4sRh-tuQ" name="Player_Score Roll" memberEnd="_5vc0EAktEeqB3a4sRh-tuQ _5vc0FQktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vc0EAktEeqB3a4sRh-tuQ _5vc0FQktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vc0DgktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vc0DwktEeqB3a4sRh-tuQ" key="uuid" value="_JgheIHFtEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vc0EAktEeqB3a4sRh-tuQ" name="score Roll" type="_5vcN3AktEeqB3a4sRh-tuQ" association="_5vc0DQktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc0EQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc0EgktEeqB3a4sRh-tuQ" key="uuid" value="_JgXtIHFtEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc0EwktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc0FAktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vc0FQktEeqB3a4sRh-tuQ" name="player" type="_5vczvAktEeqB3a4sRh-tuQ" association="_5vc0DQktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc0FgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc0FwktEeqB3a4sRh-tuQ" key="uuid" value="_JgXtIXFtEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc0GAktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc0GQktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Package" xmi:id="_5vc0GgktEeqB3a4sRh-tuQ" name="Yahtzee">
+    <eAnnotations xmi:id="_5vc0GwktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vc0HAktEeqB3a4sRh-tuQ" key="uuid" value="_e6WF8HFuEDO0V6CnhIB8QA"/>
+    </eAnnotations>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vc0HQktEeqB3a4sRh-tuQ" name="Display">
+      <eAnnotations xmi:id="_5vc0HgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc0HwktEeqB3a4sRh-tuQ" key="uuid" value="_yhsgAHFuEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_5vc0IAktEeqB3a4sRh-tuQ" name="Player" type="_5vcNLAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0IQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0IgktEeqB3a4sRh-tuQ" key="uuid" value="_GzN4cHFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0IwktEeqB3a4sRh-tuQ" name="Computer" type="_5vcNLAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0JAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0JQktEeqB3a4sRh-tuQ" key="uuid" value="_NZxVsHFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0JgktEeqB3a4sRh-tuQ" name="Jpanel" type="_5vcM8AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0JwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0KAktEeqB3a4sRh-tuQ" key="uuid" value="_uQjlgHFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0KQktEeqB3a4sRh-tuQ" name="JFrame" type="_5vcM8AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0KgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0KwktEeqB3a4sRh-tuQ" key="uuid" value="_wyCDwHFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0LAktEeqB3a4sRh-tuQ" name="Jlabel" type="_5vcM8AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0LQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0LgktEeqB3a4sRh-tuQ" key="uuid" value="_z6QY8HFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0LwktEeqB3a4sRh-tuQ" name="JRadioButton" type="_5vcM8AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0MAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0MQktEeqB3a4sRh-tuQ" key="uuid" value="_1VSMgHFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0MgktEeqB3a4sRh-tuQ" name="JButton" type="_5vcM8AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0MwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0NAktEeqB3a4sRh-tuQ" key="uuid" value="_9ZpEgHFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0NQktEeqB3a4sRh-tuQ" name="JTextField" type="_5vcM8AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0NgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0NwktEeqB3a4sRh-tuQ" key="uuid" value="__DSi4HFvEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0OAktEeqB3a4sRh-tuQ" name="JScrollPanel" type="_5vc0HQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0OQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0OgktEeqB3a4sRh-tuQ" key="uuid" value="_D753oHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0OwktEeqB3a4sRh-tuQ" name="JImageIcon" type="_5vcM8AktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc0PAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0PQktEeqB3a4sRh-tuQ" key="uuid" value="_JbGEMHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0PgktEeqB3a4sRh-tuQ" name="Temp">
+        <eAnnotations xmi:id="_5vc0PwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0QAktEeqB3a4sRh-tuQ" key="uuid" value="_LxJVkHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0QQktEeqB3a4sRh-tuQ" name="Temp">
+        <eAnnotations xmi:id="_5vc0QgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0QwktEeqB3a4sRh-tuQ" key="uuid" value="_NgsAkHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#//Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5vc0RAktEeqB3a4sRh-tuQ" name="initComponents">
+        <eAnnotations xmi:id="_5vc0RQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0RgktEeqB3a4sRh-tuQ" key="uuid" value="_VRUEQHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0RwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0SAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0SQktEeqB3a4sRh-tuQ" key="uuid" value="_VRRA8HFwEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0SgktEeqB3a4sRh-tuQ" name="buttonListener">
+        <eAnnotations xmi:id="_5vc0SwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0TAktEeqB3a4sRh-tuQ" key="uuid" value="_aNBJQHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0TQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0TgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0TwktEeqB3a4sRh-tuQ" key="uuid" value="_aM-tAHFwEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0UAktEeqB3a4sRh-tuQ" name="setPlay">
+        <eAnnotations xmi:id="_5vc0UQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0UgktEeqB3a4sRh-tuQ" key="uuid" value="_vKVQsHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0UwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0VAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0VQktEeqB3a4sRh-tuQ" key="uuid" value="_vKSNYHFwEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0VgktEeqB3a4sRh-tuQ" name="setComp">
+        <eAnnotations xmi:id="_5vc0VwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0WAktEeqB3a4sRh-tuQ" key="uuid" value="_1tajMHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0WQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0WgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0WwktEeqB3a4sRh-tuQ" key="uuid" value="_1tYuAHFwEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0XAktEeqB3a4sRh-tuQ" name="setName">
+        <eAnnotations xmi:id="_5vc0XQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0XgktEeqB3a4sRh-tuQ" key="uuid" value="_AyuDsHFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0XwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0YAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0YQktEeqB3a4sRh-tuQ" key="uuid" value="_AytcoHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0YgktEeqB3a4sRh-tuQ" name="gotName">
+        <eAnnotations xmi:id="_5vc0YwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0ZAktEeqB3a4sRh-tuQ" key="uuid" value="_U583sHFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0ZQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0ZgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0ZwktEeqB3a4sRh-tuQ" key="uuid" value="_U550YHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0aAktEeqB3a4sRh-tuQ" name="getName">
+        <eAnnotations xmi:id="_5vc0aQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0agktEeqB3a4sRh-tuQ" key="uuid" value="_ZZNRQHFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0awktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0bAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0bQktEeqB3a4sRh-tuQ" key="uuid" value="_ZZK1AHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0bgktEeqB3a4sRh-tuQ" name="getName">
+        <eAnnotations xmi:id="_5vc0bwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0cAktEeqB3a4sRh-tuQ" key="uuid" value="_di978HFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0cQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0cgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0cwktEeqB3a4sRh-tuQ" key="uuid" value="_di8GwHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0dAktEeqB3a4sRh-tuQ" name="setScoreG">
+        <eAnnotations xmi:id="_5vc0dQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0dgktEeqB3a4sRh-tuQ" key="uuid" value="_j2vnIHFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0dwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0eAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0eQktEeqB3a4sRh-tuQ" key="uuid" value="_j2tK4HFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0egktEeqB3a4sRh-tuQ" name="getInstructs">
+        <eAnnotations xmi:id="_5vc0ewktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0fAktEeqB3a4sRh-tuQ" key="uuid" value="_ngxo4HFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0fQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0fgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0fwktEeqB3a4sRh-tuQ" key="uuid" value="_ngwawHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0gAktEeqB3a4sRh-tuQ" name="readPlay">
+        <eAnnotations xmi:id="_5vc0gQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0ggktEeqB3a4sRh-tuQ" key="uuid" value="_qIkKgHFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0gwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0hAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0hQktEeqB3a4sRh-tuQ" key="uuid" value="_qIjjcHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0hgktEeqB3a4sRh-tuQ" name="rollFirst">
+        <eAnnotations xmi:id="_5vc0hwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0iAktEeqB3a4sRh-tuQ" key="uuid" value="_ucdooHFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0iQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0igktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0iwktEeqB3a4sRh-tuQ" key="uuid" value="_ucbzcHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0jAktEeqB3a4sRh-tuQ" name="gamePlay">
+        <eAnnotations xmi:id="_5vc0jQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0jgktEeqB3a4sRh-tuQ" key="uuid" value="_ze8rEHFxEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0jwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0kAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0kQktEeqB3a4sRh-tuQ" key="uuid" value="_ze8EAHFxEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0kgktEeqB3a4sRh-tuQ" name="announceWinner">
+        <eAnnotations xmi:id="_5vc0kwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0lAktEeqB3a4sRh-tuQ" key="uuid" value="_WTuRkHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0lQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0lgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0lwktEeqB3a4sRh-tuQ" key="uuid" value="_WTr1UHFyEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vc0mAktEeqB3a4sRh-tuQ" name="Turn">
+      <eAnnotations xmi:id="_5vc0mQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc0mgktEeqB3a4sRh-tuQ" key="uuid" value="_ZEhlQHFyEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_5vc0mwktEeqB3a4sRh-tuQ" name="Dice">
+        <eAnnotations xmi:id="_5vc0nAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0nQktEeqB3a4sRh-tuQ" key="uuid" value="_bSDMwHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//ByteArray"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5vc0ngktEeqB3a4sRh-tuQ" name="rollDice">
+        <eAnnotations xmi:id="_5vc0nwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0oAktEeqB3a4sRh-tuQ" key="uuid" value="_dV7wEHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0oQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0ogktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0owktEeqB3a4sRh-tuQ" key="uuid" value="_dV6h8HFyEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0pAktEeqB3a4sRh-tuQ" name="playerTurn">
+        <eAnnotations xmi:id="_5vc0pQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0pgktEeqB3a4sRh-tuQ" key="uuid" value="_gfMAAHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0pwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0qAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0qQktEeqB3a4sRh-tuQ" key="uuid" value="_gfKx4HFyEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0qgktEeqB3a4sRh-tuQ" name="computerTurn">
+        <eAnnotations xmi:id="_5vc0qwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0rAktEeqB3a4sRh-tuQ" key="uuid" value="_hr0LMHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0rQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0rgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0rwktEeqB3a4sRh-tuQ" key="uuid" value="_hrzkIHFyEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0sAktEeqB3a4sRh-tuQ" name="initPlayerTurn">
+        <eAnnotations xmi:id="_5vc0sQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0sgktEeqB3a4sRh-tuQ" key="uuid" value="_B_ZioXUpEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0swktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0tAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0tQktEeqB3a4sRh-tuQ" key="uuid" value="_B_ZioHUpEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0tgktEeqB3a4sRh-tuQ" name="initCompTurn">
+        <eAnnotations xmi:id="_5vc0twktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0uAktEeqB3a4sRh-tuQ" key="uuid" value="_Hu4N8HUpEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0uQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0ugktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0uwktEeqB3a4sRh-tuQ" key="uuid" value="_Hu3m4HUpEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0vAktEeqB3a4sRh-tuQ" name="gradeDice">
+        <eAnnotations xmi:id="_5vc0vQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0vgktEeqB3a4sRh-tuQ" key="uuid" value="_RPj6AXUpEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0vwktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0wAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0wQktEeqB3a4sRh-tuQ" key="uuid" value="_RPj6AHUpEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0wgktEeqB3a4sRh-tuQ" name="bestScore">
+        <eAnnotations xmi:id="_5vc0wwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0xAktEeqB3a4sRh-tuQ" key="uuid" value="_VcTnQXUpEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0xQktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0xgktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0xwktEeqB3a4sRh-tuQ" key="uuid" value="_VcTnQHUpEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0yAktEeqB3a4sRh-tuQ" name="determineRoll">
+        <eAnnotations xmi:id="_5vc0yQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0ygktEeqB3a4sRh-tuQ" key="uuid" value="_Z0jZ4XUpEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0ywktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0zAktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc0zQktEeqB3a4sRh-tuQ" key="uuid" value="_Z0jZ4HUpEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc0zgktEeqB3a4sRh-tuQ" name="click">
+        <eAnnotations xmi:id="_5vc0zwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc00AktEeqB3a4sRh-tuQ" key="uuid" value="_ddPX0HUpEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc00QktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc00gktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc00wktEeqB3a4sRh-tuQ" key="uuid" value="_ddOwwHUpEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vc01AktEeqB3a4sRh-tuQ" name="Scoring">
+      <eAnnotations xmi:id="_5vc01QktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc01gktEeqB3a4sRh-tuQ" key="uuid" value="_jjCLgHFyEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_5vc01wktEeqB3a4sRh-tuQ" name="Temp">
+        <eAnnotations xmi:id="_5vc02AktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc02QktEeqB3a4sRh-tuQ" key="uuid" value="_lxqmQHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//ByteArray"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5vc02gktEeqB3a4sRh-tuQ" name="playerScore">
+        <eAnnotations xmi:id="_5vc02wktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc03AktEeqB3a4sRh-tuQ" key="uuid" value="_yXFOoHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc03QktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc03gktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc03wktEeqB3a4sRh-tuQ" key="uuid" value="_yXEAgHFyEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc04AktEeqB3a4sRh-tuQ" name="getPlayScore">
+        <eAnnotations xmi:id="_5vc04QktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc04gktEeqB3a4sRh-tuQ" key="uuid" value="_-F_XsHFwEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc04wktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc05AktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc05QktEeqB3a4sRh-tuQ" key="uuid" value="_-F87cHFwEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc05gktEeqB3a4sRh-tuQ" name="bListener">
+        <eAnnotations xmi:id="_5vc05wktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc06AktEeqB3a4sRh-tuQ" key="uuid" value="_4O9jUHUoEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc06QktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc06gktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc06wktEeqB3a4sRh-tuQ" key="uuid" value="_4O8VMHUoEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc07AktEeqB3a4sRh-tuQ" name="butListener">
+        <eAnnotations xmi:id="_5vc07QktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc07gktEeqB3a4sRh-tuQ" key="uuid" value="_6LZa0XUoEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc07wktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc08AktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc08QktEeqB3a4sRh-tuQ" key="uuid" value="_6LZa0HUoEDOtPvjdD_-PWA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Class" xmi:id="_5vc08gktEeqB3a4sRh-tuQ" name="Players">
+      <eAnnotations xmi:id="_5vc08wktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc09AktEeqB3a4sRh-tuQ" key="uuid" value="_-d4oYHFyEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_5vc09QktEeqB3a4sRh-tuQ" name="compScore">
+        <eAnnotations xmi:id="_5vc09gktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc09wktEeqB3a4sRh-tuQ" key="uuid" value="__44mwHFyEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//ByteArray"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_5vc0-AktEeqB3a4sRh-tuQ" name="playerScore">
+        <eAnnotations xmi:id="_5vc0-QktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0-gktEeqB3a4sRh-tuQ" key="uuid" value="_B8CKQHFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <type xsi:type="uml:PrimitiveType" href="pathmap://GENMYMODEL_LIBRARIES/GenMyModelPrimitiveTypes.library.uml#//ByteArray"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_5vc0-wktEeqB3a4sRh-tuQ" name="setScore">
+        <eAnnotations xmi:id="_5vc0_AktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc0_QktEeqB3a4sRh-tuQ" key="uuid" value="_R7ScQHFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc0_gktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc0_wktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc1AAktEeqB3a4sRh-tuQ" key="uuid" value="_R7ROIHFzEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5vc1AQktEeqB3a4sRh-tuQ" name="getScore()">
+        <eAnnotations xmi:id="_5vc1AgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1AwktEeqB3a4sRh-tuQ" key="uuid" value="_UDuIYHFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_5vc1BAktEeqB3a4sRh-tuQ" name="returnParameter" isUnique="false" direction="return">
+          <eAnnotations xmi:id="_5vc1BQktEeqB3a4sRh-tuQ" source="genmymodel">
+            <details xmi:id="_5vc1BgktEeqB3a4sRh-tuQ" key="uuid" value="_UDthUHFzEDO0V6CnhIB8QA"/>
+          </eAnnotations>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vc1BwktEeqB3a4sRh-tuQ" name="Display_Players" memberEnd="_5vc1CgktEeqB3a4sRh-tuQ _5vc1DwktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vc1CgktEeqB3a4sRh-tuQ _5vc1DwktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc1CAktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc1CQktEeqB3a4sRh-tuQ" key="uuid" value="_yhEboHFzEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vc1CgktEeqB3a4sRh-tuQ" name="players" type="_5vc08gktEeqB3a4sRh-tuQ" association="_5vc1BwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1CwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1DAktEeqB3a4sRh-tuQ" key="uuid" value="_yg8f0HFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1DQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1DgktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vc1DwktEeqB3a4sRh-tuQ" name="display" type="_5vc0HQktEeqB3a4sRh-tuQ" association="_5vc1BwktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1EAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1EQktEeqB3a4sRh-tuQ" key="uuid" value="_yhDNgHFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1EgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1EwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vc1FAktEeqB3a4sRh-tuQ" name="Display_Turn" memberEnd="_5vc1FwktEeqB3a4sRh-tuQ _5vc1HAktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vc1FwktEeqB3a4sRh-tuQ _5vc1HAktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc1FQktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc1FgktEeqB3a4sRh-tuQ" key="uuid" value="_zgTEAHFzEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vc1FwktEeqB3a4sRh-tuQ" name="turn" type="_5vc0mAktEeqB3a4sRh-tuQ" association="_5vc1FAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1GAktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1GQktEeqB3a4sRh-tuQ" key="uuid" value="_zgOLgHFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1GgktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1GwktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vc1HAktEeqB3a4sRh-tuQ" name="display" type="_5vc0HQktEeqB3a4sRh-tuQ" association="_5vc1FAktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1HQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1HgktEeqB3a4sRh-tuQ" key="uuid" value="_zgSc8HFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1HwktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1IAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vc1IQktEeqB3a4sRh-tuQ" name="Display_Scoring" memberEnd="_5vc1JAktEeqB3a4sRh-tuQ _5vc1KQktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vc1JAktEeqB3a4sRh-tuQ _5vc1KQktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc1IgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc1IwktEeqB3a4sRh-tuQ" key="uuid" value="_0w_P0HFzEDO0V6CnhIB8QA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vc1JAktEeqB3a4sRh-tuQ" name="scoring" type="_5vc01AktEeqB3a4sRh-tuQ" association="_5vc1IQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1JQktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1JgktEeqB3a4sRh-tuQ" key="uuid" value="_0w8zkHFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1JwktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1KAktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vc1KQktEeqB3a4sRh-tuQ" name="display" type="_5vc0HQktEeqB3a4sRh-tuQ" association="_5vc1IQktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1KgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1KwktEeqB3a4sRh-tuQ" key="uuid" value="_0w-owHFzEDO0V6CnhIB8QA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1LAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1LQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xsi:type="uml:Association" xmi:id="_5vc1LgktEeqB3a4sRh-tuQ" name="Scoring_Turn" memberEnd="_5vc1NgktEeqB3a4sRh-tuQ _5vc1MQktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vc1MQktEeqB3a4sRh-tuQ _5vc1NgktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc1LwktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc1MAktEeqB3a4sRh-tuQ" key="uuid" value="_8pvskXUoEDOtPvjdD_-PWA"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_5vc1MQktEeqB3a4sRh-tuQ" name="turn" type="_5vc0mAktEeqB3a4sRh-tuQ" association="_5vc1LgktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1MgktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1MwktEeqB3a4sRh-tuQ" key="uuid" value="_8pt3YHUoEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1NAktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1NQktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5vc1NgktEeqB3a4sRh-tuQ" name="scoring" type="_5vc01AktEeqB3a4sRh-tuQ" association="_5vc1LgktEeqB3a4sRh-tuQ">
+        <eAnnotations xmi:id="_5vc1NwktEeqB3a4sRh-tuQ" source="genmymodel">
+          <details xmi:id="_5vc1OAktEeqB3a4sRh-tuQ" key="uuid" value="_8pvskHUoEDOtPvjdD_-PWA"/>
+        </eAnnotations>
+        <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1OQktEeqB3a4sRh-tuQ"/>
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1OgktEeqB3a4sRh-tuQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Class" xmi:id="_5vc1OwktEeqB3a4sRh-tuQ" name="Display">
+    <eAnnotations xmi:id="_5vc1PAktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vc1PQktEeqB3a4sRh-tuQ" key="uuid" value="_g_XlMHkjEDO_QP-7nl11vw"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" xmi:id="_5vc1PgktEeqB3a4sRh-tuQ" name="Scoring_Display" memberEnd="_5vc1QQktEeqB3a4sRh-tuQ _5vc1RgktEeqB3a4sRh-tuQ" navigableOwnedEnd="_5vc1QQktEeqB3a4sRh-tuQ _5vc1RgktEeqB3a4sRh-tuQ">
+    <eAnnotations xmi:id="_5vc1PwktEeqB3a4sRh-tuQ" source="genmymodel">
+      <details xmi:id="_5vc1QAktEeqB3a4sRh-tuQ" key="uuid" value="_iVWgsHkjEDO_QP-7nl11vw"/>
+    </eAnnotations>
+    <ownedEnd xmi:id="_5vc1QQktEeqB3a4sRh-tuQ" name="display" type="_5vc1OwktEeqB3a4sRh-tuQ" association="_5vc1PgktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc1QgktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc1QwktEeqB3a4sRh-tuQ" key="uuid" value="_iVUEcHkjEDO_QP-7nl11vw"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1RAktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1RQktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_5vc1RgktEeqB3a4sRh-tuQ" name="scoring" type="_5vcNhgktEeqB3a4sRh-tuQ" association="_5vc1PgktEeqB3a4sRh-tuQ">
+      <eAnnotations xmi:id="_5vc1RwktEeqB3a4sRh-tuQ" source="genmymodel">
+        <details xmi:id="_5vc1SAktEeqB3a4sRh-tuQ" key="uuid" value="_iVV5oHkjEDO_QP-7nl11vw"/>
+      </eAnnotations>
+      <lowerValue xsi:type="uml:LiteralInteger" xmi:id="_5vc1SQktEeqB3a4sRh-tuQ"/>
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1SgktEeqB3a4sRh-tuQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

@@ -1,19 +1,24 @@
 package gui;
 
+import game.Dice;
 import javafx.application.Application;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-// wir implementieren den Eventhandler
+// Eventhandler implementieren
 public class MainWindowTest extends Application implements EventHandler {
 
-    // Hier legen wir einen Button an
+    // Button Referenz
     Button button;
+    String sceneResult;
     int i = 0;
+    String diceResult;
 
     public static void main() {
         launch();
@@ -23,25 +28,25 @@ public class MainWindowTest extends Application implements EventHandler {
     public void start(Stage primaryStage) {
         try {
 
-            primaryStage.setTitle("Unser erstes Fenster");
+            primaryStage.setTitle("YATZY");
             StackPane root = new StackPane();
-            Scene scene = new Scene(root, 400, 400);
-
+            Scene scene = new Scene(root, 640, 480);
             // hier legen wir den Button an und setzten seinen Text
             button = new Button();
-            button.setText("Klick mich");
+            button.setText("Würfeln");
             // #1 Button
             button.setOnAction(this);
 
             root.getChildren().add(button);
 
             //Next Step: Den Button im Fenster anstelle der Konsole ausgeben...
-            //Text text = new Text(20, 40, "Hallo Welt!");
+            //diceResult = dice1.printOut();
+            Text text = new Text(20, 40, sceneResult);
             // Wir setzen die Textgröße
-            //text.setFont(new Font(40));
+            text.setFont(new Font(40));
             // Wir weisen unseren Text einer Gruppe hinzu die wir
             // wiederrum einer Scene zuweisen
-            //Scene scene = new Scene(new Group(text));
+            //Scene scene2 = new Scene(new Group(text));
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception e) {
@@ -52,8 +57,10 @@ public class MainWindowTest extends Application implements EventHandler {
     @Override
     public void handle(Event event) {
         if (event.getSource() == button) {
-            i++;
-            System.out.println(i + " mal geklickt");
+            Dice dice2 = new Dice(5); //Aufruf der übergebenen Würfe
+            sceneResult = dice2.getResult();
+            dice2.printOut();
+            ;
         }
     }
 }

@@ -1,11 +1,9 @@
 package gui;
 
-import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -15,7 +13,7 @@ public class Presenter implements Initializable {
     private final Model model;
 
     @FXML private Text destination;
-    @FXML private ComboBox<String> destinations;
+    //@FXML private ComboBox<String> destinations;
     @FXML private Button submit;
 
     public Presenter(Model model) {
@@ -24,22 +22,23 @@ public class Presenter implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // add destinations to dropdown list
-        destinations.getItems().addAll(model.getDestinations());
+        //add destinations to dropdown list
+        //destinations.getItems().addAll(model.getDestinations());
 
         // set submit button action handler
         submit.setOnAction(this::submitButtonHandler);
 
         // add change listener
-        model.destinationProperty().addListener(this::selectedNodeHandler);
+        //model.destinationProperty().addListener(this::selectedNodeHandler);
     }
 
-    private void selectedNodeHandler(Observable observable) {
+    /*private void selectedNodeHandler(Observable observable) {
         destination.setText(model.getDestination());
-    }
+    }*/
 
     public void submitButtonHandler(ActionEvent actionEvent) {
-        model.setDestination(destinations.getValue());
+        model.setDestination();
+        destination.setText(model.getDestination());
     }
 
 

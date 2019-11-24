@@ -24,13 +24,13 @@ public class Main extends Application {
 
         initScene(primaryStage, root);
 
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("YATZY");
         primaryStage.show();
     }
 
     private void initScene(Stage primaryStage, GridPane root) {
-        final int width = 300;
-        final int height = 275;
+        final int width = 640;
+        final int height = 480;
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add("style.css");
         primaryStage.setScene(scene);

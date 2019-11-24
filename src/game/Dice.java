@@ -1,12 +1,12 @@
 package game;
 
 public class Dice {
+    int[] rollDice;
+    String result = "";
 
-    static void throwDice(int numberOfThrows) {
+    public Dice(int numberOfThrows) {
         int[] rollDice = new int[numberOfThrows]; // Die grösse des Arrays wird mit dem Übergabewert anzahlWuerfe bestimmt.
-
-//Schleife zum Füllen des Arrays
-        for (int i = 0; i < rollDice.length; i++) {
+        for (int i = 0; i < rollDice.length; i++) { //Schleife zum Füllen des Arrays
             rollDice[i] = (int) (Math.random() * 6) + 1;
             /* Zufallszahlen werden an der Stelle i gespeichert.
              * Diese Zufallszahlen sind dann allerdings Kommazahlen zwischen 0 und 1. Da du Zufallszahlen eines Würfels simulieren möchtest, müssen diese aber zwischen 1 und 6 sein.
@@ -16,15 +16,25 @@ public class Dice {
              * Und diese Rückgabe speicherst du dann in dem Array „wuerfe“ unter dem entsprechenden Index ab  => "wuerfe[i]=(int)(Math.random()*6)+1;".
              */
         }
+        this.rollDice = rollDice;
 
-//Schleife zum Lesen des Arrays
+        //Schleife zum Lesen des Arrays und in einen String schreiben.
         for (int i = 0; i < rollDice.length; i++) {
-            System.out.println(rollDice[i]); //Ausgabe des Wertes im Fach i
+            if (i + 1 < rollDice.length) {
+                result += rollDice[i] + ", "; //Ausgabe des Wertes im Fach i
+            } else {
+                result += rollDice[i] + "";
+            }
         }
+
     }
 
-    public static void main(int numberOfThrows) {
-        throwDice(numberOfThrows); //Aufruf der übergebenen Würfe
+    public String getResult() {
+        return result;
+    }
+
+    public void printOut() {
+        System.out.println(result);
     }
 }
 

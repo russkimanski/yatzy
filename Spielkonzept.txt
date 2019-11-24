@@ -1,0 +1,7 @@
+Gewinner ist, wer am Ende die höchste Gesamtsumme auf seinem Zettel erzielen kann.
+Gespielt wird mit fünf Augenwürfeln und einem Würfelbecher und es wird reihum gewürfelt.
+In jeder Runde darf jeder Spieler bis zu drei Mal hintereinander würfeln.
+Dabei darf man „passende“ Würfel zur Seite legen und mit den verbleibenden weiter würfeln.
+Nach dem zweiten Wurf dürfen Würfel, die beim ersten Wurf behalten wurden, wieder aufgenommen werden.
+Spätestens nach dem dritten Wurf muss man sich für ein freies Feld auf dem Spielzettel entscheiden,
+welches nun mit dem Ergebnis dieses Wurfes bewertet wird – oder ein Feld streichen.

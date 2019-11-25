@@ -1,8 +1,7 @@
 package game;
 
 public class Dice {
-    int[] rollDice;
-    String result = "";
+    private String result = "";
 
     public Dice(int numberOfThrows) {
         int[] rollDice = new int[numberOfThrows]; // Die grösse des Arrays wird mit dem Übergabewert anzahlWuerfe bestimmt.
@@ -16,7 +15,6 @@ public class Dice {
              * Und diese Rückgabe speicherst du dann in dem Array „wuerfe“ unter dem entsprechenden Index ab  => "wuerfe[i]=(int)(Math.random()*6)+1;".
              */
         }
-        this.rollDice = rollDice;
 
         //Schleife zum Lesen des Arrays und in einen String schreiben.
         for (int i = 0; i < rollDice.length; i++) {

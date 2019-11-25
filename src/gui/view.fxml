@@ -13,8 +13,8 @@
 
     <children>
         <!-- <ComboBox fx:id="destinations" prefWidth="150.0" GridPane.rowIndex="1" /> -->
-        <Button fx:id="submit" text="Submit" GridPane.rowIndex="3"/>
-        <Text fx:id="destination" GridPane.rowIndex="4"/>
+        <Button fx:id="submit" text="Würfeln" GridPane.rowIndex="3"/>
+        <Text fx:id="diced" GridPane.rowIndex="4"/>
     </children>
     <columnConstraints>
         <ColumnConstraints/>

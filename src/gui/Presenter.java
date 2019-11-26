@@ -26,8 +26,8 @@ public class Presenter implements Initializable {
     }
 
     private void submitButtonHandler(ActionEvent actionEvent) {
-        model.setDestination();
-        diced.setText(model.getDestination());
+        model.rollDice();
+        diced.setText(model.getDiced());
     }
 
 }

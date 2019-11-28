@@ -29,8 +29,8 @@ public class Main extends Application {
     }
 
     private void initScene(Stage primaryStage, GridPane root) {
-        final int width = 320;
-        final int height = 240;
+        final int width = 800;
+        final int height = 600;
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add("style.css");
         primaryStage.setScene(scene);

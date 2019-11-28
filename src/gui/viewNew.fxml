@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
           minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171">
@@ -32,22 +33,26 @@
                         vgrow="SOMETIMES"/>
     </rowConstraints>
     <children>
-        <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
-        <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="5" GridPane.rowIndex="2"/>
-        <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="6" GridPane.rowIndex="2"/>
-        <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="7" GridPane.rowIndex="2"/>
-        <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="8" GridPane.rowIndex="2"/>
+        <ToggleButton mnemonicParsing="false" text="hold dice 1" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+        <ToggleButton mnemonicParsing="false" text="hold dice 2" GridPane.columnIndex="5" GridPane.rowIndex="2"/>
+        <ToggleButton mnemonicParsing="false" text="hold dice 3" GridPane.columnIndex="6" GridPane.rowIndex="2"/>
+        <ToggleButton mnemonicParsing="false" text="hold dice 4" GridPane.columnIndex="7" GridPane.rowIndex="2"/>
+        <ToggleButton mnemonicParsing="false" text="hold dice 5" GridPane.columnIndex="8" GridPane.rowIndex="2"/>
         <TextField prefHeight="130.0" prefWidth="60.0" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
         <TextField prefHeight="105.0" prefWidth="60.0" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
         <TextField prefHeight="165.0" prefWidth="60.0" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
         <TextField prefHeight="117.0" prefWidth="60.0" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
         <TextField prefHeight="101.0" prefWidth="60.0" GridPane.columnIndex="8" GridPane.rowIndex="1"/>
         <Text fx:id="diced" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3"/>
-        <Button fx:id="submit" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" GridPane.columnIndex="4"
-                GridPane.rowIndex="3" text="Würfeln">
+        <Button fx:id="submit" mnemonicParsing="false" prefHeight="62.0" prefWidth="58.0" text="Würfeln"
+                GridPane.columnIndex="4" GridPane.rowIndex="3">
             <cursor>
                 <Cursor fx:constant="HAND"/>
             </cursor>
         </Button>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="282.0" stroke="BLACK" strokeType="INSIDE" width="125.0"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="281.0" stroke="BLACK" strokeType="INSIDE" width="125.0"
+                   GridPane.columnIndex="2" GridPane.rowIndex="3"/>
     </children>
 </GridPane>

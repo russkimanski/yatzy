@@ -37,13 +37,13 @@
         <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="6" GridPane.rowIndex="2"/>
         <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="7" GridPane.rowIndex="2"/>
         <ToggleButton mnemonicParsing="false" text="Behalten" GridPane.columnIndex="8" GridPane.rowIndex="2"/>
-        <TextField prefHeight="130.0" prefWidth="60.0" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
-        <TextField prefHeight="105.0" prefWidth="60.0" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
-        <TextField prefHeight="165.0" prefWidth="60.0" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
-        <TextField prefHeight="117.0" prefWidth="60.0" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
-        <TextField prefHeight="101.0" prefWidth="60.0" GridPane.columnIndex="8" GridPane.rowIndex="1"/>
+        <TextField prefHeight="110.0" prefWidth="60.0" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+        <TextField prefHeight="110.0" prefWidth="60.0" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+        <TextField prefHeight="110.0" prefWidth="60.0" GridPane.columnIndex="6" GridPane.rowIndex="1"/>
+        <TextField prefHeight="110.0" prefWidth="60.0" GridPane.columnIndex="7" GridPane.rowIndex="1"/>
+        <TextField prefHeight="110.0" prefWidth="60.0" GridPane.columnIndex="8" GridPane.rowIndex="1"/>
         <Text fx:id="diced" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3"/>
-        <Button fx:id="submit" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" GridPane.columnIndex="4"
+        <Button fx:id="submit" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" GridPane.columnIndex="4"
                 GridPane.rowIndex="3" text="Würfeln">
             <cursor>
                 <Cursor fx:constant="HAND"/>

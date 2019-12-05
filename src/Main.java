@@ -11,8 +11,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Model model = new Model();
-        Presenter presenter = new Presenter(model);
+        Yatzy yatzy = new Yatzy();
+        Presenter presenter = new Presenter(yatzy);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("view.fxml"));
         loader.setController(presenter);

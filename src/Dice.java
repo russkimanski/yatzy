@@ -11,35 +11,22 @@
 import java.util.Arrays;
 
 public class Dice {
-    private String result = "";
-    private final int[] rollDice;
+    private int result;
 
-    public Dice(int numberOfThrows) {
-        rollDice = new int[numberOfThrows];
-        setRollDice();
+    public Dice() {
     }
 
-    private void setResult() {
-        for (int i = 0; i < rollDice.length; i++) {
-            if (i + 1 < rollDice.length) {
-                result += rollDice[i] + ", ";
-            } else {
-                result += rollDice[i] + "";
-            }
-        }
-    }
-
-    private void setRollDice() {
-        Arrays.setAll(rollDice, i -> (int) (Math.random() * 6) + 1);
-        setResult();
-    }
-
-    public String getResult() {
+    public int getResult() {
         return result;
     }
 
     public void printOut() {
         System.out.println(result);
     }
+
+    public void roll() {
+      result  = (int) (Math.random() * 6) + 1;
+    }
+
 }
 

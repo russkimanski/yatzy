@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_5vcMcAktEeqB3a4sRh-tuQ" name="Yahtzee Use-Case">
+<uml:Yatzy xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_5vcMcAktEeqB3a4sRh-tuQ" name="Yahtzee Use-Case">
   <eAnnotations xmi:id="_5vcMcQktEeqB3a4sRh-tuQ" source="genmymodel">
     <details xmi:id="_5vcMcgktEeqB3a4sRh-tuQ" key="uuid" value="_z1FjUAksEeqB3a4sRh-tuQ"/>
   </eAnnotations>
@@ -34,7 +34,7 @@
     <eAnnotations xmi:id="_5vcMgwktEeqB3a4sRh-tuQ" source="genmymodel">
       <details xmi:id="_5vcMhAktEeqB3a4sRh-tuQ" key="uuid" value="_U2lHgGoGEDOqO97N0k2noQ"/>
     </eAnnotations>
-    <ownedComment xmi:id="_5vcMhQktEeqB3a4sRh-tuQ" annotatedElement="_5vcM8AktEeqB3a4sRh-tuQ" body="Optional For Gui. After working model through txt.">
+    <ownedComment xmi:id="_5vcMhQktEeqB3a4sRh-tuQ" annotatedElement="_5vcM8AktEeqB3a4sRh-tuQ" body="Optional For Gui. After working yatzy through txt.">
       <eAnnotations xmi:id="_5vcMhgktEeqB3a4sRh-tuQ" source="genmymodel">
         <details xmi:id="_5vcMhwktEeqB3a4sRh-tuQ" key="uuid" value="_67PqEGoJEDOqO97N0k2noQ"/>
       </eAnnotations>
@@ -1462,4 +1462,4 @@
       <upperValue xsi:type="uml:LiteralUnlimitedNatural" xmi:id="_5vc1SgktEeqB3a4sRh-tuQ" value="1"/>
     </ownedEnd>
   </packagedElement>
-</uml:Model>
+</uml:Yatzy>

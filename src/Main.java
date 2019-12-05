@@ -1,5 +1,3 @@
-package gui;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -29,8 +27,8 @@ public class Main extends Application {
     }
 
     private void initScene(Stage primaryStage, GridPane root) {
-        final int width = 800;
-        final int height = 600;
+        final int width = 1024;
+        final int height = 768;
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add("style.css");
         primaryStage.setScene(scene);

@@ -1,6 +1,3 @@
-package gui;
-
-import game.Dice;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 

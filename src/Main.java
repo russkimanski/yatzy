@@ -1,7 +1,7 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -17,7 +17,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("view.fxml"));
         loader.setController(presenter);
 
-        GridPane root = loader.load();
+        Pane root = loader.load();
 
 
         initScene(primaryStage, root);
@@ -26,7 +26,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    private void initScene(Stage primaryStage, GridPane root) {
+    private void initScene(Stage primaryStage, Pane root) {
         final int width = 1024;
         final int height = 768;
         Scene scene = new Scene(root, width, height);

@@ -10,8 +10,3 @@ Label {
     -fx-font-size: 28pt;
     -fx-font-family: "Arial";
 }
-
-/*Main window*/
-.root {
-    -fx-font-size: 16pt;
-}

@@ -3,35 +3,49 @@ import javafx.beans.property.StringProperty;
 
 class Yatzy {
     private StringProperty throwString = new SimpleStringProperty();
+    private StringProperty throwString2 = new SimpleStringProperty();
+    private StringProperty throwString3 = new SimpleStringProperty();
+    private StringProperty throwString4 = new SimpleStringProperty();
+    private StringProperty throwString5 = new SimpleStringProperty();
     private final int[] rollDice = new int[5];
 
     public final void rollDices() {
         Dice dice = new Dice();
+        Dice dice2 = new Dice();
+        Dice dice3 = new Dice();
+        Dice dice4 = new Dice();
+        Dice dice5 = new Dice();
         dice.roll();
+        dice2.roll();
+        dice3.roll();
+        dice4.roll();
+        dice5.roll();
         throwString.setValue(String.valueOf(dice.getResult()));
+        throwString2.setValue(String.valueOf(dice2.getResult()));
+        throwString3.setValue(String.valueOf(dice3.getResult()));
+        throwString4.setValue(String.valueOf(dice4.getResult()));
+        throwString5.setValue(String.valueOf(dice5.getResult()));
 
     }
 
     public StringProperty getThrowString() {
         return throwString;
-
-       /* String result = "";
-        for (int i = 0; i < rollDice.length; i++) {
-            if (i + 1 < rollDice.length) {
-                result += rollDice[i] + ", ";
-            } else {
-                result += rollDice[i] + "";
-            }
-
-        }
-        throwString = new SimpleStringProperty(result);
-        return throwString;*/
     }
 
-    private void setRollDice() {
-        getThrowString();
-
+    public StringProperty getThrowString2() {
+        return throwString2;
     }
 
+    public StringProperty getThrowString3() {
+        return throwString3;
+    }
+
+    public StringProperty getThrowString4() {
+        return throwString4;
+    }
+
+    public StringProperty getThrowString5() {
+        return throwString5;
+    }
 
 }

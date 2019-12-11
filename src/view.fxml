@@ -20,31 +20,36 @@
             <Font name="System Bold" size="15.0"/>
          </font>
       </Button>
-      <ToggleButton layoutX="450.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+      <ToggleButton fx:id="t1" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                    prefWidth="90.0"
                     text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
       </ToggleButton>
-      <ToggleButton layoutX="560.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+      <ToggleButton fx:id="t2" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                    prefWidth="90.0"
                     text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
       </ToggleButton>
-      <ToggleButton layoutX="670.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+      <ToggleButton fx:id="t3" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                    prefWidth="90.0"
                     text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
       </ToggleButton>
-      <ToggleButton layoutX="780.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+      <ToggleButton fx:id="t4" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                    prefWidth="90.0"
                     text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
       </ToggleButton>
-      <ToggleButton layoutX="890.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+      <ToggleButton fx:id="t5" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                    prefWidth="90.0"
                     text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>

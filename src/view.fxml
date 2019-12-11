@@ -20,31 +20,36 @@
             <Font name="System Bold" size="15.0"/>
          </font>
       </Button>
-      <Button layoutX="450.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Halten">
+      <ToggleButton layoutX="450.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+                    text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
-      </Button>
-      <Button layoutX="560.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Halten">
+      </ToggleButton>
+      <ToggleButton layoutX="560.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+                    text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
-      </Button>
-      <Button layoutX="670.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Halten">
+      </ToggleButton>
+      <ToggleButton layoutX="670.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+                    text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
-      </Button>
-      <Button layoutX="780.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Halten">
+      </ToggleButton>
+      <ToggleButton layoutX="780.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+                    text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
-      </Button>
-      <Button layoutX="890.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Halten">
+      </ToggleButton>
+      <ToggleButton layoutX="890.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0"
+                    text="Halten">
          <font>
             <Font name="System Bold" size="15.0"/>
          </font>
-      </Button>
+      </ToggleButton>
       <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzahl Spieler">
          <font>
             <Font name="System Bold" size="15.0"/>

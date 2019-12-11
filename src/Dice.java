@@ -11,6 +11,7 @@ public class Dice {
     private int result;
 
     public Dice() {
+        roll();
     }
 
     public int getResult() {

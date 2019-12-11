@@ -15,11 +15,6 @@ class Yatzy {
         Dice dice3 = new Dice();
         Dice dice4 = new Dice();
         Dice dice5 = new Dice();
-        dice.roll();
-        dice2.roll();
-        dice3.roll();
-        dice4.roll();
-        dice5.roll();
         throwString.setValue(String.valueOf(dice.getResult()));
         throwString2.setValue(String.valueOf(dice2.getResult()));
         throwString3.setValue(String.valueOf(dice3.getResult()));

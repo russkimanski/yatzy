@@ -13,37 +13,37 @@ public class Presenter implements Initializable {
     private final Yatzy yatzy;
 
     @FXML
-    private Label dice1;
+    private Label dice1 = new Label();
 
     @FXML
-    private Label dice2;
+    private Label dice2 = new Label();
 
     @FXML
-    private Label dice3;
+    private Label dice3 = new Label();
 
     @FXML
-    private Label dice4;
+    private Label dice4 = new Label();
 
     @FXML
-    private Label dice5;
+    private Label dice5 = new Label();
 
     @FXML
-    private ToggleButton t1;
+    private ToggleButton t1 = new ToggleButton();
 
     @FXML
-    private ToggleButton t2;
+    private ToggleButton t2 = new ToggleButton();
 
     @FXML
-    private ToggleButton t3;
+    private ToggleButton t3 = new ToggleButton();
 
     @FXML
-    private ToggleButton t4;
+    private ToggleButton t4 = new ToggleButton();
 
     @FXML
-    private ToggleButton t5;
+    private ToggleButton t5 = new ToggleButton();
 
     @FXML
-    private Button submit;
+    private Button submit = new Button();
 
     Presenter(Yatzy yatzy) {
         this.yatzy = yatzy;
@@ -107,7 +107,5 @@ public class Presenter implements Initializable {
 
     private void submitButtonHandler(ActionEvent actionEvent) {
         yatzy.rollDices();
-
     }
-
 }

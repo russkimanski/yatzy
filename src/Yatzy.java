@@ -7,7 +7,6 @@ class Yatzy {
     private StringProperty throwString3 = new SimpleStringProperty();
     private StringProperty throwString4 = new SimpleStringProperty();
     private StringProperty throwString5 = new SimpleStringProperty();
-    private final int[] rollDice = new int[5];
 
     public final void rollDices() {
         Dice dice = new Dice();

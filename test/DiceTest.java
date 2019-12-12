@@ -7,6 +7,6 @@ class DiceTest {
     }
 
     @Test
-    void printOut() {
+    void roll() {
     }
 }

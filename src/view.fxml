@@ -6,213 +6,229 @@
 <?import javafx.scene.text.*?>
 <Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
       minWidth="-Infinity" prefHeight="631.0" prefWidth="1000.0" style="-fx-background-color: seagreen;"
-      xmlns="http://javafx.com/javafx/8">
-   <children>
-      <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0"
-              prefWidth="120.0" style="-fx-background-color: cyan;" text="Würfeln">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </Button>
-      <Button layoutX="765.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0"
-              style="-fx-background-color: chartreuse;" text="Start !">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </Button>
-      <ToggleButton fx:id="t1" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                    prefWidth="90.0"
-                    text="Halten">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </ToggleButton>
-      <ToggleButton fx:id="t2" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                    prefWidth="90.0"
-                    text="Halten">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </ToggleButton>
-      <ToggleButton fx:id="t3" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                    prefWidth="90.0"
-                    text="Halten">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </ToggleButton>
-      <ToggleButton fx:id="t4" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                    prefWidth="90.0"
-                    text="Halten">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </ToggleButton>
-      <ToggleButton fx:id="t5" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                    prefWidth="90.0"
-                    text="Halten">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </ToggleButton>
+      xmlns="http://javafx.com/javafx/10.0.2-internal">
+    <children>
+        <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0"
+                prefWidth="120.0" style="-fx-background-color: cyan;" text="Würfeln">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+        <Button layoutX="765.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0"
+                style="-fx-background-color: chartreuse;" text="Start !">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+        <ToggleButton fx:id="t1" cache="false" layoutX="450.0" layoutY="160.0" prefHeight="40.0" prefWidth="90.0"
+                      text="Halten">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </ToggleButton>
+        <ToggleButton fx:id="t2" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                      prefWidth="90.0" text="Halten">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </ToggleButton>
+        <ToggleButton fx:id="t3" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                      prefWidth="90.0" text="Halten">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </ToggleButton>
+        <ToggleButton fx:id="t4" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                      prefWidth="90.0" text="Halten">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </ToggleButton>
+        <ToggleButton fx:id="t5" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                      prefWidth="90.0" text="Halten">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </ToggleButton>
       <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzahl Spieler">
          <font>
-            <Font name="System Bold" size="15.0"/>
+             <Font name="System Bold" size="15.0"/>
          </font>
       </Text>
-      <Label fx:id="dice1" alignment="CENTER" layoutX="450.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-             style="-fx-background-color: beige; -fx-border-color: black;" text="">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </Label>
-      <Label fx:id="dice2" alignment="CENTER" layoutX="560.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-             style="-fx-background-color: beige; -fx-border-color: black;" text="">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </Label>
-      <Label fx:id="dice3" alignment="CENTER" layoutX="670.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-             style="-fx-background-color: beige; -fx-border-color: black;" text="">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </Label>
-      <Label fx:id="dice4" alignment="CENTER" layoutX="780.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-             style="-fx-background-color: beige; -fx-border-color: black;" text="">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </Label>
-      <Label fx:id="dice5" alignment="CENTER" layoutX="890.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-             style="-fx-background-color: beige; -fx-border-color: black;" text="">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </Label>
+        <Label fx:id="dice1" alignment="CENTER" layoutX="450.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
+               style="-fx-background-color: beige; -fx-border-color: black;" text="">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="dice2" alignment="CENTER" layoutX="560.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
+               style="-fx-background-color: beige; -fx-border-color: black;" text="">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="dice3" alignment="CENTER" layoutX="670.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
+               style="-fx-background-color: beige; -fx-border-color: black;" text="">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="dice4" alignment="CENTER" layoutX="780.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
+               style="-fx-background-color: beige; -fx-border-color: black;" text="">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="dice5" alignment="CENTER" layoutX="890.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
+               style="-fx-background-color: beige; -fx-border-color: black;" text="">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Label>
       <RadioButton layoutX="765.0" layoutY="480.0" mnemonicParsing="false" text="1">
          <font>
-            <Font name="System Bold" size="15.0"/>
+             <Font name="System Bold" size="15.0"/>
          </font>
       </RadioButton>
       <RadioButton layoutX="807.0" layoutY="480.0" mnemonicParsing="false" text="2">
          <font>
-            <Font name="System Bold" size="15.0"/>
+             <Font name="System Bold" size="15.0"/>
          </font>
       </RadioButton>
       <RadioButton layoutX="848.0" layoutY="480.0" mnemonicParsing="false" text="3">
          <font>
-            <Font name="System Bold" size="15.0"/>
+             <Font name="System Bold" size="15.0"/>
          </font>
       </RadioButton>
-      <RadioButton layoutX="895.0" layoutY="480.0" mnemonicParsing="false" text="4">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="940.0" layoutY="480.0" mnemonicParsing="false" text="5">
-         <font>
-            <Font name="System Bold" size="15.0"/>
-         </font>
-      </RadioButton>
-      <TabPane layoutX="531.0" layoutY="282.0"/>
-      <Accordion layoutX="308.0" layoutY="236.0"/>
-      <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="26.0" style="-fx-background-color: white;">
-         <columnConstraints>
-            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-         </rowConstraints>
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 er" GridPane.rowIndex="1"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Spieler">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3"/>
-            <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.columnIndex="1">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="3">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
+        <RadioButton layoutX="895.0" layoutY="480.0" mnemonicParsing="false" text="4">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </RadioButton>
+        <RadioButton layoutX="940.0" layoutY="480.0" mnemonicParsing="false" text="5">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </RadioButton>
+        <TabPane layoutX="531.0" layoutY="282.0"/>
+        <Accordion layoutX="308.0" layoutY="236.0"/>
+        <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="26.0" style="-fx-background-color: white;">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 er" GridPane.rowIndex="1"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Spieler">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3"/>
+                <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="3">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="2">
                <font>
-                  <Font name="System Bold" size="15.0"/>
+                   <Font name="System Bold" size="15.0"/>
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="4">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" GridPane.columnIndex="5">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 4 er" GridPane.rowIndex="4"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 5 er" GridPane.rowIndex="5"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 6 er" GridPane.rowIndex="6"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Summe" GridPane.rowIndex="7">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Bonus" wrappingWidth="106.72998046875"
-                  GridPane.rowIndex="8"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 Paar" GridPane.rowIndex="9"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 Paar" GridPane.rowIndex="10"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Drei Gleiche" GridPane.rowIndex="11"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Gleiche" GridPane.rowIndex="12"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Kleine Strasse" GridPane.rowIndex="13"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grosse Strasse" GridPane.rowIndex="14"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Volles Haus" GridPane.rowIndex="15"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chance" GridPane.rowIndex="16"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" YATZY" GridPane.rowIndex="17">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Endsumme" GridPane.rowIndex="18">
-               <font>
-                  <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
-         </children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="4">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" GridPane.columnIndex="5">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 4 er" GridPane.rowIndex="4"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 5 er" GridPane.rowIndex="5"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 6 er" GridPane.rowIndex="6"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Summe" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Bonus" wrappingWidth="106.72998046875"
+                      GridPane.rowIndex="8"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 Paar" GridPane.rowIndex="9"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 Paar" GridPane.rowIndex="10"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Drei Gleiche" GridPane.rowIndex="11"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Gleiche" GridPane.rowIndex="12"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Kleine Strasse" GridPane.rowIndex="13"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grosse Strasse" GridPane.rowIndex="14"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Volles Haus" GridPane.rowIndex="15"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chance" GridPane.rowIndex="16"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" YATZY" GridPane.rowIndex="17">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Endsumme" GridPane.rowIndex="18">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
+                <TextField fx:id="b1" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="b2" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <TextArea fx:id="b3" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                          GridPane.rowIndex="3"/>
+                <TextField fx:id="b4" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <TextField fx:id="b5" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                <TextField fx:id="b6" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                <TextField fx:id="bsum" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                <TextArea fx:id="bon" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                          GridPane.rowIndex="8"/>
+                <TextField fx:id="1p" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+                <TextField fx:id="2p" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+                <TextField fx:id="3k" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+                <TextField fx:id="4k" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+                <TextField fx:id="sstr" GridPane.columnIndex="1" GridPane.rowIndex="13"/>
+                <TextField fx:id="lst" GridPane.columnIndex="1" GridPane.rowIndex="14"/>
+                <TextField fx:id="fho" GridPane.columnIndex="1" GridPane.rowIndex="15"/>
+                <TextField fx:id="cha" GridPane.columnIndex="1" GridPane.rowIndex="16"/>
+                <TextArea fx:id="yat" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                          GridPane.rowIndex="17"/>
+                <TextField fx:id="sum" GridPane.columnIndex="1" GridPane.rowIndex="18"/>
+            </children>
       </GridPane>
    </children>
    <opaqueInsets>
-      <Insets bottom="5.0"/>
+       <Insets bottom="5.0"/>
    </opaqueInsets>
 </Pane>

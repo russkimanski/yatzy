@@ -4,6 +4,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+/**
+ * @author Peter Boxler <peter.boxler@edu.teko.ch>
+ * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
+ * @author Alessandro Pucci <alessandro.pucci@edu.teko.ch>
+ * @version 0.5
+ * @since 0.5
+ */
 public class Main extends Application {
     public static void main(String[] args) {
         launch(args);

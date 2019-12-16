@@ -10,3 +10,7 @@ Label {
     -fx-font-size: 28pt;
     -fx-font-family: "Arial";
 }
+
+#rounds {
+    -fx-font-size: 18pt;
+}

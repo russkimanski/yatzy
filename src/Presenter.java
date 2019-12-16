@@ -1,4 +1,3 @@
-import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,39 +8,37 @@ import javafx.scene.control.ToggleButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * @author Peter Boxler <peter.boxler@edu.teko.ch>
+ * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
+ * @author Alessandro Pucci <alessandro.pucci@edu.teko.ch>
+ * @version 0.5
+ * @since 0.5
+ */
 public class Presenter implements Initializable {
-    private final Yatzy yatzy;
-
+    private Yatzy yatzy;
     @FXML
     private Label dice1 = new Label();
-
     @FXML
     private Label dice2 = new Label();
-
     @FXML
     private Label dice3 = new Label();
-
     @FXML
     private Label dice4 = new Label();
-
     @FXML
     private Label dice5 = new Label();
-
+    @FXML
+    private Label rounds = new Label();
     @FXML
     private ToggleButton t1 = new ToggleButton();
-
     @FXML
     private ToggleButton t2 = new ToggleButton();
-
     @FXML
     private ToggleButton t3 = new ToggleButton();
-
     @FXML
     private ToggleButton t4 = new ToggleButton();
-
     @FXML
     private ToggleButton t5 = new ToggleButton();
-
     @FXML
     private Button submit = new Button();
 
@@ -52,60 +49,25 @@ public class Presenter implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         submit.setOnAction(this::submitButtonHandler);
-
-        yatzy.getThrowString().addListener(this::throwStringListener);
-
-        yatzy.getThrowString2().addListener(this::throwStringListener2);
-
-        yatzy.getThrowString3().addListener(this::throwStringListener3);
-
-        yatzy.getThrowString4().addListener(this::throwStringListener4);
-
-        yatzy.getThrowString5().addListener(this::throwStringListener5);
-
-    }
-
-    private void throwStringListener(Observable observable) {
-        if (t1.isSelected()) {
-        } else {
-            String value = yatzy.getThrowString().get();
-            dice1.setText(value);
-        }
-    }
-
-    private void throwStringListener2(Observable observable) {
-        if (t2.isSelected()) {
-        } else {
-            String value = yatzy.getThrowString2().get();
-            dice2.setText(value);
-        }
-    }
-
-    private void throwStringListener3(Observable observable) {
-        if (t3.isSelected()) {
-        } else {
-            String value = yatzy.getThrowString3().get();
-            dice3.setText(value);
-        }
-    }
-
-    private void throwStringListener4(Observable observable) {
-        if (t4.isSelected()) {
-        } else {
-            String value = yatzy.getThrowString4().get();
-            dice4.setText(value);
-        }
-    }
-
-    private void throwStringListener5(Observable observable) {
-        if (t5.isSelected()) {
-        } else {
-            String value = yatzy.getThrowString5().get();
-            dice5.setText(value);
-        }
+        t1.setOnAction(this::submitToggleButtonHandler);
+        t2.setOnAction(this::submitToggleButtonHandler);
+        t3.setOnAction(this::submitToggleButtonHandler);
+        t4.setOnAction(this::submitToggleButtonHandler);
+        t5.setOnAction(this::submitToggleButtonHandler);
+        rounds.textProperty().bind(yatzy.getRound());
+        dice1.textProperty().bind(yatzy.getThrowString1());
+        dice2.textProperty().bind(yatzy.getThrowString2());
+        dice3.textProperty().bind(yatzy.getThrowString3());
+        dice4.textProperty().bind(yatzy.getThrowString4());
+        dice5.textProperty().bind(yatzy.getThrowString5());
     }
 
     private void submitButtonHandler(ActionEvent actionEvent) {
         yatzy.rollDices();
+        yatzy.getRound();
+    }
+
+    private void submitToggleButtonHandler(ActionEvent actionEvent) {
+        yatzy.setTButtonValue(t1.isSelected(), t2.isSelected(), t3.isSelected(), t4.isSelected(), t5.isSelected());
     }
 }

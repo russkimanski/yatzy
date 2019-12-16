@@ -7,11 +7,17 @@
  * Die grösse des Arrays wird mit dem Übergabewert anzahlWuerfe bestimmt.
  */
 
+/**
+ * @author Peter Boxler <peter.boxler@edu.teko.ch>
+ * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
+ * @author Alessandro Pucci <alessandro.pucci@edu.teko.ch>
+ * @version 0.5
+ * @since 0.5
+ */
 public class Dice {
     private int result;
 
     public Dice() {
-        roll();
     }
 
     public int getResult() {
@@ -19,7 +25,7 @@ public class Dice {
     }
 
     public void roll() {
-      result  = (int) (Math.random() * 6) + 1;
+        result  = (int) (Math.random() * 6) + 1;
     }
 
 }

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -20,8 +19,8 @@
                 <Font name="System Bold" size="15.0"/>
             </font>
         </Button>
-        <ToggleButton fx:id="t1" cache="false" layoutX="450.0" layoutY="160.0" prefHeight="40.0" prefWidth="90.0"
-                      text="Halten">
+        <ToggleButton fx:id="t1" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
+                      prefWidth="90.0" text="Halten">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
@@ -206,14 +205,10 @@
                 </Text>
                 <TextField fx:id="b1" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
                 <TextField fx:id="b2" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                <TextArea fx:id="b3" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-                          GridPane.rowIndex="3"/>
                 <TextField fx:id="b4" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                 <TextField fx:id="b5" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
                 <TextField fx:id="b6" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
                 <TextField fx:id="bsum" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
-                <TextArea fx:id="bon" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-                          GridPane.rowIndex="8"/>
                 <TextField fx:id="1p" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
                 <TextField fx:id="2p" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
                 <TextField fx:id="3k" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
@@ -222,11 +217,86 @@
                 <TextField fx:id="lst" GridPane.columnIndex="1" GridPane.rowIndex="14"/>
                 <TextField fx:id="fho" GridPane.columnIndex="1" GridPane.rowIndex="15"/>
                 <TextField fx:id="cha" GridPane.columnIndex="1" GridPane.rowIndex="16"/>
-                <TextArea fx:id="yat" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-                          GridPane.rowIndex="17"/>
                 <TextField fx:id="sum" GridPane.columnIndex="1" GridPane.rowIndex="18"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="1"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="2"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="3"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="4"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="5"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="5"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="5"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="6"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="6"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="6"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="7"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="7"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="7"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="7"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="8"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="8"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="8"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="8"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="9"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="9"/>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="10"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="10"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="9"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="9"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="10"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="10"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="11"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="11"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="11"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="11"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="12"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="12"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="12"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="12"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="13"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="13"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="13"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="13"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="14"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="14"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="14"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="14"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="15"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="15"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="15"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="15"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="16"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="16"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="16"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="16"/>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="17"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="17"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="17"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="17"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="17"/>
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="18"/>
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="18"/>
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="18"/>
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="18"/>
             </children>
       </GridPane>
+        <Label fx:id="rounds" alignment="CENTER" layoutX="450.0" layoutY="216.0" prefHeight="51.0" prefWidth="200.0"
+               text="Label" style="-fx-background-color: beige; -fx-border-color: black;"/>
    </children>
    <opaqueInsets>
        <Insets bottom="5.0"/>

@@ -1,11 +1,16 @@
+import javafx.beans.binding.Bindings;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 /**
@@ -17,30 +22,24 @@ import java.util.ResourceBundle;
  */
 public class Presenter implements Initializable {
     private Yatzy yatzy;
+
     @FXML
-    private Label dice1 = new Label();
+    private Group labelGroup;
     @FXML
-    private Label dice2 = new Label();
+    private Label rounds;
+
     @FXML
-    private Label dice3 = new Label();
+    private ToggleButton t1;
     @FXML
-    private Label dice4 = new Label();
+    private ToggleButton t2;
     @FXML
-    private Label dice5 = new Label();
+    private ToggleButton t3;
     @FXML
-    private Label rounds = new Label();
+    private ToggleButton t4;
     @FXML
-    private ToggleButton t1 = new ToggleButton();
+    private ToggleButton t5;
     @FXML
-    private ToggleButton t2 = new ToggleButton();
-    @FXML
-    private ToggleButton t3 = new ToggleButton();
-    @FXML
-    private ToggleButton t4 = new ToggleButton();
-    @FXML
-    private ToggleButton t5 = new ToggleButton();
-    @FXML
-    private Button submit = new Button();
+    private Button submit;
 
     Presenter(Yatzy yatzy) {
         this.yatzy = yatzy;
@@ -49,25 +48,32 @@ public class Presenter implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         submit.setOnAction(this::submitButtonHandler);
-        t1.setOnAction(this::submitToggleButtonHandler);
-        t2.setOnAction(this::submitToggleButtonHandler);
-        t3.setOnAction(this::submitToggleButtonHandler);
-        t4.setOnAction(this::submitToggleButtonHandler);
-        t5.setOnAction(this::submitToggleButtonHandler);
-        rounds.textProperty().bind(yatzy.getRound());
-        dice1.textProperty().bind(yatzy.getThrowString1());
-        dice2.textProperty().bind(yatzy.getThrowString2());
-        dice3.textProperty().bind(yatzy.getThrowString3());
-        dice4.textProperty().bind(yatzy.getThrowString4());
-        dice5.textProperty().bind(yatzy.getThrowString5());
+        t1.setOnAction(this::holdButtonHandler);
+        t2.setOnAction(this::holdButtonHandler);
+        t3.setOnAction(this::holdButtonHandler);
+        t4.setOnAction(this::holdButtonHandler);
+        t5.setOnAction(this::holdButtonHandler);
+
+        rounds.textProperty().bind(Bindings.convert(yatzy.getRound()));
+
+        final List<Dice> dices = yatzy.getRollDices();
+        final ObservableList<Node> labels = labelGroup.getChildren();
+        for (int i = 0; i < dices.size(); i++) {
+            Label label = (Label) labels.get(i);
+            Dice dice = dices.get(i);
+            label.textProperty().bind(Bindings.convert(dice.getValue()));
+        }
     }
+
 
     private void submitButtonHandler(ActionEvent actionEvent) {
         yatzy.rollDices();
-        yatzy.getRound();
     }
 
-    private void submitToggleButtonHandler(ActionEvent actionEvent) {
-        yatzy.setTButtonValue(t1.isSelected(), t2.isSelected(), t3.isSelected(), t4.isSelected(), t5.isSelected());
+    private void holdButtonHandler(ActionEvent actionEvent) {
+        // todo: implement correct holding handler
+        ToggleButton button = (ToggleButton) actionEvent.getSource();
+        int id = button.getId().charAt(1);
+        // yatzy.holdDice();
     }
 }

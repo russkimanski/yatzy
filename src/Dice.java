@@ -7,6 +7,9 @@
  * Die grösse des Arrays wird mit dem Übergabewert anzahlWuerfe bestimmt.
  */
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+
 /**
  * @author Peter Boxler <peter.boxler@edu.teko.ch>
  * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
@@ -15,17 +18,14 @@
  * @since 0.5
  */
 public class Dice {
-    private int result;
-
-    public Dice() {
-    }
-
-    public int getResult() {
-        return result;
-    }
+    private IntegerProperty value = new SimpleIntegerProperty();
 
     public void roll() {
-        result  = (int) (Math.random() * 6) + 1;
+        value.setValue((int) (Math.random() * 6) + 1);
+    }
+
+    public IntegerProperty getValue() {
+        return value;
     }
 
 }

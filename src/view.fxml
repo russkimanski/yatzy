@@ -85,26 +85,29 @@
             </font>
         </Label>
       <RadioButton layoutX="765.0" layoutY="480.0" mnemonicParsing="false" text="1">
+          <toggleGroup>
+              <ToggleGroup fx:id="tgswitch"/>
+          </toggleGroup>
          <font>
              <Font name="System Bold" size="15.0"/>
          </font>
       </RadioButton>
-      <RadioButton layoutX="807.0" layoutY="480.0" mnemonicParsing="false" text="2">
+      <RadioButton layoutX="807.0" layoutY="480.0" mnemonicParsing="false" text="2" toggleGroup="$tgswitch">
          <font>
              <Font name="System Bold" size="15.0"/>
          </font>
       </RadioButton>
-      <RadioButton layoutX="848.0" layoutY="480.0" mnemonicParsing="false" text="3">
+      <RadioButton layoutX="848.0" layoutY="480.0" mnemonicParsing="false" text="3" toggleGroup="$tgswitch">
          <font>
              <Font name="System Bold" size="15.0"/>
          </font>
       </RadioButton>
-        <RadioButton layoutX="895.0" layoutY="480.0" mnemonicParsing="false" text="4">
+        <RadioButton layoutX="895.0" layoutY="480.0" mnemonicParsing="false" text="4" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
         </RadioButton>
-        <RadioButton layoutX="940.0" layoutY="480.0" mnemonicParsing="false" text="5">
+        <RadioButton layoutX="940.0" layoutY="480.0" mnemonicParsing="false" text="5" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>

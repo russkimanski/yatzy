@@ -26,7 +26,6 @@ public class Main extends Application {
 
         Pane root = loader.load();
 
-
         initScene(primaryStage, root);
 
         primaryStage.setTitle("YATZY");

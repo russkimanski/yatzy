@@ -1,0 +1,19 @@
+#field {
+    -fx-font: normal bold 15px 'sans-serif';
+    -fx-background-color: seagreen;
+
+    -fx-max-height: Infinity;
+    -fx-max-width: Infinity;
+
+    -fx-pref-height: 631px;
+    -fx-pref-width: 1000px;
+}
+
+#submit {
+    -fx-background-color: cyan;
+}
+
+.holdButton {
+    -fx-pref-height: 40;
+    -fx-pref-width: 90;
+}

@@ -17,8 +17,6 @@ class Yatzy {
     private List<Dice> rollDices = new LinkedList<>();
     private List<Dice> holdDices = new LinkedList<>();
 
-    private int round;
-
     public Yatzy() {
         int diceCount = 5;
         for (int i = 0; i < diceCount; i++) {
@@ -27,14 +25,19 @@ class Yatzy {
     }
 
     public final void rollDices() {
-        if (round < 3) {
-            this.round += 1;
+        if (roundCount.getValue() < 3) {
+            this.roundCount.set(roundCount.getValue() + 1);
         } else {
-            this.round = 1;
+            this.roundCount.set(1);
         }
 
         for (Dice dice : rollDices) {
-            dice.roll();
+            // todo: implement correct holding handler
+            if (holdDices.contains(dice)) {
+
+            } else {
+                dice.roll();
+            }
         }
 
     }

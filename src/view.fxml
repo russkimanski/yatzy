@@ -1,107 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-      minWidth="-Infinity" prefHeight="631.0" prefWidth="1000.0" style="-fx-background-color: seagreen;"
+<Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="field"
       xmlns="http://javafx.com/javafx/10.0.2-internal">
     <children>
         <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0"
-                prefWidth="120.0" style="-fx-background-color: cyan;" text="Würfeln">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </Button>
+                prefWidth="120.0" text="Würfeln"/>
         <Button layoutX="765.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0"
                 style="-fx-background-color: chartreuse;" text="Start !">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
         </Button>
-        <ToggleButton fx:id="t1" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                      prefWidth="90.0" text="Halten">
+
+        <ToggleButton styleClass="holdButton" fx:id="t1" layoutX="450.0" layoutY="160.0" mnemonicParsing="false"
+                      text="Halten"/>
+        <ToggleButton styleClass="holdButton" fx:id="t2" layoutX="560.0" layoutY="160.0" mnemonicParsing="false"
+                      text="Halten"/>
+        <ToggleButton styleClass="holdButton" fx:id="t3" layoutX="670.0" layoutY="160.0" mnemonicParsing="false"
+                      text="Halten"/>
+        <ToggleButton styleClass="holdButton" fx:id="t4" layoutX="780.0" layoutY="160.0" mnemonicParsing="false"
+                      text="Halten"/>
+        <ToggleButton styleClass="holdButton" fx:id="t5" layoutX="890.0" layoutY="160.0" mnemonicParsing="false"
+                      text="Halten"/>
+        <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzahl Spieler">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
-        </ToggleButton>
-        <ToggleButton fx:id="t2" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                      prefWidth="90.0" text="Halten">
+        </Text>
+
+        <Group fx:id="labelGroup" layoutY="26">
+            <Label alignment="CENTER" layoutX="450.0" prefHeight="90.0" prefWidth="90.0"/>
+            <Label alignment="CENTER" layoutX="560.0" prefHeight="90.0" prefWidth="90.0"/>
+            <Label alignment="CENTER" layoutX="670.0" prefHeight="90.0" prefWidth="90.0"/>
+            <Label alignment="CENTER" layoutX="780.0" prefHeight="90.0" prefWidth="90.0"/>
+            <Label alignment="CENTER" layoutX="890.0" prefHeight="90.0" prefWidth="90.0"/>
+        </Group>
+        <RadioButton layoutX="765.0" layoutY="480.0" mnemonicParsing="false" text="1">
+            <toggleGroup>
+                <ToggleGroup fx:id="tgswitch"/>
+            </toggleGroup>
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
-        </ToggleButton>
-        <ToggleButton fx:id="t3" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                      prefWidth="90.0" text="Halten">
+        </RadioButton>
+        <RadioButton layoutX="807.0" layoutY="480.0" mnemonicParsing="false" text="2" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
-        </ToggleButton>
-        <ToggleButton fx:id="t4" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                      prefWidth="90.0" text="Halten">
+        </RadioButton>
+        <RadioButton layoutX="848.0" layoutY="480.0" mnemonicParsing="false" text="3" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
-        </ToggleButton>
-        <ToggleButton fx:id="t5" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0"
-                      prefWidth="90.0" text="Halten">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </ToggleButton>
-      <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzahl Spieler">
-         <font>
-             <Font name="System Bold" size="15.0"/>
-         </font>
-      </Text>
-        <Label fx:id="dice1" alignment="CENTER" layoutX="450.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-               style="-fx-background-color: beige; -fx-border-color: black;" text="">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </Label>
-        <Label fx:id="dice2" alignment="CENTER" layoutX="560.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-               style="-fx-background-color: beige; -fx-border-color: black;" text="">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </Label>
-        <Label fx:id="dice3" alignment="CENTER" layoutX="670.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-               style="-fx-background-color: beige; -fx-border-color: black;" text="">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </Label>
-        <Label fx:id="dice4" alignment="CENTER" layoutX="780.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-               style="-fx-background-color: beige; -fx-border-color: black;" text="">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </Label>
-        <Label fx:id="dice5" alignment="CENTER" layoutX="890.0" layoutY="26.0" prefHeight="90.0" prefWidth="90.0"
-               style="-fx-background-color: beige; -fx-border-color: black;" text="">
-            <font>
-                <Font name="System Bold" size="15.0"/>
-            </font>
-        </Label>
-      <RadioButton layoutX="765.0" layoutY="480.0" mnemonicParsing="false" text="1">
-          <toggleGroup>
-              <ToggleGroup fx:id="tgswitch"/>
-          </toggleGroup>
-         <font>
-             <Font name="System Bold" size="15.0"/>
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="807.0" layoutY="480.0" mnemonicParsing="false" text="2" toggleGroup="$tgswitch">
-         <font>
-             <Font name="System Bold" size="15.0"/>
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="848.0" layoutY="480.0" mnemonicParsing="false" text="3" toggleGroup="$tgswitch">
-         <font>
-             <Font name="System Bold" size="15.0"/>
-         </font>
-      </RadioButton>
+        </RadioButton>
         <RadioButton layoutX="895.0" layoutY="480.0" mnemonicParsing="false" text="4" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0"/>
@@ -163,11 +118,11 @@
                         <Font name="System Bold" size="15.0"/>
                     </font>
                 </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="2">
-               <font>
-                   <Font name="System Bold" size="15.0"/>
-               </font>
-            </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Text>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="4">
                     <font>
                         <Font name="System Bold" size="15.0"/>
@@ -297,11 +252,11 @@
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="18"/>
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="18"/>
             </children>
-      </GridPane>
+        </GridPane>
         <Label fx:id="rounds" alignment="CENTER" layoutX="450.0" layoutY="216.0" prefHeight="51.0" prefWidth="200.0"
                text="Label" style="-fx-background-color: beige; -fx-border-color: black;"/>
-   </children>
-   <opaqueInsets>
-       <Insets bottom="5.0"/>
-   </opaqueInsets>
+    </children>
+    <opaqueInsets>
+        <Insets bottom="5.0"/>
+    </opaqueInsets>
 </Pane>

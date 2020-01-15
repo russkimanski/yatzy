@@ -13,6 +13,14 @@
     -fx-background-color: cyan;
 }
 
+Label {
+    -fx-font: normal bold 32px 'sans-serif';
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: beige;
+    -fx-background-color: beige;
+}
+
 .holdButton {
     -fx-pref-height: 40;
     -fx-pref-width: 90;

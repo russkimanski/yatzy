@@ -74,6 +74,6 @@ public class Presenter implements Initializable {
         // todo: implement correct holding handler
         ToggleButton button = (ToggleButton) actionEvent.getSource();
         int id = button.getId().charAt(1);
-        // yatzy.holdDice();
+        //yatzy.holdDice();
     }
 }

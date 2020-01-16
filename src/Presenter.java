@@ -76,7 +76,7 @@ public class Presenter implements Initializable {
     }
 
     private void startButtonHandler(ActionEvent actionEvent) {
-        /* yatzy.startGame(); todo: implement startGameFunction */
+        /* yatzy.startGame(); todo: implement startGameFunction with player naming */
     }
 
     private void writeResultsButtonHandler(ActionEvent actionEvent) {

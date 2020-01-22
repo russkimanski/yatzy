@@ -40,6 +40,10 @@ public class Presenter implements Initializable {
     private ToggleButton t5;
     @FXML
     private Button submit;
+    @FXML
+    private Button start;
+    @FXML
+    private Button writeResults;
 
     Presenter(Yatzy yatzy) {
         this.yatzy = yatzy;
@@ -48,6 +52,8 @@ public class Presenter implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         submit.setOnAction(this::submitButtonHandler);
+        start.setOnAction(this::startButtonHandler);
+        writeResults.setOnAction(this::writeResultsButtonHandler);
         t1.setOnAction(this::holdButtonHandler);
         t2.setOnAction(this::holdButtonHandler);
         t3.setOnAction(this::holdButtonHandler);
@@ -65,9 +71,16 @@ public class Presenter implements Initializable {
         }
     }
 
-
     private void submitButtonHandler(ActionEvent actionEvent) {
         yatzy.rollDices();
+    }
+
+    private void startButtonHandler(ActionEvent actionEvent) {
+        /* yatzy.startGame(); todo: implement startGameFunction with player naming */
+    }
+
+    private void writeResultsButtonHandler(ActionEvent actionEvent) {
+        /* yatzy.updateResults(); todo: implement selection of result key and update the value. */
     }
 
     private void holdButtonHandler(ActionEvent actionEvent) {

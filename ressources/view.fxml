@@ -9,7 +9,8 @@
     <children>
         <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0"
                 prefWidth="120.0" text="Würfeln"/>
-        <Button layoutX="765.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0"
+        <Button fx:id="start" layoutX="765.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0"
+                prefWidth="200.0"
                 style="-fx-background-color: chartreuse;" text="Start !">
             <font>
                 <Font name="System Bold" size="15.0"/>

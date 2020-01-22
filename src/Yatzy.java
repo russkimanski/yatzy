@@ -16,6 +16,7 @@ class Yatzy {
 
     private List<Dice> rollDices = new LinkedList<>();
     private List<Dice> holdDices = new LinkedList<>();
+    private List<Player> players = new LinkedList<>();
 
     public Yatzy() {
         int diceCount = 5;
@@ -66,13 +67,19 @@ class Yatzy {
     }
 
     public void startGame(String toggleGroupValue) {
+        players.clear();
         for (int i = 0; i < Integer.parseInt(toggleGroupValue); i++) {
             String playerName = "Spieler" + (i + 1);
             Player player = new Player();
+            this.players.add(player);
             player.setPlayerName(playerName);
+            player.setPlayRound(0);
             /*Für Itrationsmeeting um zu zeigen, dass entsprechend den mit dem RadioButton selektierten Anzahl Spielern
             Objekte erstellt worden sind:*/
-            System.out.println(playerName);
+            System.out.println(player.getPlayerName());
+            System.out.println(player.getPlayRound());
         }
+        //Für Iterationsmeeting um die Anzahl Spieler aufzulisten (Konsole):
+        System.out.println(players.size());
     }
 }

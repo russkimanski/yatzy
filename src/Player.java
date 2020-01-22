@@ -3,6 +3,9 @@ import java.util.HashMap;
 public class Player {
     public HashMap<String, Integer> results = new HashMap<>();
     private String name;
+    private boolean playerLocked;
+    private int playRound;
+
 
     public Player() {
         results.put("1er", 0);
@@ -29,7 +32,15 @@ public class Player {
         this.name = playerName;
     }
 
-    public String getPlayerName(int player) {
+    public String getPlayerName() {
         return name;
+    }
+
+    public int getPlayRound() {
+        return playRound;
+    }
+
+    public void setPlayRound(int playRound) {
+        this.playRound = playRound;
     }
 }

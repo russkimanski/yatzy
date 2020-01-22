@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class Player {
-    public HashMap<String, Integer> results = new HashMap<String, Integer>();
+    public HashMap<String, Integer> results = new HashMap<>();
     private String name;
 
     public Player() {

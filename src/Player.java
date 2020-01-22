@@ -1,10 +1,8 @@
-import javafx.beans.property.SimpleStringProperty;
-
 import java.util.HashMap;
 
 public class Player {
     public HashMap<String, Integer> results = new HashMap<String, Integer>();
-    private SimpleStringProperty name = new SimpleStringProperty();
+    private String name;
 
     public Player() {
         results.put("1er", 0);
@@ -27,7 +25,11 @@ public class Player {
         results.put("finalPoints", 0);
     }
 
-    public void setName() {
-        name.setValue("XY"); //todo: Implement start button and player rename method.
+    public void setPlayerName(String playerName) {
+        this.name = playerName;
+    }
+
+    public String getPlayerName(int player) {
+        return name;
     }
 }

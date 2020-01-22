@@ -12,6 +12,7 @@ import javafx.stage.Stage;
  * @since 0.5
  */
 public class Main extends Application {
+    public static Stage stage;
     public static void main(String[] args) {
         launch(args);
     }
@@ -38,5 +39,6 @@ public class Main extends Application {
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add("style.css");
         primaryStage.setScene(scene);
+        stage = primaryStage;
     }
 }

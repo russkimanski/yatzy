@@ -5,9 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
+import javafx.stage.Popup;
 
 import java.net.URL;
 import java.util.List;
@@ -26,8 +25,9 @@ public class Presenter implements Initializable {
     @FXML
     private Group labelGroup;
     @FXML
+    ToggleGroup tgswitch;
+    @FXML
     private Label rounds;
-
     @FXML
     private ToggleButton t1;
     @FXML
@@ -44,6 +44,8 @@ public class Presenter implements Initializable {
     private Button start;
     @FXML
     private Button writeResults;
+    @FXML
+    private Popup popup;
 
     Presenter(Yatzy yatzy) {
         this.yatzy = yatzy;
@@ -76,12 +78,15 @@ public class Presenter implements Initializable {
     }
 
     private void startButtonHandler(ActionEvent actionEvent) {
-        /* yatzy.startGame(); todo: implement startGameFunction with player naming */
+        RadioButton selectedRadioButton = (RadioButton) tgswitch.getSelectedToggle();
+        String toggleGroupValue = selectedRadioButton.getText();
+        yatzy.startGame(toggleGroupValue);
     }
 
     private void writeResultsButtonHandler(ActionEvent actionEvent) {
-        /* yatzy.updateResults(); todo: implement selection of result key and update the value. */
+
     }
+        /* yatzy.updateResults(); todo: implement selection of result key and update the value. */
 
     private void holdButtonHandler(ActionEvent actionEvent) {
         // todo: implement correct holding handler

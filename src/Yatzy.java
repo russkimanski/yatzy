@@ -64,4 +64,15 @@ class Yatzy {
     public List<Dice> getRollDices() {
         return rollDices;
     }
+
+    public void startGame(String toggleGroupValue) {
+        for (int i = 0; i < Integer.parseInt(toggleGroupValue); i++) {
+            String playerName = "Spieler" + (i + 1);
+            Player player = new Player();
+            player.setPlayerName(playerName);
+            /*Für Itrationsmeeting um zu zeigen, dass entsprechend den mit dem RadioButton selektierten Anzahl Spielern
+            Objekte erstellt worden sind:*/
+            System.out.println(playerName);
+        }
+    }
 }

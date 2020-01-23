@@ -33,9 +33,8 @@ class Yatzy {
         }
 
         for (Dice dice : rollDices) {
-            // todo: implement correct holding handler
-            if (holdDices.contains(dice)) {
-
+            //ToDo: Review Pesche
+            if (dice.isHold()) {
             } else {
                 dice.roll();
             }
@@ -43,14 +42,12 @@ class Yatzy {
 
     }
 
-    public void holdDice(Dice dice) {
-        rollDices.remove(dice);
-        holdDices.add(dice);
+    public void holdDice(int dice) {
+        rollDices.get(dice).setOnHold();
     }
 
-    public void unholdDice(Dice dice) {
-        holdDices.remove(dice);
-        rollDices.add(dice);
+    public void setDiceActive(int dice) {
+        rollDices.get(dice).setActive();
     }
 
 

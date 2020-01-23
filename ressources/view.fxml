@@ -16,15 +16,15 @@
                 <Font name="System Bold" size="15.0"/>
             </font>
         </Button>
-        <ToggleButton fx:id="t1" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t2" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t3" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t4" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t3" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t5" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t4" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
         <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzahl Spieler">
             <font>

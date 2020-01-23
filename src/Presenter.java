@@ -29,6 +29,8 @@ public class Presenter implements Initializable {
     @FXML
     private Label rounds;
     @FXML
+    private ToggleButton t0;
+    @FXML
     private ToggleButton t1;
     @FXML
     private ToggleButton t2;
@@ -36,8 +38,6 @@ public class Presenter implements Initializable {
     private ToggleButton t3;
     @FXML
     private ToggleButton t4;
-    @FXML
-    private ToggleButton t5;
     @FXML
     private Button submit;
     @FXML
@@ -56,11 +56,11 @@ public class Presenter implements Initializable {
         submit.setOnAction(this::submitButtonHandler);
         start.setOnAction(this::startButtonHandler);
         writeResults.setOnAction(this::writeResultsButtonHandler);
+        t0.setOnAction(this::holdButtonHandler);
         t1.setOnAction(this::holdButtonHandler);
         t2.setOnAction(this::holdButtonHandler);
         t3.setOnAction(this::holdButtonHandler);
         t4.setOnAction(this::holdButtonHandler);
-        t5.setOnAction(this::holdButtonHandler);
 
         rounds.textProperty().bind(Bindings.convert(yatzy.getRound()));
 
@@ -89,9 +89,14 @@ public class Presenter implements Initializable {
         /* yatzy.updateResults(); todo: implement selection of result key and update the value. */
 
     private void holdButtonHandler(ActionEvent actionEvent) {
-        // todo: implement correct holding handler
+        //ToDo: Review Pesche
         ToggleButton button = (ToggleButton) actionEvent.getSource();
-        int id = button.getId().charAt(1);
+        int id = button.getId().charAt(1) - 48;
+        if (button.isSelected()) {
+            yatzy.holdDice(id);
+        } else {
+            yatzy.setDiceActive(id);
+        }
         //yatzy.holdDice();
     }
 }

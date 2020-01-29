@@ -1,10 +1,14 @@
+import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.TextInputDialog;
+
 import java.util.HashMap;
+import java.util.Optional;
 
 public class Player {
     public HashMap<String, Integer> results = new HashMap<>();
-    private String name;
-    private boolean playerLocked;
+    private static int playerCount;
     private int playRound;
+    private SimpleStringProperty name = new SimpleStringProperty();
 
 
     public Player() {
@@ -26,16 +30,29 @@ public class Player {
         results.put("chance", 0);
         results.put("yatzy", 0);
         results.put("finalPoints", 0);
+        String noName = "n/a";
+        name.setValue(noName);
+        playerCount = playerCount + 1;
     }
 
-    public void setPlayerName(String playerName) {
-        this.name = playerName;
+    public static void resetPlayerCount() {
+        playerCount = 0;
     }
 
-    public String getPlayerName() {
-        return name;
+    public void setPlayerName() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Spielername");
+        dialog.setHeaderText("Spieler " + (playerCount));
+        dialog.setContentText("Bitte den Namen des Spielers eingeben:");
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(s -> this.name.setValue(s));
     }
 
+    public SimpleStringProperty getPlayerName() {
+        return this.name;
+    }
+
+    //ToDo Implement MaxRoundCount...
     public int getPlayRound() {
         return playRound;
     }

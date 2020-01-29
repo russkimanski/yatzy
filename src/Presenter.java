@@ -6,19 +6,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.stage.Popup;
 
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-/**
- * @author Peter Boxler <peter.boxler@edu.teko.ch>
- * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
- * @author Alessandro Pucci <alessandro.pucci@edu.teko.ch>
- * @version 0.5
- * @since 0.5
- */
 public class Presenter implements Initializable {
     private Yatzy yatzy;
 
@@ -46,6 +40,16 @@ public class Presenter implements Initializable {
     private Button writeResults;
     @FXML
     private Popup popup;
+    @FXML
+    private Text p1;
+    @FXML
+    private Text p2;
+    @FXML
+    private Text p3;
+    @FXML
+    private Text p4;
+    @FXML
+    private Text p5;
 
     Presenter(Yatzy yatzy) {
         this.yatzy = yatzy;
@@ -61,7 +65,6 @@ public class Presenter implements Initializable {
         t2.setOnAction(this::holdButtonHandler);
         t3.setOnAction(this::holdButtonHandler);
         t4.setOnAction(this::holdButtonHandler);
-
         rounds.textProperty().bind(Bindings.convert(yatzy.getRound()));
 
         final List<Dice> dices = yatzy.getRollDices();
@@ -81,6 +84,28 @@ public class Presenter implements Initializable {
         RadioButton selectedRadioButton = (RadioButton) tgswitch.getSelectedToggle();
         String toggleGroupValue = selectedRadioButton.getText();
         yatzy.startGame(toggleGroupValue);
+        for (int i = 0; i < Integer.parseInt(toggleGroupValue); i++) {
+            switch (i) {
+                //todo: Mit Group lösen oder variablen Variabel :)
+                case 0:
+                    p1.textProperty().bind((yatzy.getPlayerName(i)));
+                    break;
+                case 1:
+                    p2.textProperty().bind((yatzy.getPlayerName(i)));
+                    break;
+                case 2:
+                    p3.textProperty().bind((yatzy.getPlayerName(i)));
+                    break;
+                case 3:
+                    p4.textProperty().bind((yatzy.getPlayerName(i)));
+                    break;
+                case 4:
+                    p5.textProperty().bind((yatzy.getPlayerName(i)));
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     private void writeResultsButtonHandler(ActionEvent actionEvent) {
@@ -91,12 +116,11 @@ public class Presenter implements Initializable {
     private void holdButtonHandler(ActionEvent actionEvent) {
         //ToDo: Review Pesche!
         ToggleButton button = (ToggleButton) actionEvent.getSource();
-        int id = button.getId().charAt(1) - 48;
+        int id = Character.getNumericValue(button.getId().charAt(1));
         if (button.isSelected()) {
             yatzy.holdDice(id);
         } else {
             yatzy.setDiceActive(id);
         }
-        //yatzy.holdDice();
     }
 }

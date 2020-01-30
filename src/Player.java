@@ -6,6 +6,8 @@ import java.util.HashMap;
 public class Player {
     public HashMap<String, Integer> results = new HashMap<>();
     private int playRound;
+    private boolean lock;
+    private boolean active;
     private StringProperty name = new SimpleStringProperty();
 
     public Player() {
@@ -27,8 +29,6 @@ public class Player {
         results.put("chance", 0);
         results.put("yatzy", 0);
         results.put("finalPoints", 0);
-        String noName = "n/a";
-        name.setValue(noName);
     }
 
     public StringProperty getName() {
@@ -45,5 +45,21 @@ public class Player {
 
     public int getPlayRound() {
         return playRound;
+    }
+
+    public boolean getLock() {
+        return this.lock;
+    }
+
+    public void setLock(boolean lockValue) {
+        this.lock = lockValue;
+    }
+
+    public boolean getActivePlayer() {
+        return this.active;
+    }
+
+    public void setActivePlayer(boolean activeValue) {
+        this.active = activeValue;
     }
 }

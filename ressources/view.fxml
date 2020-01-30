@@ -16,15 +16,15 @@
             </font>
         </Button>
         <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Haute"/>
+                      text="Bhaute"/>
         <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Haute"/>
+                      text="Bhaute"/>
         <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Haute"/>
+                      text="Bhaute"/>
         <ToggleButton fx:id="t3" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Haute"/>
+                      text="Bhaute"/>
         <ToggleButton fx:id="t4" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Haute"/>
+                      text="Bhaute"/>
         <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Azahu Spieler">
             <font>
                 <Font name="System Bold" size="15.0"/>

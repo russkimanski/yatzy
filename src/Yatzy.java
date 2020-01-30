@@ -71,9 +71,9 @@ class Yatzy {
         return players.get(playerId);
     }
 
-    public void resetPlayer() {
-        for (int i = 0; i < players.size(); i++) {
-            players.get(i).setName("");
+    public void resetGame() {
+        for (Player player : players) {
+            player.setName("");
         }
         players.clear();
     }

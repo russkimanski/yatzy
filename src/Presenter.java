@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.stage.Popup;
 
 import java.net.URL;
 import java.util.List;
@@ -19,7 +18,7 @@ public class Presenter implements Initializable {
     @FXML
     private Group labelGroup;
     @FXML
-    ToggleGroup tgswitch;
+    private ToggleGroup tgswitch;
     @FXML
     private Label rounds;
     @FXML
@@ -38,8 +37,6 @@ public class Presenter implements Initializable {
     private Button start;
     @FXML
     private Button writeResults;
-    @FXML
-    private Popup popup;
     @FXML
     private Group playerGroup;
 
@@ -73,7 +70,7 @@ public class Presenter implements Initializable {
     }
 
     private void startButtonHandler(ActionEvent actionEvent) {
-        yatzy.resetPlayer();
+        yatzy.resetGame();
 
         RadioButton selectedRadioButton = (RadioButton) tgswitch.getSelectedToggle();
         int playerCount = Integer.parseInt(selectedRadioButton.getText());
@@ -93,7 +90,7 @@ public class Presenter implements Initializable {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Spielername");
         dialog.setHeaderText("Spieler " + (playerId + 1));
-        dialog.setContentText("Gib di name i:");
+        dialog.setContentText("Wie heissisch?");
         Optional<String> result = dialog.showAndWait();
         return result.orElse(null);
     }
@@ -108,11 +105,11 @@ public class Presenter implements Initializable {
         int id = Character.getNumericValue(button.getId().charAt(1));
 
         if (button.isSelected()) {
-            button.setText("Häbe");
+            button.setText("Häbene");
             yatzy.holdDice(id);
         } else {
+            button.setText("Bhaute");
             yatzy.setDiceActive(id);
-            button.setText("Haute");
         }
     }
 }

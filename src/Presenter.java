@@ -10,6 +10,7 @@ import javafx.stage.Popup;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Presenter implements Initializable {
@@ -72,20 +73,34 @@ public class Presenter implements Initializable {
     }
 
     private void startButtonHandler(ActionEvent actionEvent) {
+        yatzy.resetPlayer();
+
         RadioButton selectedRadioButton = (RadioButton) tgswitch.getSelectedToggle();
-        String toggleGroupValue = selectedRadioButton.getText();
-        yatzy.startGame(toggleGroupValue);
+        int playerCount = Integer.parseInt(selectedRadioButton.getText());
+
         final ObservableList<Node> labels = playerGroup.getChildren();
-        for (int i = 0; i < Integer.parseInt(toggleGroupValue); i++) {
-            Label label = (Label) labels.get(i);
-            label.textProperty().bind((yatzy.getPlayerName(i)));
+        for (int playerId = 0; playerId < playerCount; playerId++) {
+            Label label = (Label) labels.get(playerId);
+            String name = getPlayerName(playerId);
+            yatzy.startGame(playerCount);
+            yatzy.getPlayer(playerId).setName(name);
+            label.textProperty().bind((yatzy.getPlayerName(playerId)));
         }
+
+    }
+
+    private String getPlayerName(int playerId) {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Spielername");
+        dialog.setHeaderText("Spieler " + (playerId));
+        dialog.setContentText("Gib di name i:");
+        Optional<String> result = dialog.showAndWait();
+        return result.orElse(null);
     }
 
     private void writeResultsButtonHandler(ActionEvent actionEvent) {
-
-    }
         /* yatzy.updateResults(); todo: implement selection of result key and update the value. */
+    }
 
     private void holdButtonHandler(ActionEvent actionEvent) {
         //ToDo: Review Pesche!
@@ -96,7 +111,7 @@ public class Presenter implements Initializable {
             button.setText("Häbe");
             yatzy.holdDice(id);
         } else {
-            yatzy.unHoldDice(id);
+            yatzy.setDiceActive(id);
             button.setText("Haute");
         }
     }

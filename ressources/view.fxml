@@ -108,11 +108,11 @@
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3"/>
                 <Group fx:id="playerGroup" layoutX="500" layoutY="26" GridPane.columnIndex="3">
-                    <Label alignment="CENTER" layoutX="500.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
-                    <Label alignment="CENTER" layoutX="550.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
-                    <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
-                    <Label alignment="CENTER" layoutX="650.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
-                    <Label alignment="CENTER" layoutX="700.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
+                    <Label alignment="CENTER" layoutX="500.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
+                    <Label alignment="CENTER" layoutX="550.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
+                    <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
+                    <Label alignment="CENTER" layoutX="650.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
+                    <Label alignment="CENTER" layoutX="700.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
                 </Group>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 4 er" GridPane.rowIndex="4"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 5 er" GridPane.rowIndex="5"/>

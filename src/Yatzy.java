@@ -1,11 +1,13 @@
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 import java.util.LinkedList;
 import java.util.List;
 
 class Yatzy {
-    private SimpleIntegerProperty roundCount = new SimpleIntegerProperty();
+    private IntegerProperty roundCount = new SimpleIntegerProperty();
 
     private List<Dice> rollDices = new LinkedList<>();
     private List<Player> players = new LinkedList<>();
@@ -41,7 +43,7 @@ class Yatzy {
         rollDices.get(dice).setActive();
     }
 
-    public SimpleIntegerProperty getRound() {
+    public IntegerProperty getRound() {
         return roundCount;
     }
 
@@ -49,25 +51,30 @@ class Yatzy {
         return rollDices;
     }
 
-    public SimpleStringProperty getPlayerName(int playerNumber) {
+    public StringProperty getPlayerName(int playerNumber) {
         if (players.size() == 0) {
             return new SimpleStringProperty();
         } else {
-            return players.get(playerNumber).getPlayerName();
+            return players.get(playerNumber).getName();
         }
     }
 
-    public void startGame(String toggleGroupValue) {
-        players.clear();
-        Player.resetPlayerCount();
-        for (int i = 0; i < Integer.parseInt(toggleGroupValue); i++) {
+    public void startGame(int playerCount) {
+        for (int i = 0; i < playerCount; i++) {
             Player player = new Player();
             players.add(player);
-            players.get(i).setPlayerName();
             players.get(i).setPlayRound(0);
         }
     }
 
-    public void unHoldDice(int id) {
+    public Player getPlayer(int playerId) {
+        return players.get(playerId);
+    }
+
+    public void resetPlayer() {
+        for (int i = 0; i < players.size(); i++) {
+            players.get(i).setName("");
+        }
+        players.clear();
     }
 }

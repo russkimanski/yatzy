@@ -24,4 +24,13 @@ Label {
 .holdButton {
     -fx-pref-height: 40;
     -fx-pref-width: 90;
+    -fx-color: WhiteSmoke;
+	}
+
+}
+/*Change holdButton-color when hold the button*/
+
+.holdButton:selected {
+    -fx-background-color: cyan;
+
 }

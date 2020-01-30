@@ -1,21 +1,14 @@
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * @author Peter Boxler <peter.boxler@edu.teko.ch>
- * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
- * @author Alessandro Pucci <alessandro.pucci@edu.teko.ch>
- * @version 0.5
- * @implNote Refactoring notwendig! Schleifen einfügen und mit Listen arbeiten (DRY wird aktuell nicht eingehalten).
- * @since 0.5
- */
 class Yatzy {
     private SimpleIntegerProperty roundCount = new SimpleIntegerProperty();
 
     private List<Dice> rollDices = new LinkedList<>();
-    private List<Dice> holdDices = new LinkedList<>();
+    private List<Player> players = new LinkedList<>();
 
     public Yatzy() {
         int diceCount = 5;
@@ -32,47 +25,46 @@ class Yatzy {
         }
 
         for (Dice dice : rollDices) {
-            // todo: implement correct holding handler
-            if (holdDices.contains(dice)) {
-
-            } else {
+            //ToDo: Review Pesche
+            if (!dice.isHold()) {
                 dice.roll();
             }
         }
 
     }
 
-    public void holdDice(Dice dice) {
-        rollDices.remove(dice);
-        holdDices.add(dice);
+    public void holdDice(int dice) {
+        rollDices.get(dice).setOnHold();
     }
 
-    public void unholdDice(Dice dice) {
-        holdDices.remove(dice);
-        rollDices.add(dice);
+    public void setDiceActive(int dice) {
+        rollDices.get(dice).setActive();
     }
-
 
     public SimpleIntegerProperty getRound() {
         return roundCount;
-    }
-
-    public List<Dice> getHoldDices() {
-        return holdDices;
     }
 
     public List<Dice> getRollDices() {
         return rollDices;
     }
 
+    public SimpleStringProperty getPlayerName(int playerNumber) {
+        if (players.size() == 0) {
+            return new SimpleStringProperty();
+        } else {
+            return players.get(playerNumber).getPlayerName();
+        }
+    }
+
     public void startGame(String toggleGroupValue) {
+        players.clear();
+        Player.resetPlayerCount();
         for (int i = 0; i < Integer.parseInt(toggleGroupValue); i++) {
-            String playerName = "Spieler" + (i + 1);
             Player player = new Player();
-            player.setPlayerName(playerName);
-            /*Für Itrationsmeeting um zu zeigen, dass entsprechend den mit dem RadioButton selektierten Anzahl Spielern
-            Objekte erstellt worden sind:*/
-            System.out.println(playerName);
+            players.add(player);
+            players.get(i).setPlayerName();
+            players.get(i).setPlayRound(0);
         }
     }
 }

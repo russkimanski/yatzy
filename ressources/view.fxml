@@ -16,15 +16,15 @@
                 <Font name="System Bold" size="15.0"/>
             </font>
         </Button>
-        <ToggleButton fx:id="t1" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t2" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t3" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t4" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t3" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
-        <ToggleButton fx:id="t5" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
+        <ToggleButton fx:id="t4" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
                       text="Halten"/>
         <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzahl Spieler">
             <font>
@@ -72,11 +72,11 @@
         <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="26.0" style="-fx-background-color: white;">
             <columnConstraints>
                 <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
@@ -108,27 +108,27 @@
                 </Text>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3"/>
-                <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.columnIndex="1">
+                <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" fx:id="p1">
                     <font>
                         <Font name="System Bold" size="15.0"/>
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="3">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" fx:id="p2">
                     <font>
                         <Font name="System Bold" size="15.0"/>
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="2">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" fx:id="p3">
                     <font>
                         <Font name="System Bold" size="15.0"/>
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="4">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" fx:id="p4">
                     <font>
                         <Font name="System Bold" size="15.0"/>
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" GridPane.columnIndex="5">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" fx:id="p5">
                     <font>
                         <Font name="System Bold" size="15.0"/>
                     </font>

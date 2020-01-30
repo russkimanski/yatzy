@@ -43,7 +43,7 @@ public class Player {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Spielername");
         dialog.setHeaderText("Spieler " + (playerCount));
-        dialog.setContentText("Bitte den Namen des Spielers eingeben:");
+        dialog.setContentText("Gib di name i:");
         Optional<String> result = dialog.showAndWait();
         result.ifPresent(s -> this.name.setValue(s));
     }

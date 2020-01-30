@@ -117,10 +117,13 @@ public class Presenter implements Initializable {
         //ToDo: Review Pesche!
         ToggleButton button = (ToggleButton) actionEvent.getSource();
         int id = Character.getNumericValue(button.getId().charAt(1));
+
         if (button.isSelected()) {
+            button.setText("Hält");
             yatzy.holdDice(id);
         } else {
-            yatzy.setDiceActive(id);
+            yatzy.unHoldDice(id);
+            button.setText("Halten");
         }
     }
 }

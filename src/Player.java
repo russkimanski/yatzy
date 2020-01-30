@@ -26,7 +26,7 @@ public class Player {
         results.put("vierGleiche", 0);
         results.put("kleineStrasse", 0);
         results.put("grosseStrasse", 0);
-        results.put("vollesHaus", 0);
+        results.put("fullHouse", 0);
         results.put("chance", 0);
         results.put("yatzy", 0);
         results.put("finalPoints", 0);

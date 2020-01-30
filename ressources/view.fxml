@@ -149,7 +149,7 @@
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Gleiche" GridPane.rowIndex="12"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Kleine Strasse" GridPane.rowIndex="13"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grosse Strasse" GridPane.rowIndex="14"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Volles Haus" GridPane.rowIndex="15"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Full House" GridPane.rowIndex="15"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chance" GridPane.rowIndex="16"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" YATZY" GridPane.rowIndex="17">
                     <font>

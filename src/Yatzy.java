@@ -67,4 +67,7 @@ class Yatzy {
             players.get(i).setPlayRound(0);
         }
     }
+
+    public void unHoldDice(int id) {
+    }
 }

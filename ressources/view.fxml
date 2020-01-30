@@ -108,31 +108,13 @@
                 </Text>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3"/>
-                <Text smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" fx:id="p1">
-                    <font>
-                        <Font name="System Bold" size="15.0"/>
-                    </font>
-                </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" fx:id="p2">
-                    <font>
-                        <Font name="System Bold" size="15.0"/>
-                    </font>
-                </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" fx:id="p3">
-                    <font>
-                        <Font name="System Bold" size="15.0"/>
-                    </font>
-                </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" fx:id="p4">
-                    <font>
-                        <Font name="System Bold" size="15.0"/>
-                    </font>
-                </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" fx:id="p5">
-                    <font>
-                        <Font name="System Bold" size="15.0"/>
-                    </font>
-                </Text>
+                <Group fx:id="playerGroup" layoutX="500" layoutY="26" GridPane.columnIndex="3">
+                    <Label alignment="CENTER" layoutX="500.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
+                    <Label alignment="CENTER" layoutX="550.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
+                    <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
+                    <Label alignment="CENTER" layoutX="650.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
+                    <Label alignment="CENTER" layoutX="700.0" layoutY="26.0" prefHeight="31.0" prefWidth="53.0"/>
+                </Group>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 4 er" GridPane.rowIndex="4"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 5 er" GridPane.rowIndex="5"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 6 er" GridPane.rowIndex="6"/>
@@ -149,7 +131,7 @@
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Gleiche" GridPane.rowIndex="12"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Kleine Strasse" GridPane.rowIndex="13"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grosse Strasse" GridPane.rowIndex="14"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Full House" GridPane.rowIndex="15"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Volles Haus" GridPane.rowIndex="15"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chance" GridPane.rowIndex="16"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" YATZY" GridPane.rowIndex="17">
                     <font>

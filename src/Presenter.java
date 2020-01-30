@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
 import javafx.stage.Popup;
 
 import java.net.URL;
@@ -41,15 +40,7 @@ public class Presenter implements Initializable {
     @FXML
     private Popup popup;
     @FXML
-    private Text p1;
-    @FXML
-    private Text p2;
-    @FXML
-    private Text p3;
-    @FXML
-    private Text p4;
-    @FXML
-    private Text p5;
+    private Group playerGroup;
 
     Presenter(Yatzy yatzy) {
         this.yatzy = yatzy;
@@ -84,27 +75,10 @@ public class Presenter implements Initializable {
         RadioButton selectedRadioButton = (RadioButton) tgswitch.getSelectedToggle();
         String toggleGroupValue = selectedRadioButton.getText();
         yatzy.startGame(toggleGroupValue);
+        final ObservableList<Node> labels = playerGroup.getChildren();
         for (int i = 0; i < Integer.parseInt(toggleGroupValue); i++) {
-            switch (i) {
-                //todo: Mit Group lösen oder variablen Variabel :)
-                case 0:
-                    p1.textProperty().bind((yatzy.getPlayerName(i)));
-                    break;
-                case 1:
-                    p2.textProperty().bind((yatzy.getPlayerName(i)));
-                    break;
-                case 2:
-                    p3.textProperty().bind((yatzy.getPlayerName(i)));
-                    break;
-                case 3:
-                    p4.textProperty().bind((yatzy.getPlayerName(i)));
-                    break;
-                case 4:
-                    p5.textProperty().bind((yatzy.getPlayerName(i)));
-                    break;
-                default:
-                    break;
-            }
+            Label label = (Label) labels.get(i);
+            label.textProperty().bind((yatzy.getPlayerName(i)));
         }
     }
 
@@ -117,13 +91,10 @@ public class Presenter implements Initializable {
         //ToDo: Review Pesche!
         ToggleButton button = (ToggleButton) actionEvent.getSource();
         int id = Character.getNumericValue(button.getId().charAt(1));
-
         if (button.isSelected()) {
-            button.setText("Hält");
             yatzy.holdDice(id);
         } else {
-            yatzy.unHoldDice(id);
-            button.setText("Halten");
+            yatzy.setDiceActive(id);
         }
     }
 }

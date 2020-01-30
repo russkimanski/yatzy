@@ -21,11 +21,17 @@ Label {
     -fx-background-color: beige;
 }
 
+#playerGroup Label {
+    -fx-font: normal bold 12px 'sans-serif';
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
 .holdButton {
     -fx-pref-height: 40;
     -fx-pref-width: 90;
     -fx-color: WhiteSmoke;
-	}
+}
 
 }
 /*Change holdButton-color when hold the button*/

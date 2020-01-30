@@ -92,7 +92,7 @@ public class Presenter implements Initializable {
     private String getPlayerName(int playerId) {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Spielername");
-        dialog.setHeaderText("Spieler " + (playerId));
+        dialog.setHeaderText("Spieler " + (playerId + 1));
         dialog.setContentText("Gib di name i:");
         Optional<String> result = dialog.showAndWait();
         return result.orElse(null);

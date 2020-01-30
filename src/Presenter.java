@@ -93,11 +93,11 @@ public class Presenter implements Initializable {
         int id = Character.getNumericValue(button.getId().charAt(1));
 
         if (button.isSelected()) {
-            button.setText("Hält");
+            button.setText("Häbe");
             yatzy.holdDice(id);
         } else {
             yatzy.unHoldDice(id);
-            button.setText("Halten");
+            button.setText("Haute");
         }
     }
 }

@@ -8,25 +8,25 @@
 <Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal">
     <children>
         <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0"
-                prefWidth="120.0" text="Würfeln"/>
+                prefWidth="120.0" text="Würfle"/>
         <Button fx:id="start" layoutX="765.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0"
                 prefWidth="200.0"
-                style="-fx-background-color: chartreuse;" text="Start !">
+                style="-fx-background-color: chartreuse;" text="Spiu starte !">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
         </Button>
         <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Halten"/>
+                      text="Haute"/>
         <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Halten"/>
+                      text="Haute"/>
         <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Halten"/>
+                      text="Haute"/>
         <ToggleButton fx:id="t3" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Halten"/>
+                      text="Haute"/>
         <ToggleButton fx:id="t4" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Halten"/>
-        <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anzahl Spieler">
+                      text="Haute"/>
+        <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Azahu Spieler">
             <font>
                 <Font name="System Bold" size="15.0"/>
             </font>
@@ -127,11 +127,11 @@
                       GridPane.rowIndex="8"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 Paar" GridPane.rowIndex="9"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 Paar" GridPane.rowIndex="10"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Drei Gleiche" GridPane.rowIndex="11"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Gleiche" GridPane.rowIndex="12"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Kleine Strasse" GridPane.rowIndex="13"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grosse Strasse" GridPane.rowIndex="14"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Volles Haus" GridPane.rowIndex="15"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Drü Glichi" GridPane.rowIndex="11"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Glichi" GridPane.rowIndex="12"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chlini Strass" GridPane.rowIndex="13"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grossi Strass" GridPane.rowIndex="14"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vous Hus" GridPane.rowIndex="15"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chance" GridPane.rowIndex="16"/>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" YATZY" GridPane.rowIndex="17">
                     <font>
@@ -237,8 +237,8 @@
         </GridPane>
         <Label fx:id="rounds" alignment="CENTER" layoutX="450.0" layoutY="216.0" prefHeight="51.0" prefWidth="200.0"
                style="-fx-background-color: beige; -fx-border-color: black;" text="Label"/>
-        <Button fx:id="writeResults" layoutX="598.0" layoutY="529.0" mnemonicParsing="false" prefHeight="67.0"
-                prefWidth="120.0" text="Übernehmen"/>
+        <Button fx:id="writeResults" layoutX="580.0" layoutY="529.0" mnemonicParsing="false" prefHeight="67.0"
+                prefWidth="160.0" text="Pünkt übernäh"/>
     </children>
     <opaqueInsets>
         <Insets bottom="5.0"/>

@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -8,7 +9,7 @@ import javafx.stage.Stage;
  * @author Peter Boxler <peter.boxler@edu.teko.ch>
  * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
  * @author Alessandro Pucci <alessandro.pucci@edu.teko.ch>
- * @version 0.6
+ * @version 0.7
  * @since 0.1
  */
 public class Main extends Application {
@@ -30,6 +31,8 @@ public class Main extends Application {
         initScene(primaryStage, root);
 
         primaryStage.setTitle("YATZY");
+        Image icon = new Image("yatzy.png");
+        primaryStage.getIcons().add(icon);
         primaryStage.show();
     }
 

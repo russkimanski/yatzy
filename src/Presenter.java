@@ -84,7 +84,6 @@ public class Presenter implements Initializable {
             yatzy.getPlayer(playerId).setName(name);
             label.textProperty().bind((yatzy.getPlayerName(playerId)));
         }
-
     }
 
     private String getPlayerName(int playerId) {
@@ -106,11 +105,21 @@ public class Presenter implements Initializable {
         return result.orElse(null);
     }
 
+    private void changePlayerMessage() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informationen");
+        alert.setHeaderText(null);
+        alert.setContentText(yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue() + " isch dran!");
+        alert.show();
+    }
+
 
     private void writeResultsButtonHandler(ActionEvent actionEvent) {
         if (yatzy.getRound().getValue() > 0) {
             String playerChoice = getPlayerChoice(yatzy.getCurrentPlayer());
             yatzy.writeResults(yatzy.getCurrentPlayer(), playerChoice);
+            changePlayerMessage();
+            //ToDo: Ipmlement binding to resultFields.
         }
     }
 

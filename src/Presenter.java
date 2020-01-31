@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class Presenter implements Initializable {
     private Yatzy yatzy;
@@ -76,10 +77,10 @@ public class Presenter implements Initializable {
         int playerCount = Integer.parseInt(selectedRadioButton.getText());
 
         final ObservableList<Node> labels = playerGroup.getChildren();
+        yatzy.startGame(playerCount);
         for (int playerId = 0; playerId < playerCount; playerId++) {
             Label label = (Label) labels.get(playerId);
             String name = getPlayerName(playerId);
-            yatzy.startGame(playerCount);
             yatzy.getPlayer(playerId).setName(name);
             label.textProperty().bind((yatzy.getPlayerName(playerId)));
         }
@@ -95,8 +96,22 @@ public class Presenter implements Initializable {
         return result.orElse(null);
     }
 
+    private String getPlayerChoice(int playerId) {
+        Set<String> keySet = yatzy.getPlayer(playerId).results.keySet();
+        ChoiceDialog<String> dialog = new ChoiceDialog<String>(keySet.iterator().next(), keySet);
+        dialog.setTitle("Triff ä Entscheidig!");
+        dialog.setHeaderText(yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue());
+        dialog.setContentText("Weles wosch?");
+        Optional<String> result = dialog.showAndWait();
+        return result.orElse(null);
+    }
+
+
     private void writeResultsButtonHandler(ActionEvent actionEvent) {
-        /* yatzy.updateResults(); todo: implement selection of result key and update the value. */
+        if (yatzy.getRound().getValue() > 0) {
+            String playerChoice = getPlayerChoice(yatzy.getCurrentPlayer());
+            yatzy.writeResults(yatzy.getCurrentPlayer(), playerChoice);
+        }
     }
 
     private void holdButtonHandler(ActionEvent actionEvent) {

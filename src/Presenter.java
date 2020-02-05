@@ -100,7 +100,7 @@ public class Presenter implements Initializable {
         ChoiceDialog<String> dialog = new ChoiceDialog<String>(keySet.iterator().next(), keySet);
         dialog.setTitle("Triff ä Entscheidig!");
         dialog.setHeaderText(yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue());
-        dialog.setContentText("Weles wosch?");
+        dialog.setContentText("Weles Resultat wosch übernäh?");
         Optional<String> result = dialog.showAndWait();
         return result.orElse(null);
     }

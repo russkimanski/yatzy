@@ -49,10 +49,20 @@ class Yatzy {
         return rollDices;
     }
 
-    public int sumRollDices() {
+    public int sumDices() {
         int sum = 0;
         for (int i = 0; i < rollDices.size(); i++) {
             sum += rollDices.get(i).getValue().intValue();
+        }
+        return sum;
+    }
+
+    public int checkDiceNumber(int nr) {
+        int sum = 0;
+        for (Dice d : getRollDices()) { //ToDo: Was ist besser, Aufruf über Methode oder über Feld rollDiceses, wenn eine Methode z.B. nur in der selben Klasse wervendet würde?
+            if (d.getValue().getValue() == nr) {
+                sum += nr;
+            }
         }
         return sum;
     }
@@ -76,9 +86,12 @@ class Yatzy {
 
     //ToDo: Ausgabe von writResults aktuell nur in Konsole, muss auf die TextFelder gebunden werden...
     public void writeResults(int playerId, String key) {
-        if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er" | key == "chance") {
-            int sum = sumRollDices();
-            players.get(playerId).results.put(key, sum); //ToDo: Summe von Augenzahlen implementieren, diese funktioniert nur für die "chance".
+        if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er") {
+            int sum = checkDiceNumber(Character.getNumericValue(key.charAt(0)));
+            players.get(playerId).results.put(key, sum);
+        } else if (key == "chance") {
+            int sum = sumDices();
+            players.get(playerId).results.put(key, sum);
         } else if (key == "1paar" | key == "2paar" | key == "dreiGleiche" | key == "vierGleiche") {
             players.get(playerId).results.put(key, 100); //ToDo: Implement method for these cases.
         } else {

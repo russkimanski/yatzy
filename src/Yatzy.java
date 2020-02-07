@@ -120,7 +120,7 @@ class Yatzy {
             }
             if (sum / players.size() > 14) {
                 //ToDo: Implement a method to evaluate the winning player.
-                System.out.println("Hier wird der Spieler mit den meisten Punkten ausgegeben! Z.B. " + getWinner());
+                System.out.println("Hier wird der Spieler mit den meisten Punkten ausgegeben. Z.B. " + getWinner());
                 resetGame();
             }
         } else {

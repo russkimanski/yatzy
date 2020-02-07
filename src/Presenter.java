@@ -97,6 +97,9 @@ public class Presenter implements Initializable {
 
     private String getPlayerChoice(int playerId) {
         Set<String> keySet = yatzy.getPlayer(playerId).results.keySet();
+        keySet.remove("bonus");
+        keySet.remove("sum1");
+        keySet.remove("finalPoints");
         ChoiceDialog<String> dialog = new ChoiceDialog<String>(keySet.iterator().next(), keySet);
         dialog.setTitle("Triff ä Entscheidig!");
         dialog.setHeaderText(yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue());

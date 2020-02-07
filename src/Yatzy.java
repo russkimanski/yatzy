@@ -67,6 +67,11 @@ class Yatzy {
         return sum;
     }
 
+    //ToDo: Implement a method to evaluate the winning player.
+    public String getWinner() {
+        return players.get(0).getName().getValue();
+    }
+
     public StringProperty getPlayerName(int playerNumber) {
         if (players.size() == 0) {
             return new SimpleStringProperty();
@@ -84,7 +89,7 @@ class Yatzy {
         }
     }
 
-    //ToDo: Ausgabe von writResults aktuell nur in Konsole, muss auf die TextFelder gebunden werden...
+    //ToDo: Ausgabe von writResults aktuell nur in Konsole, muss auf die TextFelder gebunden werden... Zudem macht die Methode viel zu viel und muss refactored werden.
     public void writeResults(int playerId, String key) {
         if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er") {
             int sum = checkDiceNumber(Character.getNumericValue(key.charAt(0)));
@@ -93,20 +98,34 @@ class Yatzy {
             int sum = sumDices();
             players.get(playerId).results.put(key, sum);
         } else if (key == "1paar" | key == "2paar" | key == "dreiGleiche" | key == "vierGleiche") {
-            players.get(playerId).results.put(key, 100); //ToDo: Implement method for these cases.
+            players.get(playerId).results.put(key, 100); //ToDo: Implement a method for these cases.
         } else {
             setPoints();
             int points = pointList.get(key);
             players.get(playerId).results.put(key, points);
         }
         this.roundCount.set(0);
-        System.out.println("Spieler " + players.get(currentPlayer).getName().getValue() + " ha folgende Resultate in der HashMap:" + players.get(currentPlayer).results.values());
+        players.get(playerId).setPlayRound(players.get(playerId).getPlayRound() + 1);
+        System.out.println("Spieler " + players.get(currentPlayer).getName().getValue() + " hat folgende Resultate in der HashMap:" + players.get(currentPlayer).results.values());
+        System.out.println("Gespielte Runden von " + players.get(currentPlayer).getName().getValue() + ": " + players.get(currentPlayer).getPlayRound());
         if (currentPlayer < (players.size()) - 1) {
             setCurrentPlayer(getCurrentPlayer() + 1);
         } else {
             setCurrentPlayer(0);
         }
-        System.out.println("Nächster Spieler: " + players.get(currentPlayer).getName().getValue());
+        if (players.get(playerId).getPlayRound() > 14) {
+            double sum = 0;
+            for (int i = 0; i < players.size(); i++) {
+                sum += players.get(i).getPlayRound();
+            }
+            if (sum / players.size() > 14) {
+                //ToDo: Implement a method to evaluate the winning player.
+                System.out.println("Hier wird der Spieler mit den meisten Punkten ausgegeben! Z.B. " + getWinner());
+                resetGame();
+            }
+        } else {
+            System.out.println("Nächster Spieler: " + players.get(currentPlayer).getName().getValue());
+        }
     }
 
     public Player getPlayer(int playerId) {

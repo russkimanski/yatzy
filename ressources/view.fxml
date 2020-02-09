@@ -1,245 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.Group?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal">
+
+<Pane fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0"
-                prefWidth="120.0" text="Würfle"/>
-        <Button fx:id="start" layoutX="769.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0"
-                prefWidth="200.0" style="-fx-background-color: chartreuse;" text="Spiu starte !">
+      <Pane layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" style="-fx-background-color: sienna;" />
+        <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="Würfle" />
+        <Button fx:id="start" layoutX="769.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" text="Spiu starte !">
             <font>
-                <Font name="System Bold" size="15.0"/>
+                <Font name="System Bold" size="15.0" />
             </font>
         </Button>
-        <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Bhaute"/>
-        <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Bhaute"/>
-        <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Bhaute"/>
-        <ToggleButton fx:id="t3" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Bhaute"/>
-        <ToggleButton fx:id="t4" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton"
-                      text="Bhaute"/>
+        <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t3" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t4" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
         <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Azahu Spieler">
             <font>
-                <Font name="System Bold" size="15.0"/>
+                <Font name="System Bold" size="15.0" />
             </font>
         </Text>
 
         <Group fx:id="labelGroup" layoutY="26">
-            <Label alignment="CENTER" layoutX="450.0" prefHeight="90.0" prefWidth="90.0"/>
-            <Label alignment="CENTER" layoutX="560.0" prefHeight="90.0" prefWidth="90.0"/>
-            <Label alignment="CENTER" layoutX="670.0" prefHeight="90.0" prefWidth="90.0"/>
-            <Label alignment="CENTER" layoutX="780.0" prefHeight="90.0" prefWidth="90.0"/>
-            <Label alignment="CENTER" layoutX="890.0" prefHeight="90.0" prefWidth="90.0"/>
+            <Label alignment="CENTER" layoutX="450.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="560.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="670.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="780.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="890.0" prefHeight="90.0" prefWidth="90.0" />
         </Group>
         <RadioButton layoutX="765.0" layoutY="480.0" mnemonicParsing="false" selected="true" text="1">
             <toggleGroup>
-                <ToggleGroup fx:id="tgswitch"/>
+                <ToggleGroup fx:id="tgswitch" />
             </toggleGroup>
             <font>
-                <Font name="System Bold" size="15.0"/>
+                <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
         <RadioButton layoutX="807.0" layoutY="480.0" mnemonicParsing="false" text="2" toggleGroup="$tgswitch">
             <font>
-                <Font name="System Bold" size="15.0"/>
+                <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
         <RadioButton layoutX="848.0" layoutY="480.0" mnemonicParsing="false" text="3" toggleGroup="$tgswitch">
             <font>
-                <Font name="System Bold" size="15.0"/>
+                <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
         <RadioButton layoutX="895.0" layoutY="480.0" mnemonicParsing="false" text="4" toggleGroup="$tgswitch">
             <font>
-                <Font name="System Bold" size="15.0"/>
+                <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
         <RadioButton layoutX="940.0" layoutY="480.0" mnemonicParsing="false" text="5" toggleGroup="$tgswitch">
             <font>
-                <Font name="System Bold" size="15.0"/>
+                <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
-        <TabPane layoutX="531.0" layoutY="282.0"/>
-        <Accordion layoutX="308.0" layoutY="236.0"/>
-        <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="26.0" style="-fx-background-color: white;">
+        <TabPane layoutX="531.0" layoutY="282.0" />
+        <Accordion layoutX="308.0" layoutY="236.0" />
+        <GridPane gridLinesVisible="true" layoutX="31.0" layoutY="26.0" style="-fx-background-color: beige;">
             <columnConstraints>
-                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0"/>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 er" GridPane.rowIndex="1"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 er" GridPane.rowIndex="1" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Spieler">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3" />
                 <Group fx:id="playerGroup" layoutX="500" layoutY="26" GridPane.columnIndex="3">
-                    <Label alignment="CENTER" layoutX="500.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
-                    <Label alignment="CENTER" layoutX="550.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
-                    <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
-                    <Label alignment="CENTER" layoutX="650.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
-                    <Label alignment="CENTER" layoutX="700.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0"/>
+                    <Label alignment="CENTER" layoutX="500.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                    <Label alignment="CENTER" layoutX="550.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                    <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                    <Label alignment="CENTER" layoutX="650.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                    <Label alignment="CENTER" layoutX="700.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
                 </Group>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 4 er" GridPane.rowIndex="4"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 5 er" GridPane.rowIndex="5"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 6 er" GridPane.rowIndex="6"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 4 er" GridPane.rowIndex="4" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 5 er" GridPane.rowIndex="5" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 6 er" GridPane.rowIndex="6" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Summe" GridPane.rowIndex="7">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Bonus" wrappingWidth="106.72998046875"
-                      GridPane.rowIndex="8"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 Paar" GridPane.rowIndex="9"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 Paar" GridPane.rowIndex="10"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Drü Glichi" GridPane.rowIndex="11"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Glichi" GridPane.rowIndex="12"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chlini Strass" GridPane.rowIndex="13"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grossi Strass" GridPane.rowIndex="14"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vous Hus" GridPane.rowIndex="15"/>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chance" GridPane.rowIndex="16"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Bonus" wrappingWidth="106.72998046875" GridPane.rowIndex="8" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 Paar" GridPane.rowIndex="9" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 Paar" GridPane.rowIndex="10" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Drü Glichi" GridPane.rowIndex="11" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vier Glichi" GridPane.rowIndex="12" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chlini Strass" GridPane.rowIndex="13" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Grossi Strass" GridPane.rowIndex="14" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vous Hus" GridPane.rowIndex="15" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Chance" GridPane.rowIndex="16" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" YATZY" GridPane.rowIndex="17">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ändsumme" GridPane.rowIndex="18">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Ändsumme" GridPane.rowIndex="18">
                     <font>
-                        <Font name="System Bold" size="15.0"/>
+                        <Font name="System Bold" size="15.0" />
                     </font>
                 </Text>
-                <TextField fx:id="b1" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                <TextField fx:id="b2" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                <TextField fx:id="b4" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-                <TextField fx:id="b5" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-                <TextField fx:id="b6" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
-                <TextField fx:id="bsum" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
-                <TextField fx:id="1p" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
-                <TextField fx:id="2p" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
-                <TextField fx:id="3k" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
-                <TextField fx:id="4k" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
-                <TextField fx:id="sstr" GridPane.columnIndex="1" GridPane.rowIndex="13"/>
-                <TextField fx:id="lst" GridPane.columnIndex="1" GridPane.rowIndex="14"/>
-                <TextField fx:id="fho" GridPane.columnIndex="1" GridPane.rowIndex="15"/>
-                <TextField fx:id="cha" GridPane.columnIndex="1" GridPane.rowIndex="16"/>
-                <TextField fx:id="sum" GridPane.columnIndex="1" GridPane.rowIndex="18"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="1"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="1"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="1"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="2"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="2"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="2"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="2"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="3"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="3"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="3"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="3"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="4"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="4"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="4"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="4"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="5"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="5"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="5"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="5"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="6"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="6"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="6"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="6"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="7"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="7"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="7"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="7"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="8"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="8"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="8"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="8"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="9"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="9"/>
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="8"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="10"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="10"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="9"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="9"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="10"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="10"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="11"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="11"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="11"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="11"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="12"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="12"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="12"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="12"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="13"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="13"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="13"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="13"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="14"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="14"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="14"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="14"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="15"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="15"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="15"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="15"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="16"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="16"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="16"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="16"/>
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="17"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="17"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="17"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="17"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="17"/>
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="18"/>
-                <TextField GridPane.columnIndex="3" GridPane.rowIndex="18"/>
-                <TextField GridPane.columnIndex="4" GridPane.rowIndex="18"/>
-                <TextField GridPane.columnIndex="5" GridPane.rowIndex="18"/>
+                <TextField fx:id="b1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="b2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="b4" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="b5" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="b6" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField fx:id="bsum" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <TextField fx:id="1p" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                <TextField fx:id="2p" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                <TextField fx:id="3k" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                <TextField fx:id="4k" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                <TextField fx:id="sstr" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                <TextField fx:id="lst" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                <TextField fx:id="fho" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                <TextField fx:id="cha" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                <TextField fx:id="sum" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="11" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="12" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="12" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="12" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="13" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="13" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="13" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="14" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="14" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="15" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="15" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="15" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="16" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="16" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="16" />
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="17" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="17" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="17" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="17" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="17" />
+                <TextField GridPane.columnIndex="2" GridPane.rowIndex="18" />
+                <TextField GridPane.columnIndex="3" GridPane.rowIndex="18" />
+                <TextField GridPane.columnIndex="4" GridPane.rowIndex="18" />
+                <TextField GridPane.columnIndex="5" GridPane.rowIndex="18" />
             </children>
         </GridPane>
-        <Label fx:id="rounds" alignment="CENTER" layoutX="450.0" layoutY="216.0" prefHeight="51.0" prefWidth="200.0"
-               style="-fx-background-color: beige; -fx-border-color: black;" text="Label"/>
-        <Button fx:id="writeResults" layoutX="589.0" layoutY="529.0" mnemonicParsing="false" prefHeight="67.0"
-                prefWidth="160.0" text="Pünkt übernäh"/>
+        <Label fx:id="rounds" alignment="CENTER" layoutX="450.0" layoutY="216.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: beige; -fx-border-color: black;" text="Label" />
+        <Button fx:id="writeResults" layoutX="589.0" layoutY="529.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="160.0" text="Pünkt übernäh" />
     </children>
     <opaqueInsets>
-        <Insets bottom="5.0"/>
+        <Insets bottom="5.0" />
     </opaqueInsets>
 </Pane>

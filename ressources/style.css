@@ -9,11 +9,15 @@
 
 
 #submit {
-    -fx-background-color: chartreuse;
+    -fx-background-color: yellowgreen;
+}
+
+#start {
+    -fx-background-color: yellowgreen;
 }
 
 #writeResults {
-    -fx-background-color: cornflowerblue;
+    -fx-background-color: cadetblue;
 
 }
 
@@ -27,8 +31,8 @@ Label {
 
 #playerGroup Label {
     -fx-font: normal bold 12px 'sans-serif';
-    -fx-background-color: white;
-    -fx-border-color: white;
+    -fx-background-color: beige;
+    -fx-border-color: black;
 }
 
 .holdButton {
@@ -39,6 +43,10 @@ Label {
 /*Change holdButton-color when hold the button*/
 
 .holdButton:selected {
-    -fx-background-color: cornflowerblue;
+    -fx-background-color: cadetblue;
 
+}
+
+TextField {
+    -fx-background-color: white;
 }

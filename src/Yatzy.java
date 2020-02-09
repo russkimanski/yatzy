@@ -104,28 +104,35 @@ class Yatzy {
             int points = pointList.get(key);
             players.get(playerId).results.put(key, points);
         }
-        this.roundCount.set(0);
         players.get(playerId).setPlayRound(players.get(playerId).getPlayRound() + 1);
         System.out.println("Spieler " + players.get(currentPlayer).getName().getValue() + " hat folgende Resultate in der HashMap:" + players.get(currentPlayer).results.values());
         System.out.println("Gespielte Runden von " + players.get(currentPlayer).getName().getValue() + ": " + players.get(currentPlayer).getPlayRound());
-        if (currentPlayer < (players.size()) - 1) {
-            setCurrentPlayer(getCurrentPlayer() + 1);
-        } else {
-            setCurrentPlayer(0);
+        this.roundCount.set(0);
+        if (!evaluateEndOfGame()) {
+            if (currentPlayer < (players.size()) - 1) {
+                setCurrentPlayer(getCurrentPlayer() + 1);
+            } else {
+                setCurrentPlayer(0);
+            }
+            System.out.println("Nächster Spieler: " + players.get(currentPlayer).getName().getValue());
         }
-        if (players.get(playerId).getPlayRound() > 14) {
+    }
+
+    public boolean evaluateEndOfGame() {
+        boolean end = false;
+        if (players.get(getCurrentPlayer()).getPlayRound() > 14) {
             double sum = 0;
             for (int i = 0; i < players.size(); i++) {
                 sum += players.get(i).getPlayRound();
             }
-            if (sum / players.size() > 14) {
+            if (sum / players.size() >= 15) {
+                end = true;
                 //ToDo: Implement a method to evaluate the winning player.
                 System.out.println("Hier wird der Spieler mit den meisten Punkten ausgegeben. Z.B. " + getWinner());
                 resetGame();
             }
-        } else {
-            System.out.println("Nächster Spieler: " + players.get(currentPlayer).getName().getValue());
         }
+        return end;
     }
 
     public Player getPlayer(int playerId) {

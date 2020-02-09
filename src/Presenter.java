@@ -110,10 +110,12 @@ public class Presenter implements Initializable {
 
     private void changePlayerMessage() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Informationen");
+        alert.setTitle("Info");
         alert.setHeaderText(null);
         alert.setContentText(yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue() + " isch dran!");
-        alert.show();
+        if (yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue() != null) {
+            alert.show();
+        }
     }
 
 

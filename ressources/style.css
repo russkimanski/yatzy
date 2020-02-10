@@ -7,18 +7,24 @@
     -fx-pref-width: 1000px;
 }
 
-
 #submit {
     -fx-background-color: yellowgreen;
 }
-
+#submit.button:pressed {
+    -fx-background-color: red;
+}
 #start {
     -fx-background-color: yellowgreen;
 }
+#start.button:pressed {
+    -fx-background-color: red;
 
+}
 #writeResults {
     -fx-background-color: cadetblue;
-
+}
+#writeResults.button:pressed {
+    -fx-background-color: red;
 }
 
 Label {
@@ -40,10 +46,14 @@ Label {
     -fx-pref-width: 90;
     -fx-color: WhiteSmoke;
 }
-/*Change holdButton-color when hold the button*/
+/*Change holdButton-color when hold or press the button*/
 
 .holdButton:selected {
     -fx-background-color: cadetblue;
+
+}
+.holdButton:pressed {
+    -fx-color: red;
 
 }
 

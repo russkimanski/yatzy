@@ -8,13 +8,10 @@
 
 <Pane fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <Pane layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" style="-fx-background-color: sienna;" />
+      <Pane layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" style="-fx-background-color: sienna; -fx-background-radius: 5.0;" />
         <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="Würfle" />
-        <Button fx:id="start" layoutX="769.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" text="Spiu starte !">
-            <font>
-                <Font name="System Bold" size="15.0" />
-            </font>
-        </Button>
+        <Button fx:id="start" layoutX="769.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" text="Spiu starte !" >
+    </Button>
         <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
         <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
         <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
@@ -230,6 +227,7 @@
         </GridPane>
         <Label fx:id="rounds" alignment="CENTER" layoutX="450.0" layoutY="216.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: beige; -fx-border-color: black;" text="Label" />
         <Button fx:id="writeResults" layoutX="589.0" layoutY="529.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="160.0" text="Pünkt übernäh" />
+
     </children>
     <opaqueInsets>
         <Insets bottom="5.0" />

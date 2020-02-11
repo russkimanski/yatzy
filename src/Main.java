@@ -38,7 +38,7 @@ public class Main extends Application {
 
     private void initScene(Stage primaryStage, Pane root) {
         final int width = 1024;
-        final int height = 668;
+        final int height = 648;
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add("style.css");
         primaryStage.setScene(scene);

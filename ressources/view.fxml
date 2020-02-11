@@ -9,28 +9,33 @@
 <Pane fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <Pane layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" style="-fx-background-color: sienna; -fx-background-radius: 5.0;" />
-        <Button fx:id="submit" layoutX="450.0" layoutY="476.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="Würfle" />
-        <Button fx:id="start" layoutX="769.0" layoutY="565.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" text="Spiu starte !" >
-    </Button>
-        <ToggleButton fx:id="t0" layoutX="450.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
-        <ToggleButton fx:id="t1" layoutX="560.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
-        <ToggleButton fx:id="t2" layoutX="670.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
-        <ToggleButton fx:id="t3" layoutX="780.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
-        <ToggleButton fx:id="t4" layoutX="890.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
-        <Text layoutX="815.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Azahu Spieler">
+        <Button fx:id="submit" layoutX="467.0" layoutY="481.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="Würfle">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+        <Button fx:id="start" layoutX="806.0" layoutY="534.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="169.0" text="Spiu starte !">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+        <ToggleButton fx:id="t0" layoutX="467.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t1" layoutX="577.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t2" layoutX="687.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t3" layoutX="797.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <ToggleButton fx:id="t4" layoutX="907.0" layoutY="160.0" mnemonicParsing="false" styleClass="holdButton" text="Bhaute" />
+        <Text layoutX="832.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Azahu Spieler">
             <font>
-                <Font name="System Bold" size="15.0" />
+                <Font name="System Bold" size="18.0" />
             </font>
         </Text>
 
-        <Group fx:id="labelGroup" layoutY="26">
-            <Label alignment="CENTER" layoutX="450.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="560.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="670.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="780.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="890.0" prefHeight="90.0" prefWidth="90.0" />
+        <Group fx:id="labelGroup" layoutY="21">
+            <Label alignment="CENTER" layoutX="465.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="575.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="685.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="795.0" prefHeight="90.0" prefWidth="90.0" />
+            <Label alignment="CENTER" layoutX="905.0" prefHeight="90.0" prefWidth="90.0" />
         </Group>
-        <RadioButton layoutX="765.0" layoutY="480.0" mnemonicParsing="false" selected="true" text="1">
+        <RadioButton layoutX="782.0" layoutY="409.0" mnemonicParsing="false" selected="true" text="1">
             <toggleGroup>
                 <ToggleGroup fx:id="tgswitch" />
             </toggleGroup>
@@ -38,22 +43,22 @@
                 <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="807.0" layoutY="480.0" mnemonicParsing="false" text="2" toggleGroup="$tgswitch">
+        <RadioButton layoutX="824.0" layoutY="409.0" mnemonicParsing="false" text="2" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="848.0" layoutY="480.0" mnemonicParsing="false" text="3" toggleGroup="$tgswitch">
+        <RadioButton layoutX="865.0" layoutY="409.0" mnemonicParsing="false" text="3" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="895.0" layoutY="480.0" mnemonicParsing="false" text="4" toggleGroup="$tgswitch">
+        <RadioButton layoutX="912.0" layoutY="409.0" mnemonicParsing="false" text="4" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="940.0" layoutY="480.0" mnemonicParsing="false" text="5" toggleGroup="$tgswitch">
+        <RadioButton layoutX="957.0" layoutY="409.0" mnemonicParsing="false" text="5" toggleGroup="$tgswitch">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
@@ -225,8 +230,16 @@
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="18" />
             </children>
         </GridPane>
-        <Label fx:id="rounds" alignment="CENTER" layoutX="450.0" layoutY="216.0" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: beige; -fx-border-color: black;" text="Label" />
-        <Button fx:id="writeResults" layoutX="589.0" layoutY="529.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="160.0" text="Pünkt übernäh" />
+        <Label fx:id="rounds" alignment="CENTER" layoutX="467.0" layoutY="384.0" prefHeight="51.0" prefWidth="120.0" style="-fx-background-color: beige; -fx-border-width: 3px; -fx-border-color: yellowgreen;" text="Label" />
+        <Button fx:id="writeResults" layoutX="618.0" layoutY="534.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="160.0" text="Pünkt übernäh">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Text layoutX="509.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wurf">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
 
     </children>
     <opaqueInsets>

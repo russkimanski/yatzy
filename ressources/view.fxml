@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="field" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <Pane layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" style="-fx-background-color: sienna; -fx-background-radius: 5.0;" />
         <Button fx:id="submit" layoutX="467.0" layoutY="481.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="Würfle">
@@ -29,11 +30,13 @@
         </Text>
 
         <Group fx:id="labelGroup" layoutY="21">
-            <Label alignment="CENTER" layoutX="465.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="575.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="685.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="795.0" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" layoutX="905.0" prefHeight="90.0" prefWidth="90.0" />
+   <children>
+               <Label alignment="CENTER" layoutX="465.0" prefHeight="90.0" prefWidth="90.0" />
+               <Label alignment="CENTER" layoutX="575.0" prefHeight="90.0" prefWidth="90.0" />
+               <Label alignment="CENTER" layoutX="685.0" prefHeight="90.0" prefWidth="90.0" />
+               <Label alignment="CENTER" layoutX="795.0" prefHeight="90.0" prefWidth="90.0" />
+               <Label alignment="CENTER" layoutX="905.0" prefHeight="90.0" prefWidth="90.0" />
+   </children>
         </Group>
         <RadioButton layoutX="782.0" layoutY="409.0" mnemonicParsing="false" selected="true" text="1">
             <toggleGroup>
@@ -93,7 +96,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 1 er" GridPane.rowIndex="1" />
@@ -105,11 +108,13 @@
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 2 er" GridPane.rowIndex="2" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 3 er" GridPane.rowIndex="3" />
                 <Group fx:id="playerGroup" layoutX="500" layoutY="26" GridPane.columnIndex="3">
-                    <Label alignment="CENTER" layoutX="500.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
-                    <Label alignment="CENTER" layoutX="550.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
-                    <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
-                    <Label alignment="CENTER" layoutX="650.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
-                    <Label alignment="CENTER" layoutX="700.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                   <children>
+                       <Label alignment="CENTER" layoutX="500.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                       <Label alignment="CENTER" layoutX="550.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                       <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                       <Label alignment="CENTER" layoutX="650.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                       <Label alignment="CENTER" layoutX="700.0" layoutY="26.0" prefHeight="30.0" prefWidth="50.0" />
+                   </children>
                 </Group>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 4 er" GridPane.rowIndex="4" />
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" 5 er" GridPane.rowIndex="5" />
@@ -138,22 +143,7 @@
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Text>
-                <TextField fx:id="b1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField fx:id="b2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField fx:id="b4" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <TextField fx:id="b5" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <TextField fx:id="b6" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <TextField fx:id="bsum" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                <TextField fx:id="1p" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                <TextField fx:id="2p" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                <TextField fx:id="3k" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                <TextField fx:id="4k" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-                <TextField fx:id="sstr" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-                <TextField fx:id="lst" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-                <TextField fx:id="fho" GridPane.columnIndex="1" GridPane.rowIndex="15" />
-                <TextField fx:id="cha" GridPane.columnIndex="1" GridPane.rowIndex="16" />
-                <TextField fx:id="sum" GridPane.columnIndex="1" GridPane.rowIndex="18" />
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField prefHeight="16.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
@@ -187,8 +177,6 @@
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="8" />
                 <TextField GridPane.columnIndex="2" GridPane.rowIndex="9" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
                 <TextField GridPane.columnIndex="2" GridPane.rowIndex="10" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="10" />
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="9" />
@@ -219,15 +207,32 @@
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="16" />
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="16" />
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="16" />
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="17" />
                 <TextField GridPane.columnIndex="2" GridPane.rowIndex="17" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="17" />
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="17" />
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="17" />
-                <TextField GridPane.columnIndex="2" GridPane.rowIndex="18" />
+                <TextField prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="18" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="18" />
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="18" />
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="18" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="40.0" prefHeight="7.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="71.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="97.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="127.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="157.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="217.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="247.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="277.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="307.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="367.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="397.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="427.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="457.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="487.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="157.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="307.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="67.0" prefHeight="7.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" layoutX="160.0" layoutY="517.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
             </children>
         </GridPane>
         <Label fx:id="rounds" alignment="CENTER" layoutX="467.0" layoutY="384.0" prefHeight="51.0" prefWidth="120.0" style="-fx-background-color: beige; -fx-border-width: 3px; -fx-border-color: yellowgreen;" text="Label" />

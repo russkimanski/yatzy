@@ -7,6 +7,32 @@
     -fx-pref-width: 1000px;
 }
 
+#borderfield {
+    -fx-background-color: sienna;
+    -fx-background-radius: 5.0;
+}
+#rounds {
+    -fx-background-color: beige;
+    -fx-border-width: 3px;
+    -fx-border-color: yellowgreen;
+}
+
+#playerGroup Label {
+    -fx-font: normal bold 12px 'sans-serif';
+    -fx-background-color: beige;
+    -fx-border-color: black;
+}
+
+Label {
+    -fx-font: normal bold 32px 'sans-serif';
+    -fx-background-color: beige;
+    -fx-background-radius: 10px;
+}
+
+TextField {
+    -fx-background-color: white;
+}
+
 #submit {
     -fx-background-color: yellowgreen;
     -fx-background-radius: 10px;
@@ -28,22 +54,6 @@
 }
 #writeResults.button:pressed {
     -fx-background-color: skyblue;
-}
-
-Label {
-    -fx-font: normal bold 32px 'sans-serif';
-    -fx-background-color: beige;
-    -fx-background-radius: 10px;
-}
-
-TextField {
-    -fx-background-color: white;
-}
-
-#playerGroup Label {
-    -fx-font: normal bold 12px 'sans-serif';
-    -fx-background-color: beige;
-    -fx-border-color: black;
 }
 
 .holdButton {

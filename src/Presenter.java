@@ -129,7 +129,7 @@ public class Presenter implements Initializable {
     }
 
     private void holdButtonHandler(ActionEvent actionEvent) {
-        //ToDo: Review Pesche!
+
         ToggleButton button = (ToggleButton) actionEvent.getSource();
         int id = Character.getNumericValue(button.getId().charAt(1));
 

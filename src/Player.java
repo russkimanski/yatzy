@@ -17,22 +17,22 @@ public class Player {
         results.put("6er", 0);
         results.put("sum1", 0);
         //results.put("sum1", results.get("1er") + results.get("2er") + results.get("3er") + results.get("4er") + results.get("5er") + results.get("6er"));
-        results.put("bonus", 0);
+        results.put("Bonus", 0);
         /*if (results.get("sum1") > 62){
             results.put("bonus", 35);
         }else {
             results.put("bonus", 0);
         }*/
-        results.put("1paar", 0);
-        results.put("2paar", 0);
-        results.put("dreiGleiche", 0);
-        results.put("vierGleiche", 0);
-        results.put("kleineStrasse", 0);
-        results.put("grosseStrasse", 0);
-        results.put("fullHouse", 0);
-        results.put("chance", 0);
-        results.put("yatzy", 0);
-        results.put("finalPoints", 0);
+        results.put("1 Paar", 0);
+        results.put("2 Paar", 0);
+        results.put("Drei Gleiche", 0);
+        results.put("Vier Gleiche", 0);
+        results.put("Kleine Strasse", 0);
+        results.put("Grosse Strasse", 0);
+        results.put("Full House", 0);
+        results.put("Chance", 0);
+        results.put("Yatzy", 0);
+        results.put("Final Points", 0);
         //results.put("finalPoints", results.get("sum1") + results.get("bonus") + results.get("1paar") + results.get("2paar") + results.get("dreiGleiche") + results.get("vierGleiche") + results.get("kleineStrasse") + results.get("grosseStrasse") + results.get("fullHouse") + results.get("chance") + results.get("yatzy"));
     }
 

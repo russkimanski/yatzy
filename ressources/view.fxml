@@ -9,7 +9,7 @@
 
 <Pane fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <Pane layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" style="-fx-background-color: sienna; -fx-background-radius: 5.0;" />
+        <Pane fx:id="borderfield" layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" />
         <Button fx:id="submit" layoutX="467.0" layoutY="481.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="Würfle">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -143,7 +143,6 @@
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Text>
-                <TextField prefHeight="16.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
@@ -233,9 +232,10 @@
             <Label alignment="CENTER" layoutX="160.0" layoutY="307.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
             <Label alignment="CENTER" layoutX="160.0" layoutY="67.0" prefHeight="7.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label alignment="CENTER" layoutX="160.0" layoutY="517.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+                <TextField prefHeight="16.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             </children>
         </GridPane>
-        <Label fx:id="rounds" alignment="CENTER" layoutX="467.0" layoutY="384.0" prefHeight="51.0" prefWidth="120.0" style="-fx-background-color: beige; -fx-border-width: 3px; -fx-border-color: yellowgreen;" text="Label" />
+        <Label fx:id="rounds" alignment="CENTER" layoutX="467.0" layoutY="384.0" prefHeight="51.0" prefWidth="120.0" text="Label" />
         <Button fx:id="writeResults" layoutX="618.0" layoutY="534.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="160.0" text="Pünkt übernäh">
          <font>
             <Font name="System Bold" size="18.0" />

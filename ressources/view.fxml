@@ -214,25 +214,25 @@
                 <TextField GridPane.columnIndex="3" GridPane.rowIndex="18" />
                 <TextField GridPane.columnIndex="4" GridPane.rowIndex="18" />
                 <TextField GridPane.columnIndex="5" GridPane.rowIndex="18" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="40.0" prefHeight="7.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="71.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="97.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="127.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="157.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="217.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="247.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="277.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="307.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="367.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="397.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="427.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="457.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="487.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="17" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="157.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="307.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="67.0" prefHeight="7.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" layoutX="160.0" layoutY="517.0" prefHeight="33.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
                 <TextField prefHeight="16.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="18" />
             </children>
         </GridPane>
         <Label fx:id="rounds" alignment="CENTER" layoutX="467.0" layoutY="384.0" prefHeight="51.0" prefWidth="120.0" text="Label" />

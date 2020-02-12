@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:id="field" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="field" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <Pane layoutX="26.0" layoutY="19.0" prefHeight="585.0" prefWidth="412.0" style="-fx-background-color: sienna; -fx-background-radius: 5.0;" />
         <Button fx:id="submit" layoutX="467.0" layoutY="481.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" text="Würfle">
@@ -245,6 +245,11 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
+      <ImageView fitHeight="120.0" fitWidth="149.0" layoutX="628.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wurf.gif" />
+         </image>
+      </ImageView>
 
     </children>
     <opaqueInsets>

@@ -7,32 +7,64 @@
     -fx-pref-width: 1000px;
 }
 
-
-#submit {
-    -fx-background-color: yellowgreen;
+#borderfield {
+    -fx-background-color: sienna;
+    -fx-background-radius: 5.0;
 }
 
-#start {
-    -fx-background-color: yellowgreen;
+#rounds {
+    -fx-background-color: beige;
+    -fx-border-width: 3px;
+    -fx-border-color: yellowgreen;
 }
 
-#writeResults {
-    -fx-background-color: cadetblue;
-
+#playerGroup Label,
+#resultGroupP1 Label,
+#resultGroupP2 Label,
+#resultGroupP3 Label,
+#resultGroupP4 Label,
+#resultGroupP5 Label {
+    -fx-font: normal bold 12px 'sans-serif';
+    -fx-background-color: white;
+    -fx-border-color: black;
 }
 
 Label {
     -fx-font: normal bold 32px 'sans-serif';
-    -fx-border-width: 1px;
-    -fx-border-style: solid;
-    -fx-border-color: beige;
     -fx-background-color: beige;
+    -fx-background-radius: 10px;
 }
 
-#playerGroup Label {
-    -fx-font: normal bold 12px 'sans-serif';
-    -fx-background-color: beige;
-    -fx-border-color: black;
+TextField {
+    -fx-background-color: white;
+}
+
+#submit {
+    -fx-background-color: yellowgreen;
+    -fx-background-radius: 10px;
+}
+
+#submit.button:pressed {
+    -fx-background-color: chartreuse;
+}
+
+#start {
+    -fx-background-color: yellowgreen;
+    -fx-background-radius: 10px;
+}
+
+#start.button:pressed {
+    -fx-background-color: chartreuse;
+
+}
+
+#writeResults {
+    -fx-background-color: cadetblue;
+    -fx-background-radius: 10px;
+}
+
+#writeResults.button:pressed {
+    -fx-background-color: skyblue;
 }
 
 .holdButton {
@@ -40,13 +72,15 @@ Label {
     -fx-pref-width: 90;
     -fx-color: WhiteSmoke;
 }
-/*Change holdButton-color when hold the button*/
+
+/*Change holdButton-color when hold or press the button*/
 
 .holdButton:selected {
     -fx-background-color: cadetblue;
 
 }
 
-TextField {
-    -fx-background-color: white;
+.holdButton:pressed {
+    -fx-color: skyblue;
+
 }

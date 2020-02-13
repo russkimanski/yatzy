@@ -3,6 +3,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -89,7 +90,7 @@ class Yatzy {
         }
     }
 
-    //ToDo: Ausgabe von writResults aktuell nur in Konsole, muss auf die TextFelder gebunden werden... Zudem macht die Methode viel zu viel und muss refactored werden.
+    //ToDo: Die Methode macht zu viel und sollte refactored werden.
     public void writeResults(int playerId, String key) {
         if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er") {
             int sum = checkDiceNumber(Character.getNumericValue(key.charAt(0)));
@@ -97,8 +98,10 @@ class Yatzy {
         } else if (key == "chance") {
             int sum = sumDices();
             players.get(playerId).results.put(key, sum);
-        } else if (key == "1paar" | key == "2paar" | key == "dreiGleiche" | key == "vierGleiche") {
-            players.get(playerId).results.put(key, 100); //ToDo: Implement a method for these cases.
+        } else if (key == "2paar") {
+            players.get(playerId).results.put(key, checkTwoPairs());
+        } else if (key == "1paar" | key == "dreiGleiche" | key == "vierGleiche") {
+            players.get(playerId).results.put(key, checkXofAKind());
         } else {
             setPoints();
             int points = pointList.get(key);
@@ -139,6 +142,10 @@ class Yatzy {
         return players.get(playerId);
     }
 
+    public LinkedList<Player> getPlayers() {
+        return players;
+    }
+
     public void resetGame() {
         for (Player player : players) {
             player.setName("");
@@ -152,6 +159,68 @@ class Yatzy {
 
     public void setCurrentPlayer(int value) {
         this.currentPlayer = value;
+    }
+
+    public int checkTwoPairs() {
+        int numPairs = 0;
+        int score = 0;
+        int sum;
+        //for each possible number
+        for (int i = 1; i <= 6; i++) {
+            sum = 0;
+            //for each dice
+            for (Dice d : getRollDices()) {
+                //if i is the dice value
+                if (d.getValue().getValue() == i) {
+                    //increment the number of matches
+                    sum++;
+                }
+            }
+
+            if (sum / 2 > 0) {
+                numPairs += (sum / 2);
+                score += (sum / 2) * 2 * i;
+            }
+
+
+            if (numPairs == 2) {
+                return score;
+            }
+        }
+        return 0;
+    }
+
+    public int checkXofAKind() {
+
+        int[] diceValues = new int[getRollDices().size()];
+        int diceValue = 0;
+        int countFinal = 0;
+
+        for (int i = 0; i < getRollDices().size(); i++) {
+            diceValues[i] = getRollDices().get(i).getValue().intValue();
+        }
+        Arrays.sort(diceValues);
+
+
+        for (int i = 0; i < diceValues.length; i++) {
+            int count = 0;
+            for (int j = 0; j < diceValues.length; j++) {
+                if (diceValues[i] == diceValues[j]) {
+                    count++;
+                }
+            }
+            if (count == 2) {
+                diceValue = diceValues[i];
+                countFinal = 2;
+            } else if (count == 3) {
+                diceValue = diceValues[i];
+                countFinal = 3;
+            } else if (count == 4) {
+                diceValue = diceValues[i];
+                countFinal = 4;
+            }
+        }
+        return countFinal * diceValue;
     }
 
     private void setPoints() {

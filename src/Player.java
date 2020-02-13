@@ -1,12 +1,17 @@
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import java.util.HashMap;
 
+
 public class Player {
     public HashMap<String, Integer> results = new HashMap<>();
     private int playRound;
     private StringProperty name = new SimpleStringProperty();
+    private int bonus = 0;
+    private int sum1 = 0;
+    private int finalScore = 0;
 
     public Player() {
         results.put("1er", 0);
@@ -15,14 +20,6 @@ public class Player {
         results.put("4er", 0);
         results.put("5er", 0);
         results.put("6er", 0);
-        results.put("sum1", 0);
-        //results.put("sum1", results.get("1er") + results.get("2er") + results.get("3er") + results.get("4er") + results.get("5er") + results.get("6er"));
-        results.put("bonus", 0);
-        /*if (results.get("sum1") > 62){
-            results.put("bonus", 35);
-        }else {
-            results.put("bonus", 0);
-        }*/
         results.put("1paar", 0);
         results.put("2paar", 0);
         results.put("dreiGleiche", 0);
@@ -32,9 +29,26 @@ public class Player {
         results.put("fullHouse", 0);
         results.put("chance", 0);
         results.put("yatzy", 0);
-        results.put("finalPoints", 0);
-        //results.put("finalPoints", results.get("sum1") + results.get("bonus") + results.get("1paar") + results.get("2paar") + results.get("dreiGleiche") + results.get("vierGleiche") + results.get("kleineStrasse") + results.get("grosseStrasse") + results.get("fullHouse") + results.get("chance") + results.get("yatzy"));
     }
+
+    public int getSum1() {
+        this.sum1 = results.get("1er") + results.get("2er") + results.get("3er") + results.get("4er") + results.get("5er") + results.get("6er");
+        return sum1;
+    }
+
+    public int getBonus() {
+        if (sum1 >= 63) {
+            return 35;
+        } else {
+            return 0;
+        }
+    }
+
+    public int getFinalScore() {
+        this.finalScore = bonus; //ToDo: Plus Resultat Hashmap
+        return this.finalScore;
+    }
+
 
     public StringProperty getName() {
         return this.name;
@@ -50,5 +64,12 @@ public class Player {
 
     public int getPlayRound() {
         return playRound;
+    }
+
+    public SimpleIntegerProperty getPlayerResultValue(int select) {
+        SimpleIntegerProperty value = new SimpleIntegerProperty();
+        Integer[] listValues = this.results.values().toArray(new Integer[0]);
+        value.set(listValues[select]);
+        return value;
     }
 }

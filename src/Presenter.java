@@ -21,6 +21,16 @@ public class Presenter implements Initializable {
     @FXML
     private ToggleGroup tgswitch;
     @FXML
+    private Group resultGroupP1;
+    @FXML
+    private Group resultGroupP2;
+    @FXML
+    private Group resultGroupP3;
+    @FXML
+    private Group resultGroupP4;
+    @FXML
+    private Group resultGroupP5;
+    @FXML
     private Label rounds;
     @FXML
     private ToggleButton t0;
@@ -72,17 +82,63 @@ public class Presenter implements Initializable {
 
     private void startButtonHandler(ActionEvent actionEvent) {
         yatzy.resetGame();
+        initializeGame();
+    }
 
+    private void initializeGame() {
         RadioButton selectedRadioButton = (RadioButton) tgswitch.getSelectedToggle();
         int playerCount = Integer.parseInt(selectedRadioButton.getText());
 
         final ObservableList<Node> labels = playerGroup.getChildren();
         yatzy.startGame(playerCount);
+
         for (int playerId = 0; playerId < playerCount; playerId++) {
             Label label = (Label) labels.get(playerId);
             String name = getPlayerName(playerId);
             yatzy.getPlayer(playerId).setName(name);
             label.textProperty().bind((yatzy.getPlayerName(playerId)));
+        }
+    }
+
+    //ToDo: Refactoring necessary
+    private void bindPlayerResults(int playerId) {
+        final ObservableList<Node> resultLabels1 = resultGroupP1.getChildren();
+        final ObservableList<Node> resultLabels2 = resultGroupP2.getChildren();
+        final ObservableList<Node> resultLabels3 = resultGroupP3.getChildren();
+        final ObservableList<Node> resultLabels4 = resultGroupP4.getChildren();
+        final ObservableList<Node> resultLabels5 = resultGroupP5.getChildren();
+        int size = this.yatzy.getPlayer(playerId).results.size();
+        switch (playerId) {
+            case 0:
+                for (int i = 0; i < size; i++) {
+                    Label resultLabel = (Label) resultLabels1.get(i);
+                    resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
+                }
+                break;
+            case 1:
+                for (int i = 0; i < size; i++) {
+                    Label resultLabel = (Label) resultLabels2.get(i);
+                    resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
+                }
+                break;
+            case 2:
+                for (int i = 0; i < size; i++) {
+                    Label resultLabel = (Label) resultLabels3.get(i);
+                    resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
+                }
+                break;
+            case 3:
+                for (int i = 0; i < size; i++) {
+                    Label resultLabel = (Label) resultLabels4.get(i);
+                    resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
+                }
+                break;
+            case 4:
+                for (int i = 0; i < size; i++) {
+                    Label resultLabel = (Label) resultLabels5.get(i);
+                    resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
+                }
+                break;
         }
     }
 
@@ -97,9 +153,6 @@ public class Presenter implements Initializable {
 
     private String getPlayerChoice(int playerId) {
         Set<String> keySet = yatzy.getPlayer(playerId).results.keySet();
-        keySet.remove("bonus");
-        keySet.remove("sum1");
-        keySet.remove("finalPoints");
         ChoiceDialog<String> dialog = new ChoiceDialog<String>(keySet.iterator().next(), keySet);
         dialog.setTitle("Triff ä Entscheidig!");
         dialog.setHeaderText(yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue());
@@ -121,10 +174,11 @@ public class Presenter implements Initializable {
 
     private void writeResultsButtonHandler(ActionEvent actionEvent) {
         if (yatzy.getRound().getValue() > 0) {
-            String playerChoice = getPlayerChoice(yatzy.getCurrentPlayer());
-            yatzy.writeResults(yatzy.getCurrentPlayer(), playerChoice);
+            int player = yatzy.getCurrentPlayer();
+            String playerChoice = getPlayerChoice(player);
+            yatzy.writeResults(player, playerChoice);
+            bindPlayerResults(player);
             changePlayerMessage();
-            //ToDo: Ipmlement binding to resultFields.
         }
     }
 

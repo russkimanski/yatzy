@@ -9,8 +9,8 @@ import javafx.stage.Stage;
  * @author Peter Boxler <peter.boxler@edu.teko.ch>
  * @author Daniel Fiechter <daniel.fiechter@edu.teko.ch>
  * @author Alessandro Pucci <alessandro.pucci@edu.teko.ch>
- * @version 0.7
- * @since 0.1
+ * @version Final
+ * @since 0.2
  */
 public class Main extends Application {
     public static Stage stage;

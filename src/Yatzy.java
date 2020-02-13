@@ -26,7 +26,6 @@ class Yatzy {
         if (roundCount.getValue() < 3 && players.size() > 0) {
             this.roundCount.set(roundCount.getValue() + 1);
             for (Dice dice : rollDices) {
-                //ToDo: Review Pesche
                 if (!dice.isHold()) {
                     dice.roll();
                 }
@@ -95,12 +94,12 @@ class Yatzy {
         if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er") {
             int sum = checkDiceNumber(Character.getNumericValue(key.charAt(0)));
             players.get(playerId).results.put(key, sum);
-        } else if (key == "chance") {
+        } else if (key == "Chance") {
             int sum = sumDices();
             players.get(playerId).results.put(key, sum);
-        } else if (key == "2paar") {
+        } else if (key == "2 Paar") {
             players.get(playerId).results.put(key, checkTwoPairs());
-        } else if (key == "1paar" | key == "dreiGleiche" | key == "vierGleiche") {
+        } else if (key == "1 Paar" | key == "Drei Gleiche" | key == "Vier Gleiche") {
             players.get(playerId).results.put(key, checkXofAKind());
         } else {
             setPoints();
@@ -224,10 +223,10 @@ class Yatzy {
     }
 
     private void setPoints() {
-        pointList.put("kleineStrasse", 30);
-        pointList.put("grosseStrasse", 40);
-        pointList.put("fullHouse", 25);
-        pointList.put("yatzy", 50);
-        pointList.put("bonus", 35);
+        pointList.put("Kleine Strasse", 30);
+        pointList.put("Grosse Strasse", 40);
+        pointList.put("Full House", 25);
+        pointList.put("Yatzy", 50);
+        pointList.put("Bonus", 35);
     }
 }

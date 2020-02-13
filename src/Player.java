@@ -20,15 +20,15 @@ public class Player {
         results.put("4er", 0);
         results.put("5er", 0);
         results.put("6er", 0);
-        results.put("1paar", 0);
-        results.put("2paar", 0);
-        results.put("dreiGleiche", 0);
-        results.put("vierGleiche", 0);
-        results.put("kleineStrasse", 0);
-        results.put("grosseStrasse", 0);
-        results.put("fullHouse", 0);
-        results.put("chance", 0);
-        results.put("yatzy", 0);
+        results.put("1 Paar", 0);
+        results.put("2 Paar", 0);
+        results.put("Drei Gleiche", 0);
+        results.put("Vier Gleiche", 0);
+        results.put("Kleine Strasse", 0);
+        results.put("Grosse Strasse", 0);
+        results.put("Full House", 0);
+        results.put("Chance", 0);
+        results.put("Yatzy", 0);
     }
 
     public int getSum1() {

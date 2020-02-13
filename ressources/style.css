@@ -84,5 +84,4 @@ TextField {
 
 .holdButton:pressed {
     -fx-color: skyblue;
-
 }

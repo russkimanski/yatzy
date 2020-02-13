@@ -3,7 +3,6 @@ import javafx.beans.property.SimpleIntegerProperty;
 
 public class Dice {
     private IntegerProperty value = new SimpleIntegerProperty();
-    //ToDo: Review Pesche
     private boolean hold;
 
     public void roll() {
@@ -14,7 +13,6 @@ public class Dice {
         return value;
     }
 
-    //ToDo: Review Pesche
     public void setOnHold() {
         this.hold = true;
     }

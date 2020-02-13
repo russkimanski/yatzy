@@ -25,8 +25,8 @@
 #resultGroupP4 Label,
 #resultGroupP5 Label {
     -fx-font: normal bold 12px 'sans-serif';
-    -fx-background-color: white;
-    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
 }
 
 Label {
@@ -36,7 +36,9 @@ Label {
 }
 
 TextField {
+
     -fx-background-color: white;
+
 }
 
 #submit {

@@ -11,7 +11,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.Set;
 
 public class Presenter implements Initializable {
     private Yatzy yatzy;
@@ -110,6 +109,7 @@ public class Presenter implements Initializable {
         int size = this.yatzy.getPlayer(playerId).results.size();
         switch (playerId) {
             case 0:
+                this.yatzy.getPlayer(playerId).getPlayerBonus().get();
                 for (int i = 0; i < size; i++) {
                     Label resultLabel = (Label) resultLabels1.get(i);
                     resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
@@ -152,10 +152,10 @@ public class Presenter implements Initializable {
     }
 
     private String getPlayerChoice(int playerId) {
-        Set<String> keySet = yatzy.getPlayer(playerId).results.keySet();
-        ChoiceDialog<String> dialog = new ChoiceDialog<String>(keySet.iterator().next(), keySet);
+        String[] resultKeys = yatzy.getPlayer(playerId).getListOfSortedKeys();
+        ChoiceDialog dialog = new ChoiceDialog(resultKeys[0], resultKeys);
         dialog.setTitle("Triff ä Entscheidig!");
-        dialog.setHeaderText(yatzy.getPlayerName(yatzy.getCurrentPlayer()).getValue());
+        dialog.setHeaderText(yatzy.getPlayerName(playerId).getValue());
         dialog.setContentText("Weles Resultat wosch übernäh?");
         Optional<String> result = dialog.showAndWait();
         return result.orElse(null);
@@ -179,6 +179,8 @@ public class Presenter implements Initializable {
             yatzy.writeResults(player, playerChoice);
             bindPlayerResults(player);
             changePlayerMessage();
+            yatzy.getPlayer(player).removeSelectedResult(playerChoice);
+            deselectHoldButtons();
         }
     }
 
@@ -194,5 +196,13 @@ public class Presenter implements Initializable {
             button.setText("Bhaute");
             yatzy.setDiceActive(id);
         }
+    }
+
+    private void deselectHoldButtons() {
+        t0.setSelected(false);
+        t1.setSelected(false);
+        t2.setSelected(false);
+        t3.setSelected(false);
+        t4.setSelected(false);
     }
 }

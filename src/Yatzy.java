@@ -57,7 +57,7 @@ class Yatzy {
         return sum;
     }
 
-    public int checkDiceNumber(int nr) {
+    public int getDiceSum(int nr) {
         int sum = 0;
         for (Dice d : getRollDices()) { //ToDo: Was ist besser, Aufruf über Methode oder über Feld rollDiceses, wenn eine Methode z.B. nur in der selben Klasse wervendet würde?
             if (d.getValue().getValue() == nr) {
@@ -92,33 +92,44 @@ class Yatzy {
     //ToDo: Die Methode macht zu viel und sollte refactored werden.
     public void writeResults(int playerId, String key) {
         if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er") {
-            int sum = checkDiceNumber(Character.getNumericValue(key.charAt(0)));
+            int sum = getDiceSum(Character.getNumericValue(key.charAt(0)));
             players.get(playerId).results.put(key, sum);
         } else if (key == "Chance") {
             int sum = sumDices();
             players.get(playerId).results.put(key, sum);
-        } else if (key == "2 Paar") {
+        } else if (key == "Zwöi Paar") {
             players.get(playerId).results.put(key, checkTwoPairs());
-        } else if (key == "1 Paar" | key == "Drei Gleiche" | key == "Vier Gleiche") {
+        } else if (key == "Äs Paar" | key == "Drü Glichi" | key == "Vier Glichi") {
             players.get(playerId).results.put(key, checkXofAKind());
         } else {
             setPoints();
             int points = pointList.get(key);
             players.get(playerId).results.put(key, points);
         }
+        System.out.println(players.get(playerId).getName() + "hat folgende Resultate: " + players.get(playerId).results.values());
+        setNextPlayer(playerId);
+    }
+
+
+    public void setNextPlayer(int playerId) {
         players.get(playerId).setPlayRound(players.get(playerId).getPlayRound() + 1);
-        System.out.println("Spieler " + players.get(currentPlayer).getName().getValue() + " hat folgende Resultate in der HashMap:" + players.get(currentPlayer).results.values());
-        System.out.println("Gespielte Runden von " + players.get(currentPlayer).getName().getValue() + ": " + players.get(currentPlayer).getPlayRound());
+
         this.roundCount.set(0);
+
+        for (Dice dice : rollDices) {
+            dice.setActive();
+            dice.setDiceValueNull();
+        }
+
         if (!evaluateEndOfGame()) {
-            if (currentPlayer < (players.size()) - 1) {
+            if (playerId < (players.size()) - 1) {
                 setCurrentPlayer(getCurrentPlayer() + 1);
             } else {
                 setCurrentPlayer(0);
             }
-            System.out.println("Nächster Spieler: " + players.get(currentPlayer).getName().getValue());
         }
     }
+
 
     public boolean evaluateEndOfGame() {
         boolean end = false;
@@ -137,13 +148,16 @@ class Yatzy {
         return end;
     }
 
+
     public Player getPlayer(int playerId) {
         return players.get(playerId);
     }
 
+
     public LinkedList<Player> getPlayers() {
         return players;
     }
+
 
     public void resetGame() {
         for (Player player : players) {
@@ -152,13 +166,16 @@ class Yatzy {
         players.clear();
     }
 
+
     public int getCurrentPlayer() {
         return this.currentPlayer;
     }
 
+
     public void setCurrentPlayer(int value) {
         this.currentPlayer = value;
     }
+
 
     public int checkTwoPairs() {
         int numPairs = 0;
@@ -188,6 +205,7 @@ class Yatzy {
         }
         return 0;
     }
+
 
     public int checkXofAKind() {
 
@@ -222,11 +240,11 @@ class Yatzy {
         return countFinal * diceValue;
     }
 
+
     private void setPoints() {
-        pointList.put("Kleine Strasse", 30);
-        pointList.put("Grosse Strasse", 40);
+        pointList.put("Chlini Strass", 30);
+        pointList.put("Grossi Strass", 40);
         pointList.put("Full House", 25);
         pointList.put("Yatzy", 50);
-        pointList.put("Bonus", 35);
     }
 }

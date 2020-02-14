@@ -2,17 +2,23 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.stream.Stream;
 
 
 public class Player {
     public HashMap<String, Integer> results = new HashMap<>();
+    private HashMap<String, Integer> resultsToSelect;
     private int playRound;
     private StringProperty name = new SimpleStringProperty();
     private int bonus = 0;
     private int sum1 = 0;
     private int finalScore = 0;
 
+    //ToDo: A solution with enum
     public Player() {
         results.put("1er", 0);
         results.put("2er", 0);
@@ -20,32 +26,38 @@ public class Player {
         results.put("4er", 0);
         results.put("5er", 0);
         results.put("6er", 0);
-        results.put("1 Paar", 0);
-        results.put("2 Paar", 0);
-        results.put("Drei Gleiche", 0);
-        results.put("Vier Gleiche", 0);
-        results.put("Kleine Strasse", 0);
-        results.put("Grosse Strasse", 0);
+        results.put("Äs Paar", 0);
+        results.put("Zwöi Paar", 0);
+        results.put("Drü Glichi", 0);
+        results.put("Vier Glichi", 0);
+        results.put("Chlini Strass", 0);
+        results.put("Grossi Strass", 0);
         results.put("Full House", 0);
         results.put("Chance", 0);
         results.put("Yatzy", 0);
+
+        resultsToSelect = new HashMap<>(results);
     }
 
-    public int getSum1() {
-        this.sum1 = results.get("1er") + results.get("2er") + results.get("3er") + results.get("4er") + results.get("5er") + results.get("6er");
-        return sum1;
+    public SimpleIntegerProperty getPlayerSum1() {
+        SimpleIntegerProperty value = new SimpleIntegerProperty();
+        this.sum1 = Stream.of("1er", "2er", "3er", "4er", "5er", "6er").mapToInt(s -> results.get(s)).sum();
+        value.set(sum1);
+        return value;
     }
 
-    public int getBonus() {
+    public SimpleIntegerProperty getPlayerBonus() {
+        SimpleIntegerProperty value = new SimpleIntegerProperty();
+        int bonus = 0;
         if (sum1 >= 63) {
-            return 35;
-        } else {
-            return 0;
+            bonus = 35;
         }
+        value.set(bonus);
+        return value;
     }
 
     public int getFinalScore() {
-        this.finalScore = bonus; //ToDo: Plus Resultat Hashmap
+        this.finalScore = bonus + Stream.of().mapToInt(s -> results.get(s)).sum();
         return this.finalScore;
     }
 
@@ -66,10 +78,24 @@ public class Player {
         return playRound;
     }
 
+    public String[] getListOfSortedKeys() {
+        Set<String> keySet = this.resultsToSelect.keySet();
+        ArrayList<String> keys = new ArrayList<String>(keySet);
+        Collections.sort(keys);
+
+        return keys.toArray(new String[0]);
+
+    }
+
+    //ToDO: Das AarrayObjekt wird immer wieder erstellt. Daher besser als Feld definieren:
     public SimpleIntegerProperty getPlayerResultValue(int select) {
         SimpleIntegerProperty value = new SimpleIntegerProperty();
         Integer[] listValues = this.results.values().toArray(new Integer[0]);
         value.set(listValues[select]);
         return value;
+    }
+
+    public void removeSelectedResult(String key) {
+        this.resultsToSelect.remove(key);
     }
 }

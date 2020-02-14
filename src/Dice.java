@@ -13,6 +13,10 @@ public class Dice {
         return value;
     }
 
+    public void setDiceValueNull() {
+        value.set(0);
+    }
+
     public void setOnHold() {
         this.hold = true;
     }

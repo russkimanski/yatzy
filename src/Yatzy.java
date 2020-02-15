@@ -106,7 +106,6 @@ class Yatzy {
             int points = pointList.get(key);
             players.get(playerId).results.put(key, points);
         }
-        System.out.println(players.get(playerId).getName() + "hat folgende Resultate: " + players.get(playerId).results.values());
         setNextPlayer(playerId);
     }
 

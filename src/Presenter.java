@@ -32,6 +32,36 @@ public class Presenter implements Initializable {
     @FXML
     private Label rounds;
     @FXML
+    private Label sum1P1;
+    @FXML
+    private Label bonusP1;
+    @FXML
+    private Label finalPointsP1;
+    @FXML
+    private Label sum1P2;
+    @FXML
+    private Label bonusP2;
+    @FXML
+    private Label finalPointsP2;
+    @FXML
+    private Label sum1P3;
+    @FXML
+    private Label bonusP3;
+    @FXML
+    private Label finalPointsP3;
+    @FXML
+    private Label sum1P4;
+    @FXML
+    private Label bonusP4;
+    @FXML
+    private Label finalPointsP4;
+    @FXML
+    private Label sum1P5;
+    @FXML
+    private Label bonusP5;
+    @FXML
+    private Label finalPointsP5;
+    @FXML
     private ToggleButton t0;
     @FXML
     private ToggleButton t1;
@@ -99,7 +129,7 @@ public class Presenter implements Initializable {
         }
     }
 
-    //ToDo: Refactoring necessary
+    //ToDo: Refactoring necessary (DRY!)
     private void bindPlayerResults(int playerId) {
         final ObservableList<Node> resultLabels1 = resultGroupP1.getChildren();
         final ObservableList<Node> resultLabels2 = resultGroupP2.getChildren();
@@ -109,31 +139,45 @@ public class Presenter implements Initializable {
         int size = this.yatzy.getPlayer(playerId).results.size();
         switch (playerId) {
             case 0:
-                this.yatzy.getPlayer(playerId).getPlayerBonus().get();
+                sum1P1.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerSum1()));
+                bonusP1.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerBonus()));
+                finalPointsP1.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getFinalScore()));
                 for (int i = 0; i < size; i++) {
                     Label resultLabel = (Label) resultLabels1.get(i);
                     resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
                 }
                 break;
             case 1:
+                sum1P2.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerSum1()));
+                bonusP2.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerBonus()));
+                finalPointsP2.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getFinalScore()));
                 for (int i = 0; i < size; i++) {
                     Label resultLabel = (Label) resultLabels2.get(i);
                     resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
                 }
                 break;
             case 2:
+                sum1P3.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerSum1()));
+                bonusP3.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerBonus()));
+                finalPointsP3.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getFinalScore()));
                 for (int i = 0; i < size; i++) {
                     Label resultLabel = (Label) resultLabels3.get(i);
                     resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
                 }
                 break;
             case 3:
+                sum1P4.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerSum1()));
+                bonusP4.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerBonus()));
+                finalPointsP4.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getFinalScore()));
                 for (int i = 0; i < size; i++) {
                     Label resultLabel = (Label) resultLabels4.get(i);
                     resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
                 }
                 break;
             case 4:
+                sum1P5.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerSum1()));
+                bonusP5.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerBonus()));
+                finalPointsP5.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getFinalScore()));
                 for (int i = 0; i < size; i++) {
                     Label resultLabel = (Label) resultLabels5.get(i);
                     resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));

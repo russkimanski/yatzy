@@ -23,7 +23,10 @@
 #resultGroupP2 Label,
 #resultGroupP3 Label,
 #resultGroupP4 Label,
-#resultGroupP5 Label {
+#resultGroupP5 Label,
+#sum1P1, #sum1P2, #sum1P3, #sum1P4, #sum1P5,
+#bonusP1, #bonusP2, #bonusP3, #bonusP4, #bonusP5,
+#finalPointsP1, #finalPointsP2, #finalPointsP3, #finalPointsP4, #finalPointsP5 {
     -fx-font: normal bold 12px 'sans-serif';
     -fx-background-color: transparent;
     -fx-border-color: transparent;

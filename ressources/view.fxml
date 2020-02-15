@@ -338,16 +338,32 @@
             <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0"/><!--1er-->
             <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0"/><!--2er-->
         </Group>
-        <Group fx:id="sum1Group" layoutX="180.0">
-            <Label alignment="CENTER" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>
-            <Label alignment="CENTER" layoutY="265.0" prefHeight="33.0" prefWidth="50.0"/>
-            <Label alignment="CENTER" layoutY="565.0" prefHeight="33.0" prefWidth="50.0"/>
-        </Group>
-        <Group fx:id="bonusGroup" layoutX="280.0">
-            <Label alignment="CENTER" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>
-            <Label alignment="CENTER" layoutY="265.0" prefHeight="33.0" prefWidth="50.0"/>
-            <Label alignment="CENTER" layoutY="565.0" prefHeight="33.0" prefWidth="50.0"/>
-        </Group>
+
+        <Label fx:id="sum1P1" alignment="CENTER" layoutX="180.0" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="bonusP1" alignment="CENTER" layoutX="180.0" layoutY="265.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="finalPointsP1" alignment="CENTER" layoutX="180.0" layoutY="565.0" prefHeight="33.0"
+               prefWidth="50.0"/>
+
+        <Label fx:id="sum1P2" alignment="CENTER" layoutX="230.0" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="bonusP2" alignment="CENTER" layoutX="230.0" layoutY="265.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="finalPointsP2" alignment="CENTER" layoutX="230.0" layoutY="565.0" prefHeight="33.0"
+               prefWidth="50.0"/>
+
+        <Label fx:id="sum1P3" alignment="CENTER" layoutX="280.0" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="bonusP3" alignment="CENTER" layoutX="280.0" layoutY="265.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="finalPointsP3" alignment="CENTER" layoutX="280.0" layoutY="565.0" prefHeight="33.0"
+               prefWidth="50.0"/>
+
+        <Label fx:id="sum1P4" alignment="CENTER" layoutX="330.0" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="bonusP4" alignment="CENTER" layoutX="330.0" layoutY="265.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="finalPointsP4" alignment="CENTER" layoutX="330.0" layoutY="565.0" prefHeight="33.0"
+               prefWidth="50.0"/>
+
+        <Label fx:id="sum1P5" alignment="CENTER" layoutX="380.0" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="bonusP5" alignment="CENTER" layoutX="380.0" layoutY="265.0" prefHeight="33.0" prefWidth="50.0"/>
+        <Label fx:id="finalPointsP5" alignment="CENTER" layoutX="380.0" layoutY="565.0" prefHeight="33.0"
+               prefWidth="50.0"/>
+
     </children>
     <opaqueInsets>
         <Insets bottom="5.0" />

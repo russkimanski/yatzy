@@ -16,7 +16,6 @@ public class Player {
     private StringProperty name = new SimpleStringProperty();
     private int bonus = 0;
     private int sum1 = 0;
-    private int finalScore = 0;
 
     //ToDo: A solution with enum
     public Player() {
@@ -49,16 +48,20 @@ public class Player {
     public SimpleIntegerProperty getPlayerBonus() {
         SimpleIntegerProperty value = new SimpleIntegerProperty();
         int bonus = 0;
-        if (sum1 >= 63) {
+        if (this.sum1 >= 63) {
             bonus = 35;
         }
+        this.bonus = bonus;
         value.set(bonus);
         return value;
     }
 
-    public int getFinalScore() {
-        this.finalScore = bonus + Stream.of().mapToInt(s -> results.get(s)).sum();
-        return this.finalScore;
+    public SimpleIntegerProperty getFinalScore() {
+        SimpleIntegerProperty value = new SimpleIntegerProperty();
+        int finalScore = 0;
+        finalScore = this.bonus + results.values().stream().mapToInt(Integer::intValue).sum();
+        value.set(finalScore);
+        return value;
     }
 
 

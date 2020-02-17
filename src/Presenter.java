@@ -221,10 +221,12 @@ public class Presenter implements Initializable {
             int player = yatzy.getCurrentPlayer();
             String playerChoice = getPlayerChoice(player);
             yatzy.writeResults(player, playerChoice);
-            bindPlayerResults(player);
-            changePlayerMessage();
-            yatzy.getPlayer(player).removeSelectedResult(playerChoice);
-            deselectHoldButtons();
+            if (!yatzy.getEndOfGame()) {
+                bindPlayerResults(player);
+                changePlayerMessage();
+                yatzy.getPlayer(player).removeSelectedResult(playerChoice);
+                deselectHoldButtons();
+            }//ToDo: Implement a method for reset of result labels.
         }
     }
 

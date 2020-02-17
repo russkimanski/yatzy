@@ -253,90 +253,90 @@
                 <Image url="@wurf.gif" />
             </image>
         </ImageView>
-        <Group fx:id="resultGroupP4" layoutX="330.0">
-            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0" /><!--3er-->
-            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0" /><!--2Paar-->
-            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0" /><!--kleineStrasse-->
-            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0" /><!--4er-->
-            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0" /><!--5er-->
-            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0" /><!--4gleiche-->
-            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0" /><!--6er-->
-            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0" /><!--chance-->
-            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0" /><!--3gleiche-->
-            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0" /><!--grosseStrasse-->
-            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0" /><!--1Paar-->
-            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0" /><!--fullhouse-->
-            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0" /><!--yatzy-->
-            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0" /><!--1er-->
-            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0" /><!--2er-->
-        </Group>
         <Group fx:id="resultGroupP1" layoutX="180.0">
-            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0" /><!--3er-->
-            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0" /><!--2Paar-->
-            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0" /><!--kleineStrasse-->
-            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0" /><!--4er-->
-            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0" /><!--5er-->
-            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0" /><!--4gleiche-->
-            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0" /><!--6er-->
-            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0" /><!--chance-->
-            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0" /><!--3gleiche-->
-            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0" /><!--grosseStrasse-->
-            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0" /><!--1Paar-->
-            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0" /><!--fullhouse-->
-            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0" /><!--yatzy-->
-            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0" /><!--1er-->
-            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0" /><!--2er-->
-        </Group>
-        <Group fx:id="resultGroupP2" layoutX="230.0">
-            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0" /><!--3er-->
-            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0" /><!--2Paar-->
-            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0" /><!--kleineStrasse-->
-            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0" /><!--4er-->
-            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0" /><!--5er-->
-            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0" /><!--4gleiche-->
-            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0" /><!--6er-->
-            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0" /><!--chance-->
-            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0" /><!--3gleiche-->
-            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0" /><!--grosseStrasse-->
-            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0" /><!--1Paar-->
-            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0" /><!--fullhouse-->
-            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0" /><!--yatzy-->
-            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0" /><!--1er-->
-            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0" /><!--2er-->
-        </Group>
-        <Group fx:id="resultGroupP5" layoutX="380">
-            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0" /><!--3er-->
-            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0" /><!--2Paar-->
-            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0" /><!--kleineStrasse-->
-            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0" /><!--4er-->
-            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0" /><!--5er-->
-            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0" /><!--4gleiche-->
-            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0" /><!--6er-->
-            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0" /><!--chance-->
-            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0" /><!--3gleiche-->
-            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0" /><!--grosseStrasse-->
-            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0" /><!--1Paar-->
-            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0" /><!--fullhouse-->
-            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0" /><!--yatzy-->
-            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0" /><!--1er-->
-            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0" /><!--2er-->
-        </Group>
-        <Group fx:id="resultGroupP3" layoutX="280.0">
-            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0" /><!--3er-->
-            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0" /><!--2Paar-->
-            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0" /><!--kleineStrasse-->
-            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0" /><!--4er-->
-            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0" /><!--5er-->
-            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0" /><!--4gleiche-->
-            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0"/><!--6er-->
-            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0"/><!--chance-->
-            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0"/><!--3gleiche-->
-            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0"/><!--grosseStrasse-->
-            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0"/><!--1Paar-->
-            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0"/><!--fullhouse-->
-            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0"/><!--yatzy-->
             <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0"/><!--1er-->
             <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0"/><!--2er-->
+            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0"/><!--3er-->
+            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0"/><!--4er-->
+            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0"/><!--5er-->
+            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0"/><!--6er-->
+            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0"/><!--chance-->
+            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0"/><!--chliniStrass-->
+            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0"/><!--drüGlichi-->
+            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0"/><!--fullHouse-->
+            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0"/><!--grossiStrass-->
+            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0"/><!--vierGlichi-->
+            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0"/><!--yatzy-->
+            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0"/><!--zwöiPaar-->
+            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0"/><!--äsPaar-->
+        </Group>
+        <Group fx:id="resultGroupP2" layoutX="230.0">
+            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0"/><!--1er-->
+            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0"/><!--2er-->
+            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0"/><!--3er-->
+            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0"/><!--4er-->
+            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0"/><!--5er-->
+            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0"/><!--6er-->
+            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0"/><!--chance-->
+            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0"/><!--chliniStrass-->
+            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0"/><!--drüGlichi-->
+            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0"/><!--fullHouse-->
+            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0"/><!--grossiStrass-->
+            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0"/><!--vierGlichi-->
+            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0"/><!--yatzy-->
+            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0"/><!--zwöiPaar-->
+            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0"/><!--äsPaar-->
+        </Group>
+        <Group fx:id="resultGroupP3" layoutX="280.0">
+            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0"/><!--1er-->
+            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0"/><!--2er-->
+            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0"/><!--3er-->
+            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0"/><!--4er-->
+            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0"/><!--5er-->
+            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0"/><!--6er-->
+            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0"/><!--chance-->
+            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0"/><!--chliniStrass-->
+            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0"/><!--drüGlichi-->
+            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0"/><!--fullHouse-->
+            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0"/><!--grossiStrass-->
+            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0"/><!--vierGlichi-->
+            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0"/><!--yatzy-->
+            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0"/><!--zwöiPaar-->
+            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0"/><!--äsPaar-->
+        </Group>
+        <Group fx:id="resultGroupP4" layoutX="330.0">
+            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0"/><!--1er-->
+            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0"/><!--2er-->
+            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0"/><!--3er-->
+            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0"/><!--4er-->
+            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0"/><!--5er-->
+            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0"/><!--6er-->
+            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0"/><!--chance-->
+            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0"/><!--chliniStrass-->
+            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0"/><!--drüGlichi-->
+            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0"/><!--fullHouse-->
+            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0"/><!--grossiStrass-->
+            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0"/><!--vierGlichi-->
+            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0"/><!--yatzy-->
+            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0"/><!--zwöiPaar-->
+            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0"/><!--äsPaar-->
+        </Group>
+        <Group fx:id="resultGroupP5" layoutX="380">
+            <Label alignment="CENTER" layoutY="55.0" prefHeight="33.0" prefWidth="50.0"/><!--1er-->
+            <Label alignment="CENTER" layoutY="85.0" prefHeight="33.0" prefWidth="50.0"/><!--2er-->
+            <Label alignment="CENTER" layoutY="115.0" prefHeight="33.0" prefWidth="50.0"/><!--3er-->
+            <Label alignment="CENTER" layoutY="145.0" prefHeight="33.0" prefWidth="50.0"/><!--4er-->
+            <Label alignment="CENTER" layoutY="175.0" prefHeight="33.0" prefWidth="50.0"/><!--5er-->
+            <Label alignment="CENTER" layoutY="205.0" prefHeight="33.0" prefWidth="50.0"/><!--6er-->
+            <Label alignment="CENTER" layoutY="505.0" prefHeight="33.0" prefWidth="50.0"/><!--chance-->
+            <Label alignment="CENTER" layoutY="415.0" prefHeight="33.0" prefWidth="50.0"/><!--chliniStrass-->
+            <Label alignment="CENTER" layoutY="355.0" prefHeight="33.0" prefWidth="50.0"/><!--drüGlichi-->
+            <Label alignment="CENTER" layoutY="475.0" prefHeight="33.0" prefWidth="50.0"/><!--fullHouse-->
+            <Label alignment="CENTER" layoutY="445.0" prefHeight="33.0" prefWidth="50.0"/><!--grossiStrass-->
+            <Label alignment="CENTER" layoutY="385.0" prefHeight="33.0" prefWidth="50.0"/><!--vierGlichi-->
+            <Label alignment="CENTER" layoutY="535.0" prefHeight="33.0" prefWidth="50.0"/><!--yatzy-->
+            <Label alignment="CENTER" layoutY="325.0" prefHeight="33.0" prefWidth="50.0"/><!--zwöiPaar-->
+            <Label alignment="CENTER" layoutY="295.0" prefHeight="33.0" prefWidth="50.0"/><!--äsPaar-->
         </Group>
 
         <Label fx:id="sum1P1" alignment="CENTER" layoutX="180.0" layoutY="235.0" prefHeight="33.0" prefWidth="50.0"/>

@@ -2,10 +2,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Stream;
 
 
@@ -90,15 +87,26 @@ public class Player {
 
     }
 
-    //ToDO: Das AarrayObjekt wird immer wieder erstellt. Daher besser als Feld definieren:
+    //SortedSet is necessary to bind the result labels.
     public SimpleIntegerProperty getPlayerResultValue(int select) {
-        SimpleIntegerProperty value = new SimpleIntegerProperty();
-        Integer[] listValues = this.results.values().toArray(new Integer[0]);
-        value.set(listValues[select]);
-        return value;
+        SimpleIntegerProperty value1 = new SimpleIntegerProperty();
+        int i = 0;
+        SortedSet<String> keys = new TreeSet<>(results.keySet());
+        int[] listValues = new int[15];
+
+        for (String key : keys) {
+            int value = this.results.get(key);
+            listValues[i] = value;
+            i++;
+        }
+
+        value1.set(listValues[select]);
+        return value1;
     }
+
 
     public void removeSelectedResult(String key) {
         this.resultsToSelect.remove(key);
     }
+
 }

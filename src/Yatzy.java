@@ -4,16 +4,15 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedList;
 
 
 class Yatzy {
     private IntegerProperty roundCount = new SimpleIntegerProperty();
-    private HashMap<String, Integer> pointList = new HashMap<>();
     private LinkedList<Dice> rollDices = new LinkedList<>();
     private LinkedList<Player> players = new LinkedList<>();
     private int currentPlayer;
+    private boolean endOfGame = false;
 
     public Yatzy() {
         int diceCount = 5;
@@ -89,7 +88,6 @@ class Yatzy {
         }
     }
 
-    //ToDo: Die Methode macht zu viel und sollte refactored werden.
     public void writeResults(int playerId, String key) {
         if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er") {
             int sum = getDiceSum(Character.getNumericValue(key.charAt(0)));
@@ -101,10 +99,14 @@ class Yatzy {
             players.get(playerId).results.put(key, checkTwoPairs());
         } else if (key == "Äs Paar" | key == "Drü Glichi" | key == "Vier Glichi") {
             players.get(playerId).results.put(key, checkXofAKind());
+        } else if (key == "Chlini Strass") {
+            players.get(playerId).results.put(key, checkSmallOrLargeStraight());
+        } else if (key == "Grossi Strass") {
+            players.get(playerId).results.put(key, checkSmallOrLargeStraight());
+        } else if (key == "Full House") {
+            players.get(playerId).results.put(key, checkFullHouse());
         } else {
-            setPoints();
-            int points = pointList.get(key);
-            players.get(playerId).results.put(key, points);
+            players.get(playerId).results.put(key, checkYatzy());
         }
         setNextPlayer(playerId);
     }
@@ -126,25 +128,29 @@ class Yatzy {
             } else {
                 setCurrentPlayer(0);
             }
+        } else {
+            resetGame();
         }
     }
 
 
     public boolean evaluateEndOfGame() {
-        boolean end = false;
         if (players.get(getCurrentPlayer()).getPlayRound() > 14) {
             double sum = 0;
             for (int i = 0; i < players.size(); i++) {
                 sum += players.get(i).getPlayRound();
             }
             if (sum / players.size() >= 15) {
-                end = true;
+                this.endOfGame = true;
                 //ToDo: Implement a method to evaluate the winning player.
                 System.out.println("Hier wird der Spieler mit den meisten Punkten ausgegeben. Z.B. " + getWinner());
-                resetGame();
             }
         }
-        return end;
+        return this.endOfGame;
+    }
+
+    public boolean getEndOfGame() {
+        return endOfGame;
     }
 
 
@@ -205,18 +211,23 @@ class Yatzy {
         return 0;
     }
 
-
-    public int checkXofAKind() {
+    public int[] getResultsAsArray() {
 
         int[] diceValues = new int[getRollDices().size()];
-        int diceValue = 0;
-        int countFinal = 0;
 
+        int count = 0;
         for (int i = 0; i < getRollDices().size(); i++) {
             diceValues[i] = getRollDices().get(i).getValue().intValue();
         }
         Arrays.sort(diceValues);
+        return diceValues;
+    }
 
+
+    public int checkXofAKind() {
+        int[] diceValues = getResultsAsArray();
+        int diceValue = 0;
+        int countFinal = 0;
 
         for (int i = 0; i < diceValues.length; i++) {
             int count = 0;
@@ -239,11 +250,70 @@ class Yatzy {
         return countFinal * diceValue;
     }
 
+    public int checkSmallOrLargeStraight() {
+        int[] diceValues = getResultsAsArray();
+        int count = 0;
 
-    private void setPoints() {
-        pointList.put("Chlini Strass", 30);
-        pointList.put("Grossi Strass", 40);
-        pointList.put("Full House", 25);
-        pointList.put("Yatzy", 50);
+        count = 0;
+        for (int i = 0; i < diceValues.length - 1; i++) {
+            if (diceValues[i + 1] - diceValues[i] == 1) {
+                count++;
+            }
+        }
+        if (count >= 4) {
+            return 40;
+        } else if (count >= 3) {
+            return 30;
+        } else {
+            return 0;
+        }
     }
+
+    public int checkFullHouse() {
+        int[] diceValues = getResultsAsArray();
+        boolean foundThree = false;
+        boolean foundTwo = false;
+
+        for (int i = 0; i < diceValues.length; i++) {
+            int count = 0;
+            for (int j = 0; j < diceValues.length; j++) {
+                if (diceValues[i] == diceValues[j]) {
+                    count++;
+                }
+            }
+            if (count == 3) {
+                foundThree = true;
+            } else if (count == 2) {
+                foundTwo = true;
+            }
+        }
+        if (foundThree && foundTwo) {
+            return 25;
+        } else {
+            return 0;
+        }
+    }
+
+    public int checkYatzy() {
+        int[] diceValues = getResultsAsArray();
+        boolean foundFive = false;
+
+        for (int i = 0; i < diceValues.length; i++) {
+            int count = 0;
+            for (int j = 0; j < diceValues.length; j++) {
+                if (diceValues[i] == diceValues[j]) {
+                    count++;
+                }
+            }
+            if (count == 5) {
+                foundFive = true;
+            }
+        }
+        if (foundFive) {
+            return 50;
+        } else {
+            return 0;
+        }
+    }
+
 }

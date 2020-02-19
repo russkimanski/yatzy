@@ -50,8 +50,8 @@ class Yatzy {
 
     public int sumDices() {
         int sum = 0;
-        for (int i = 0; i < rollDices.size(); i++) {
-            sum += rollDices.get(i).getValue().intValue();
+        for (Dice rollDice : rollDices) {
+            sum += rollDice.getValue().intValue();
         }
         return sum;
     }
@@ -89,21 +89,21 @@ class Yatzy {
     }
 
     public void writeResults(int playerId, String key) {
-        if (key == "1er" | key == "2er" | key == "3er" | key == "4er" | key == "5er" | key == "6er") {
+        if (key.equals("1er") | key.equals("2er") | key.equals("3er") | key.equals("4er") | key.equals("5er") | key.equals("6er")) {
             int sum = getDiceSum(Character.getNumericValue(key.charAt(0)));
             players.get(playerId).results.put(key, sum);
-        } else if (key == "Chance") {
+        } else if (key.equals("Chance")) {
             int sum = sumDices();
             players.get(playerId).results.put(key, sum);
-        } else if (key == "Zwöi Paar") {
+        } else if (key.equals("Zwöi Paar")) {
             players.get(playerId).results.put(key, checkTwoPairs());
-        } else if (key == "Äs Paar" | key == "Drü Glichi" | key == "Vier Glichi") {
+        } else if (key.equals("Äs Paar") | key.equals("Drü Glichi") | key.equals("Vier Glichi")) {
             players.get(playerId).results.put(key, checkXofAKind());
-        } else if (key == "Chlini Strass") {
+        } else if (key.equals("Chlini Strass")) {
             players.get(playerId).results.put(key, checkSmallOrLargeStraight());
-        } else if (key == "Grossi Strass") {
+        } else if (key.equals("Grossi Strass")) {
             players.get(playerId).results.put(key, checkSmallOrLargeStraight());
-        } else if (key == "Full House") {
+        } else if (key.equals("Full House")) {
             players.get(playerId).results.put(key, checkFullHouse());
         } else {
             players.get(playerId).results.put(key, checkYatzy());
@@ -137,8 +137,8 @@ class Yatzy {
     public boolean evaluateEndOfGame() {
         if (players.get(getCurrentPlayer()).getPlayRound() > 14) {
             double sum = 0;
-            for (int i = 0; i < players.size(); i++) {
-                sum += players.get(i).getPlayRound();
+            for (Player player : players) {
+                sum += player.getPlayRound();
             }
             if (sum / players.size() >= 15) {
                 this.endOfGame = true;
@@ -159,11 +159,6 @@ class Yatzy {
     }
 
 
-    public LinkedList<Player> getPlayers() {
-        return players;
-    }
-
-
     public void resetGame() {
         for (Player player : players) {
             player.setName("");
@@ -181,7 +176,7 @@ class Yatzy {
         this.currentPlayer = value;
     }
 
-
+    //ToDO: Create a separate class to check dice results.
     public int checkTwoPairs() {
         int numPairs = 0;
         int score = 0;
@@ -215,7 +210,6 @@ class Yatzy {
 
         int[] diceValues = new int[getRollDices().size()];
 
-        int count = 0;
         for (int i = 0; i < getRollDices().size(); i++) {
             diceValues[i] = getRollDices().get(i).getValue().intValue();
         }
@@ -229,21 +223,21 @@ class Yatzy {
         int diceValue = 0;
         int countFinal = 0;
 
-        for (int i = 0; i < diceValues.length; i++) {
+        for (int item : diceValues) {
             int count = 0;
-            for (int j = 0; j < diceValues.length; j++) {
-                if (diceValues[i] == diceValues[j]) {
+            for (int value : diceValues) {
+                if (item == value) {
                     count++;
                 }
             }
             if (count == 2) {
-                diceValue = diceValues[i];
+                diceValue = item;
                 countFinal = 2;
             } else if (count == 3) {
-                diceValue = diceValues[i];
+                diceValue = item;
                 countFinal = 3;
             } else if (count == 4) {
-                diceValue = diceValues[i];
+                diceValue = item;
                 countFinal = 4;
             }
         }
@@ -254,7 +248,6 @@ class Yatzy {
         int[] diceValues = getResultsAsArray();
         int count = 0;
 
-        count = 0;
         for (int i = 0; i < diceValues.length - 1; i++) {
             if (diceValues[i + 1] - diceValues[i] == 1) {
                 count++;
@@ -274,10 +267,10 @@ class Yatzy {
         boolean foundThree = false;
         boolean foundTwo = false;
 
-        for (int i = 0; i < diceValues.length; i++) {
+        for (int diceValue : diceValues) {
             int count = 0;
-            for (int j = 0; j < diceValues.length; j++) {
-                if (diceValues[i] == diceValues[j]) {
+            for (int value : diceValues) {
+                if (diceValue == value) {
                     count++;
                 }
             }
@@ -298,15 +291,16 @@ class Yatzy {
         int[] diceValues = getResultsAsArray();
         boolean foundFive = false;
 
-        for (int i = 0; i < diceValues.length; i++) {
+        for (int value : diceValues) {
             int count = 0;
-            for (int j = 0; j < diceValues.length; j++) {
-                if (diceValues[i] == diceValues[j]) {
+            for (int diceValue : diceValues) {
+                if (value == diceValue) {
                     count++;
                 }
             }
             if (count == 5) {
                 foundFive = true;
+                break;
             }
         }
         if (foundFive) {

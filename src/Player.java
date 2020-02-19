@@ -14,7 +14,7 @@ public class Player {
     private int bonus = 0;
     private int sum1 = 0;
 
-    //ToDo: A solution with enum
+    //ToDo: Probably a solution with enum
     public Player() {
         results.put("1er", 0);
         results.put("2er", 0);
@@ -55,8 +55,7 @@ public class Player {
 
     public SimpleIntegerProperty getFinalScore() {
         SimpleIntegerProperty value = new SimpleIntegerProperty();
-        int finalScore = 0;
-        finalScore = this.bonus + results.values().stream().mapToInt(Integer::intValue).sum();
+        int finalScore = this.bonus + results.values().stream().mapToInt(Integer::intValue).sum();
         value.set(finalScore);
         return value;
     }
@@ -66,21 +65,25 @@ public class Player {
         return this.name;
     }
 
+
     public void setName(String name) {
         this.name.setValue(name);
     }
+
 
     public void setPlayRound(int playRound) {
         this.playRound = playRound;
     }
 
+
     public int getPlayRound() {
         return playRound;
     }
 
+
     public String[] getListOfSortedKeys() {
         Set<String> keySet = this.resultsToSelect.keySet();
-        ArrayList<String> keys = new ArrayList<String>(keySet);
+        ArrayList<String> keys = new ArrayList<>(keySet);
         Collections.sort(keys);
 
         return keys.toArray(new String[0]);

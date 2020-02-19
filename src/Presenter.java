@@ -197,7 +197,7 @@ public class Presenter implements Initializable {
 
     private String getPlayerChoice(int playerId) {
         String[] resultKeys = yatzy.getPlayer(playerId).getListOfSortedKeys();
-        ChoiceDialog dialog = new ChoiceDialog(resultKeys[0], resultKeys);
+        ChoiceDialog<String> dialog = new ChoiceDialog<>(resultKeys[0], resultKeys);
         dialog.setTitle("Triff ä Entscheidig!");
         dialog.setHeaderText(yatzy.getPlayerName(playerId).getValue());
         dialog.setContentText("Weles Resultat wosch übernäh?");
@@ -244,11 +244,17 @@ public class Presenter implements Initializable {
         }
     }
 
+    //ToDo: Use for loop.
     private void deselectHoldButtons() {
         t0.setSelected(false);
+        t0.textProperty().set("Bhaute");
         t1.setSelected(false);
+        t1.textProperty().set("Bhaute");
         t2.setSelected(false);
+        t2.textProperty().set("Bhaute");
         t3.setSelected(false);
+        t3.textProperty().set("Bhaute");
         t4.setSelected(false);
+        t4.textProperty().set("Bhaute");
     }
 }

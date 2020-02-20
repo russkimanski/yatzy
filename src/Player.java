@@ -7,8 +7,7 @@ import java.util.stream.Stream;
 
 
 public class Player {
-    //ToDo: Make private and write methods (get / set).
-    public HashMap<String, Integer> results = new HashMap<>();
+    private HashMap<String, Integer> results = new HashMap<>();
     private HashMap<String, Integer> resultsToSelect;
     private int playRound;
     private StringProperty name = new SimpleStringProperty();
@@ -111,6 +110,17 @@ public class Player {
 
     public void removeSelectedResult(String key) {
         this.resultsToSelect.remove(key);
+    }
+
+
+    public void putResultsToPlayer(String key, int value) {
+        results.put(key, value);
+    }
+
+
+    public int getSizeOfResults() {
+        int size = results.size();
+        return size;
     }
 
 }

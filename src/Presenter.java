@@ -129,42 +129,44 @@ public class Presenter implements Initializable {
         }
     }
 
-    //ToDo: Refactoring necessary (DRY!)
+
     private void bindPlayerResults(int playerId) {
         final ObservableList<Node> resultLabels1 = resultGroupP1.getChildren();
         final ObservableList<Node> resultLabels2 = resultGroupP2.getChildren();
         final ObservableList<Node> resultLabels3 = resultGroupP3.getChildren();
         final ObservableList<Node> resultLabels4 = resultGroupP4.getChildren();
         final ObservableList<Node> resultLabels5 = resultGroupP5.getChildren();
-        int size = this.yatzy.getPlayer(playerId).results.size();
         switch (playerId) {
             case 0:
-                bindSumLabels(playerId, resultLabels1, size, sum1P1, bonusP1, finalPointsP1);
+                bindSumLabels(playerId, resultLabels1, sum1P1, bonusP1, finalPointsP1);
                 break;
             case 1:
-                bindSumLabels(playerId, resultLabels2, size, sum1P2, bonusP2, finalPointsP2);
+                bindSumLabels(playerId, resultLabels2, sum1P2, bonusP2, finalPointsP2);
                 break;
             case 2:
-                bindSumLabels(playerId, resultLabels3, size, sum1P3, bonusP3, finalPointsP3);
+                bindSumLabels(playerId, resultLabels3, sum1P3, bonusP3, finalPointsP3);
                 break;
             case 3:
-                bindSumLabels(playerId, resultLabels4, size, sum1P4, bonusP4, finalPointsP4);
+                bindSumLabels(playerId, resultLabels4, sum1P4, bonusP4, finalPointsP4);
                 break;
             case 4:
-                bindSumLabels(playerId, resultLabels5, size, sum1P5, bonusP5, finalPointsP5);
+                bindSumLabels(playerId, resultLabels5, sum1P5, bonusP5, finalPointsP5);
                 break;
         }
     }
 
-    private void bindSumLabels(int playerId, ObservableList<Node> resultLabels1, int size, Label sum1P1, Label bonusP1, Label finalPointsP1) {
+
+    private void bindSumLabels(int playerId, ObservableList<Node> resultLabels1, Label sum1P1, Label bonusP1, Label finalPointsP1) {
         sum1P1.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerSum1()));
         bonusP1.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerBonus()));
         finalPointsP1.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getFinalScore()));
+        int size = this.yatzy.getPlayer(playerId).getSizeOfResults();
         for (int i = 0; i < size; i++) {
             Label resultLabel = (Label) resultLabels1.get(i);
             resultLabel.textProperty().bind(Bindings.convert(this.yatzy.getPlayer(playerId).getPlayerResultValue(i)));
         }
     }
+
 
     private String getPlayerName(int playerId) {
         TextInputDialog dialog = new TextInputDialog();
@@ -175,6 +177,7 @@ public class Presenter implements Initializable {
         return result.orElse(null);
     }
 
+
     private String getPlayerChoice(int playerId) {
         String[] resultKeys = yatzy.getPlayer(playerId).getListOfSortedKeys();
         ChoiceDialog<String> dialog = new ChoiceDialog<>(resultKeys[0], resultKeys);
@@ -184,6 +187,7 @@ public class Presenter implements Initializable {
         Optional<String> result = dialog.showAndWait();
         return result.orElse(null);
     }
+
 
     private void changePlayerMessage() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -209,6 +213,7 @@ public class Presenter implements Initializable {
             }//ToDo: Implement a method for reset of result labels.
         }
     }
+
 
     private void holdButtonHandler(ActionEvent actionEvent) {
 

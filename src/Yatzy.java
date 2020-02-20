@@ -91,22 +91,22 @@ class Yatzy {
     public void writeResults(int playerId, String key) {
         if (key.equals("1er") | key.equals("2er") | key.equals("3er") | key.equals("4er") | key.equals("5er") | key.equals("6er")) {
             int sum = getDiceSum(Character.getNumericValue(key.charAt(0)));
-            players.get(playerId).results.put(key, sum);
+            players.get(playerId).putResultsToPlayer(key, sum);
         } else if (key.equals("Chance")) {
             int sum = sumDices();
-            players.get(playerId).results.put(key, sum);
+            players.get(playerId).putResultsToPlayer(key, sum);
         } else if (key.equals("Zwöi Paar")) {
-            players.get(playerId).results.put(key, checkTwoPairs());
+            players.get(playerId).putResultsToPlayer(key, checkTwoPairs());
         } else if (key.equals("Äs Paar") | key.equals("Drü Glichi") | key.equals("Vier Glichi")) {
-            players.get(playerId).results.put(key, checkXofAKind());
+            players.get(playerId).putResultsToPlayer(key, checkXofAKind());
         } else if (key.equals("Chlini Strass")) {
-            players.get(playerId).results.put(key, checkSmallOrLargeStraight());
+            players.get(playerId).putResultsToPlayer(key, checkSmallOrLargeStraight());
         } else if (key.equals("Grossi Strass")) {
-            players.get(playerId).results.put(key, checkSmallOrLargeStraight());
+            players.get(playerId).putResultsToPlayer(key, checkSmallOrLargeStraight());
         } else if (key.equals("Full House")) {
-            players.get(playerId).results.put(key, checkFullHouse());
+            players.get(playerId).putResultsToPlayer(key, checkFullHouse());
         } else {
-            players.get(playerId).results.put(key, checkYatzy());
+            players.get(playerId).putResultsToPlayer(key, checkYatzy());
         }
         setNextPlayer(playerId);
     }

@@ -206,7 +206,7 @@ class Yatzy {
         return 0;
     }
 
-    public int[] getResultsAsArray() {
+    public int[] getSortedResultsAsArray() {
 
         int[] diceValues = new int[getRollDices().size()];
 
@@ -219,7 +219,7 @@ class Yatzy {
 
 
     public int checkXofAKind() {
-        int[] diceValues = getResultsAsArray();
+        int[] diceValues = getSortedResultsAsArray();
         int diceValue = 0;
         int countFinal = 0;
 
@@ -245,7 +245,7 @@ class Yatzy {
     }
 
     public int checkSmallOrLargeStraight() {
-        int[] diceValues = getResultsAsArray();
+        int[] diceValues = getSortedResultsAsArray();
         int count = 0;
 
         for (int i = 0; i < diceValues.length - 1; i++) {
@@ -263,7 +263,7 @@ class Yatzy {
     }
 
     public int checkFullHouse() {
-        int[] diceValues = getResultsAsArray();
+        int[] diceValues = getSortedResultsAsArray();
         boolean foundThree = false;
         boolean foundTwo = false;
 
@@ -288,7 +288,7 @@ class Yatzy {
     }
 
     public int checkYatzy() {
-        int[] diceValues = getResultsAsArray();
+        int[] diceValues = getSortedResultsAsArray();
         boolean foundFive = false;
 
         for (int value : diceValues) {

@@ -7,6 +7,7 @@ import java.util.stream.Stream;
 
 
 public class Player {
+    //ToDo: Make private and write methods (get / set).
     public HashMap<String, Integer> results = new HashMap<>();
     private HashMap<String, Integer> resultsToSelect;
     private int playRound;
